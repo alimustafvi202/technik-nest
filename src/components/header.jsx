@@ -55,7 +55,9 @@ const Header = () => {
       </div>
 
       {/* Hire Us Button */}
-      <button className="hire-us">Hire Us</button>
+      <button className="hire-us">
+    <span role="img" aria-label="Man">👨</span> Hire Us
+</button>
     </header>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/header';
 import Preloader from './components/Preloader';
+import Welcome from './components/index';
 
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
       {showPreloader ? <Preloader /> : null} {/* Render Preloader only if showPreloader is true */}
       {!showPreloader && ( // Render other components after Preloader
         <>
-          <Header />
+        
+        <Header/>
+          <Welcome/>
           
         </>
       )}
