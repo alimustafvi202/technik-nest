@@ -580,21 +580,21 @@
 
 
 .welcome-thumb-wrapper {
-    position: relative;
-    text-align: right;
-     /* Align the image to the right */
+  position: relative;
+  text-align: right; /* Align the image to the right */
 }
 
 .welcome-thumb-1 {
-    display: flex; /* Ensure the image behaves like a block element */
-    margin-left: 60%;
-    max-width: 70%; /* Make sure the image doesn't overflow */
-    animation: moveUpDown 5s ease-in-out infinite; /* Add the animation */
+  display: flex;
+  margin-left: auto; /* This will push the image towards the right */
+  margin-right: 0; /* Ensure no margin on the right side */
+  max-width: 70%; /* Ensure the image doesn't overflow */
+  animation: moveUpDown 5s ease-in-out infinite; /* Add the animation */
 }
 
 .welcome-animation {
-    max-width: 70%; /* Ensure it doesn't overflow the container */
-    height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it doesn't overflow the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Keyframe Animation for Up and Down Movement */
@@ -875,5 +875,628 @@
 
 .portfolio-link:hover {
   text-decoration: underline;
+}
+
+
+
+  /* Preloader Styling */
+  .digimax-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    z-index: 9000;
+  }
+  
+  .digimax-preloader .preloader-animation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .preloader-animation .spinner {
+    height: 9em;
+    width: 9em;
+    margin-bottom: 3.5em;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-top-color: #000000;
+    border-radius: 50%;
+    animation: spinner 1s infinite linear;
+  }
+  
+  .preloader-animation .loader {
+    font: bold 5em "Poppins", sans-serif;
+    text-align: center;
+    user-select: none;
+  }
+  
+  .preloader-animation .loader .animated-letters {
+    position: relative;
+    color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .loader .animated-letters:before {
+    position: absolute;
+    content: attr(data-text-preloader);
+    top: -3px;
+    left: 0;
+    color: #000000;
+    opacity: 0;
+    transform: rotateY(-90deg);
+    animation: animated-letters 4s infinite;
+  }
+  
+  .loader .animated-letters:nth-child(2):before {
+    animation-delay: 0.2s;
+  }
+  
+  .loader .animated-letters:nth-child(3):before {
+    animation-delay: 0.4s;
+  }
+  
+  .loader .animated-letters:nth-child(4):before {
+    animation-delay: 0.6s;
+  }
+  
+  .loader .animated-letters:nth-child(5):before {
+    animation-delay: 0.8s;
+  }
+  
+  .loader .animated-letters:nth-child(6):before {
+    animation-delay: 1s;
+  }
+  
+  .loader .animated-letters:nth-child(7):before {
+    animation-delay: 1.2s;
+  }
+  
+  .loader .animated-letters:nth-child(8):before {
+    animation-delay: 1.4s;
+  }
+  
+  .digimax-preloader p {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 8px;
+    color: #3b3b3b;
+  }
+  
+  .digimax-preloader .loader-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .single-loader .loader-bg {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #ffffff;
+    transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  
+  .digimax-preloader.loaded .preloader-animation {
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+  
+  .digimax-preloader.loaded .single-loader .loader-bg {
+    width: 0;
+    transition: 0.7s all cubic-bezier(0.1, 0.1, 0.1, 1);
+  }
+  
+  @keyframes spinner {
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  @keyframes animated-letters {
+    0%, 75%, 100% {
+      opacity: 0;
+      transform: rotateY(-90deg);
+    }
+    25%, 50% {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .preloader-animation .spinner {
+      height: 8em;
+      width: 8em;
+    }
+    .preloader-animation .loader {
+      font: bold 3.5em "Poppins", sans-serif;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .preloader-animation .spinner {
+      height: 7em;
+      width: 7em;
+    }
+    .preloader-animation .loader {
+      font: bold 2em "Poppins", sans-serif;
+    }
+  }
+
+/* Header Styling */
+.header {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    background-color: #822ed5; /* Background color */
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+  }
+  
+  .logo-image {
+    height: 80px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 35%;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Logo fade-in animation */
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin-left: 80%;
+    gap: 10%;
+    white-space: nowrap;
+    animation: fadeIn 2s forwards; /* Nav menu fade-in animation */
+  }
+  
+  .nav-menu ul li {
+    margin: 0 15px;
+  }
+  
+  .nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .nav-menu ul li a:hover {
+    color: #6b5ce7; /* Hover color */
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    margin-left: 25%;
+    gap: 35px;
+    opacity: 0;
+    animation: fadeIn 2.5s forwards; /* Social icons fade-in animation */
+  }
+  
+  .social-icon {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #6b5ce7; /* Hover color for icons */
+  }
+  
+  /* Hire Us Button */
+  .hire-us {
+    background:transparent; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 12px 24px; /* Padding for a balanced look */
+    border: 2px solid #ffffff; /* Add a border matching the text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+    margin-right: 5%;
+    opacity: 0;
+    animation: fadeIn 3s forwards; /* Hire Us button fade-in animation */
+  }
+  
+  /* Hover Effect */
+  .hire-us:hover {
+    background: #6b5ce7; /* Purple background on hover */
+    color: white; /* White text on hover */
+    border-color: #6b5ce7; /* Match border with background */
+  }
+  
+  /* Focus State for Accessibility */
+  .hire-us:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(107, 92, 231, 0.5); /* Add a subtle purple glow */
+  }
+  
+  /* Disabled State */
+  .hire-us:disabled {
+    background: #e0e0e0; /* Gray background for disabled state */
+    color: #a0a0a0; /* Light gray text */
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+    border-color: #e0e0e0; /* Match border with background */
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 767px) {
+    .preloader-animation .spinner {
+      height: 8em;
+      width: 8em;
+    }
+    .preloader-animation .loader {
+      font: bold 3.5em "Poppins", sans-serif;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .preloader-animation .spinner {
+      height: 7em;
+      width: 7em;
+    }
+    .preloader-animation .loader {
+      font: bold 2em "Poppins", sans-serif;
+    }
+  }
+  
+  
+  
+/*BG SHAPE*/
+.shape {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    line-height: 0;
+    direction: ltr;
+    overflow: hidden;
+    z-index: -1;
+    
+}
+
+.shape-top {
+    top: -1px;
+}
+
+.shape-1 svg {
+    display: block;
+    width: calc(122% + 1.3px);
+    height: 134px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.shape-bottom {
+    bottom: -1px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.shape-bottom svg {
+    display: block;
+    height: 275px;
+    width: calc(228% + 1.3px);
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.homepage-2 .welcome-area .shape-bottom {
+    top: auto;
+    -webkit-transform: inherit;
+    transform: inherit;
+}
+
+.homepage-2 .welcome-area .shape-bottom svg {
+    height: 126px;
+    width: calc(118% + 1.3px);
+}
+
+@media (max-width: 991px) {
+    .shape-bottom svg {
+        height: 112px;
+    }
+
+    .homepage-2 .welcome-area .shape-bottom svg {
+        height: 68px;
+    }
+}
+
+@media (max-width: 575px) {
+    .homepage-2 .welcome-area .shape-bottom svg {
+        height: 41px;
+    }
+}
+
+.bg-shape {
+    position: absolute;
+    height: 190%;
+    width: 100%;
+    display: block;
+    border-radius: 120px;
+    background: linear-gradient(-47deg, #8731E8 0%, #4528DC 100%);
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translate(35%, -28%) rotate(-35deg);
+    transform: translate(35%, -28%) rotate(-35deg);
+    z-index: 0;
+}
+
+@media (max-width: 991px) {
+    .bg-shape {
+        height: 130%;
+    }
+}
+
+/*BACKGROUND OVERLAY*/
+.bg-overlay,
+.overlay-dark {
+    position: relative;
+    z-index: 0;
+}
+
+.bg-overlay::after,
+.overlay-dark:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bg-overlay::after {
+    opacity: 0.95;
+    z-index: -1;
+}
+
+.overlay-dark::after {
+    background-color: rgba(16, 16, 45, 1);
+    opacity: 0.95;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    z-index: -1;
+}
+
+/*BACKGROUND COLORS*/
+.color-1 {
+    color: #be63f9;
+}
+
+.color-2 {
+    color: #26c6da;
+}
+
+.color-3 {
+    color: #fc573b;
+}
+
+.color-4 {
+    color: #34FF92;
+}
+
+.color-5 {
+    color: #ffd200;
+}
+
+.color-6 {
+    color: #ff9d45;
+}
+
+.color-1.bg-hover:hover::after,
+.color-1.bg-hover.active::after {
+    background-color: #be63f9;
+}
+
+.color-2.bg-hover:hover::after,
+.color-2.bg-hover.active::after {
+    background-color: #26c6da;
+}
+
+.color-3.bg-hover:hover::after,
+.color-3.bg-hover.active::after {
+    background-color: #fc573b;
+}
+
+.color-4.bg-hover:hover::after,
+.color-4.bg-hover.active::after {
+    background-color: #34FF92;
+}
+
+.color-5.bg-hover:hover::after,
+.color-5.bg-hover.active::after {
+    background-color: #ffd200;
+}
+
+.color-6.bg-hover:hover::after,
+.color-6.bg-hover.active::after {
+    background-color: #ff9d45;
+}
+
+.text-muted {
+    color: #888 !important;
+}
+
+.bg-grey {
+    background-color: #f4f4f4;
+}
+
+.bg-inherit {
+    background: inherit !important;
+}
+
+.bg-overlay::after {
+    background: -webkit-radial-gradient(50% 50%, circle closest-side, #af52ed 0%, #8830df 100%);
+}
+
+.breadcrumb-area.bg-overlay::after {
+    background: linear-gradient(-45deg, #af52ed 0%, #8830df 100%);
+}
+
+
+
+/* ******************************
+:: 8.0 WELCOME AREA CSS
+****************************** */
+.welcome-area {
+  display: flex;
+    height: 700px;
+    max-width: 100%;
+}
+.welcome-intro h1, .welcome-intro h2 {
+    line-height: 1; /* Remove extra line spacing */
+    margin: 0; /* Remove any default margin */
+    margin-left: 120px;
+    color: white;
+    position: relative;
+    top: 50px;
+    
+}
+.welcome-intro h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+}
+.welcome-intro h2 {
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+    
+}
+
+.welcome-intro p {
+    font-size: 16px;
+    position: relative;
+    color: white;
+    top: 60px;
+    left: 120px;
+    width: 750px; /* Specify width of the paragraph block */
+    height: auto; /* Automatically adjust the height based on content */
+    max-width: 90%; /* Optional: to ensure the paragraph doesn't stretch too wide on large screens */
+    margin: 0; /* Remove any default margin */
+    padding: 10px; /* Optional: padding for some space inside the paragraph */
+    box-sizing: border-box
+}
+
+.welcome-area.bg-overlay::after {
+    z-index: -2;
+}
+
+@media (min-width: 768px) {
+  .welcome-area {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .welcome-intro {
+      text-align: left;
+  }
+
+  .welcome-thumb-wrapper {
+      margin-top: 0;
+  }
+}
+
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    top: 120px;
+    left: 130px;
+}
+
+.button-group button {
+    background: transparent;
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Hover Effect */
+.button-group button:hover {
+    background: white;
+    color: #6b5ce7;
+    border-color: white;
+}
+
+/* Focus State */
+.button-group button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Disabled State */
+.button-group button:disabled {
+    background: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+}
+
+
+.welcome-thumb-wrapper {
+    position: relative;
+    text-align: right;
+     /* Align the image to the right */
+}
+
+.welcome-thumb-1 {
+    display: flex; /* Ensure the image behaves like a block element */
+    margin-left: 60%;
+    max-width: 70%; /* Make sure the image doesn't overflow */
+    animation: moveUpDown 5s ease-in-out infinite; /* Add the animation */
+}
+
+.welcome-animation {
+    max-width: 70%; /* Ensure it doesn't overflow the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Keyframe Animation for Up and Down Movement */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0); /* Initial position */
+    }
+    50% {
+        transform: translateY(-100px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Return to initial position */
+    }
 }
 
