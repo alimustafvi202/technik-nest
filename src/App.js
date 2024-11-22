@@ -4,6 +4,10 @@ import Preloader from './components/Preloader';
 import Welcome from './components/index';
 import Services from './components/Services-short';
 import OurWork from './components/Our_Work';
+import Team from './components/team';
+import Testimonials from './components/Testimonials';
+import Contact from './components/contact';
+import Footer from './components/footer';
 
 
 function App() {
@@ -27,6 +31,10 @@ function App() {
           <Welcome/>
           <Services/>
           <OurWork/>
+          <Team/>
+          <Testimonials/>
+          <Contact/>
+          <Footer/>
         </>
       )}
     </>
