@@ -159,7 +159,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 5px;
     background-color: #822ed5; /* Background color */
     color: #fff;
     opacity: 0;
@@ -169,7 +169,7 @@
   .logo-image {
     height: 80px; /* Adjust logo height */
     width: auto; /* Maintain aspect ratio */
-    margin-left: 50%;
+    margin-left: 35%;
     opacity: 0;
     animation: fadeIn 1.5s forwards; /* Logo fade-in animation */
   }
@@ -177,11 +177,9 @@
   .nav-menu ul {
     display: flex;
     list-style: none;
-    margin-left: 50%;
-    padding: 0;
+    margin-left: 80%;
     gap: 10%;
     white-space: nowrap;
-    opacity: 0;
     animation: fadeIn 2s forwards; /* Nav menu fade-in animation */
   }
   
@@ -203,8 +201,8 @@
   /* Social Icons */
   .social-icons {
     display: flex;
+    margin-left: 25%;
     gap: 35px;
-    margin-left: 20%;
     opacity: 0;
     animation: fadeIn 2.5s forwards; /* Social icons fade-in animation */
   }
@@ -229,7 +227,7 @@
     font-size: 1em; /* Font size */
     font-weight: bold; /* Bold text for emphasis */
     transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
-    margin-right: 15%;
+    margin-right: 5%;
     opacity: 0;
     animation: fadeIn 3s forwards; /* Hire Us button fade-in animation */
   }
