@@ -1530,3 +1530,156 @@ button:hover {
   color: white;
 }
 
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color:#8a27db;;
+  color: #ffffff;
+  position: relative;
+}
+
+.logo img{
+ height: 90px;
+ width:auto;
+ margin-left: 20%;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start; /* Align menu items to the left */
+  gap: 20px; /* Spacing between menu items */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Proper spacing between list items */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset padding */
+  margin-left: 100%;
+  font-weight: bold;
+}
+
+.menu ul li {
+  white-space: nowrap; /* Prevent line breaks within list items */
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  position: relative;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #2200ff;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #2200ff;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s ease-in-out;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+
+/* Social and Hire Us Section */
+.social-hire {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space items apart */
+  gap: 20px;
+  width: 100%; /* Full width for proper spacing */
+}
+
+/* Social Icons Styling - Aligned to the left */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-left: 55%; /* Push icons to the left */
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+/* Hire Us Button - Positioned on the right */
+.hire-us {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hire-us:hover {
+  background-color: #2694f5b7;
+  transform: scale(1.05);
+}
+
+
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .social-hire {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
