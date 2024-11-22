@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/header';
 import Preloader from './components/Preloader';
 import Welcome from './components/index';
+import Services from './components/Services-short';
+import OurWork from './components/Our_Work';
 
 
 function App() {
@@ -23,7 +25,8 @@ function App() {
         
         <Header/>
           <Welcome/>
-          
+          <Services/>
+          <OurWork/>
         </>
       )}
     </>

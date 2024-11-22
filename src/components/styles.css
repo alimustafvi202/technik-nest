@@ -1,4 +1,9 @@
-
+*{
+  margin: 0;
+  padding: 0;
+ 
+  
+}
   /* Preloader Styling */
   .digimax-preloader {
     position: fixed;
@@ -156,7 +161,7 @@
 /* Header Styling */
 .header {
     margin: 0;
-    display: flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -604,3 +609,271 @@
         transform: translateY(0); /* Return to initial position */
     }
 }
+
+
+
+/*SECTION HEADING*/
+@media (max-width: 991px) {
+  h1 {
+      font-size: 3em;
+  }
+
+  h2 {
+      font-size: 36px;
+  }
+
+  .section-heading {
+      margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+      font-size: 2.8em;
+  }
+
+  h2 {
+      font-size: 30px;
+      line-height: 1.4;
+  }
+}
+
+@media (max-width: 575px) {
+  h1 {
+      font-size: 2em;
+      line-height: 1.4;
+  }
+
+  h2 {
+      font-size: 24px;
+      line-height: 1.4;
+  }
+
+  h3 {
+      font-size: 18px;
+      line-height: 1.4;
+  }
+
+  p {
+      line-height: 26px;
+  }
+}
+
+/* Services.css */
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px;
+  background-color: #ffffff;
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.service-card {
+  flex: 1;
+  max-width: 270px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 20px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid #007bff;
+}
+
+.service-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Specific Shape for service section */
+.service-shape-bottom {
+  display: block;
+  width: 100%;
+  background-color: #cdccccb0;
+  
+}
+
+.shape-fill {
+  fill: #ffffff;
+}
+
+/* Flip the second shape only */
+.flipped-shape svg {
+  transform: scaleY(-1); /* Flip vertically */
+}
+
+/* Optional: Add a margin for spacing between the cards and shape */
+
+
+
+
+/* Services.css */
+.services-container1 {
+  padding: 40px;
+  background-color: #cdccccb0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.services-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.services-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card1 {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.service-link {
+  font-size: 14px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service-link:hover {
+  text-decoration: underline;
+}
+
+/* Our Work */
+
+.portfolio {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.portfolio-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.portfolio-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.portfolio-card1 {
+  width: 300px;
+  height: 300px; /* Make the container square */
+  position: relative;
+}
+
+.portfolio-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #ddd; /* Background in case the image is not loaded */
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, rgba(39, 0, 136, 0.964), rgba(255, 0, 255, 0.8)); /* Blue to Pink Gradient */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.portfolio-card1:hover .portfolio-hover-text {
+  opacity: 1; /* Show text on hover */
+}
+
+.portfolio-hover-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.portfolio-hover-description {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.portfolio-link {
+  font-size: 14px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.portfolio-link:hover {
+  text-decoration: underline;
+}
+
