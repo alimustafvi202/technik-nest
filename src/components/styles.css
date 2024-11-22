@@ -488,8 +488,9 @@
 :: 8.0 WELCOME AREA CSS
 ****************************** */
 .welcome-area {
+  display: flex;
     height: 700px;
-    z-index: 1;
+    max-width: 100%;
 }
 .welcome-intro h1, .welcome-intro h2 {
     line-height: 1; /* Remove extra line spacing */
@@ -529,6 +530,22 @@
 .welcome-area.bg-overlay::after {
     z-index: -2;
 }
+
+@media (min-width: 768px) {
+  .welcome-area {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .welcome-intro {
+      text-align: left;
+  }
+
+  .welcome-thumb-wrapper {
+      margin-top: 0;
+  }
+}
+
 
 .button-group {
     display: flex;
