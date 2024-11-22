@@ -12,14 +12,14 @@ const Footer = () => {
         Have questions or need more information? Feel free to reach out to our team. We`re here to assist you and provide personalized solutions tailored to your specific needs. Contact us today for a consultation.
         </p>
         <div>
-            <button className="hire-us">Contact Us</button>
+            <button className="footerbtn">Contact Us</button>
         </div>
       </div>
     </section>
      <footer className="footer-container">
      <div className="footer-branding">
        <h2>Technik Nest</h2>
-       <p>Innovative Mind, Nesting Success.</p>
+       <p>Technik Nest is a leading software development house in Pakistan, specializing in crafting custom software solutions, web applications, and mobile apps.</p>
      </div>
      <div className="footer-links">
        <h3>Quick Links</h3>
@@ -32,22 +32,20 @@ const Footer = () => {
      </div>
      <div className="footer-contact">
        <h3>Contact Us</h3>
-       <p>+923165601184</p>
-       <p>techniknestofficial@gmail.com</p>
+       <p>+92 3165601184</p>
+       <p>info@techniknest.com</p>
      </div>
      <div className="footer-social">
        <h3>Follow Us</h3>
-       <div className="social-icons">
-         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+       <div className="footsocial-icons">
+         <a href="https://facebook.com/techniknest" target="_blank" rel="noopener noreferrer">
            <FaFacebookF />
          </a>
-         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-           <FaTwitter />
-         </a>
-         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        
+         <a href="https://linkedin.com/company/techniknest" target="_blank" rel="noopener noreferrer">
            <FaLinkedinIn />
          </a>
-         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+         <a href="https://instagram.com/techniknest" target="_blank" rel="noopener noreferrer">
            <FaInstagram />
          </a>
        </div>

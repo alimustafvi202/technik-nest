@@ -29,7 +29,7 @@ const Header = () => {
       {/* Social Icons */}
       <div className="social-icons">
         <a
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/company/techniknest"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -37,7 +37,7 @@ const Header = () => {
           <FaLinkedin size={20} />
         </a>
         <a
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/techniknest"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -45,7 +45,7 @@ const Header = () => {
           <FaInstagram size={20} />
         </a>
         <a
-          href="https://www.facebook.com"
+          href="https://www.facebook.com/techniknest"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"

@@ -269,6 +269,7 @@
     }
   }
   
+  
   /* Media Queries */
   @media screen and (max-width: 767px) {
     .preloader-animation .spinner {
@@ -551,50 +552,6 @@
 }
 
 
-.button-group {
-    display: flex;
-    gap: 20px;
-    position: relative;
-    top: 120px;
-    left: 130px;
-}
-
-.button-group button {
-    background: transparent;
-    color: white;
-    padding: 12px 24px;
-    border: 2px solid white;
-    cursor: pointer;
-    border-radius: 25px;
-    font-size: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.3s, color 0.3s, border-color 0.3s;
-}
-
-/* Hover Effect */
-.button-group button:hover {
-    background: white;
-    color: #6b5ce7;
-    border-color: white;
-}
-
-/* Focus State */
-.button-group button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-/* Disabled State */
-.button-group button:disabled {
-    background: #e0e0e0;
-    color: #a0a0a0;
-    cursor: not-allowed;
-    border-color: #e0e0e0;
-}
-
-
 .welcome-thumb-wrapper {
     position: relative;
     text-align: right;
@@ -628,6 +585,53 @@
         transform: translateY(-70px); /* Return to initial position */
     }
 }
+
+/* Portfolio Us Button */
+.button-container {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Align the buttons vertically */
+  gap: 20px; /* Add space between the buttons */
+  margin-top: 15%; /* Adjust the top margin for the container */
+  margin-right: 20%;
+}
+
+.mainbtn, .mainbtn1 {
+  background: transparent; /* Button background color */
+  color: #ffffff; /* Button text color */
+  padding: 12px 24px; /* Padding for a balanced look */
+  border: 2px solid #ffffff; /* Add a border matching the text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 1em; /* Font size */
+  font-weight: bold; /* Bold text for emphasis */
+  transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+  opacity: 0;
+  animation: fadeIn 3s forwards; /* Fade-in animation */
+}
+
+/* Hover Effect */
+.mainbtn:hover, .mainbtn1:hover {
+  background: #6b5ce7; /* Purple background on hover */
+  color: white; /* White text on hover */
+  border-color: #6b5ce7; /* Match border with background */
+}
+
+/* Focus State for Accessibility */
+.mainbtn:focus, .mainbtn1:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(107, 92, 231, 0.5); /* Add a subtle purple glow */
+}
+
+/* Disabled State */
+.mainbtn:disabled, .mainbtn1:disabled {
+  background: #e0e0e0; /* Gray background for disabled state */
+  color: #a0a0a0; /* Light gray text */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+  border-color: #e0e0e0; /* Match border with background */
+}
+
+
 
 /* Services.css */
 .services-container1 {
@@ -784,7 +788,80 @@
   text-decoration: underline;
 }
 
+/* Portfolio Us Button */
+.portbtn {
+  background:transparent; /* Button background color */
+  color: #4800ff; /* Button text color */
+  padding: 12px 24px; /* Padding for a balanced look */
+  border: 2px solid #6b5ce7; /* Add a border matching the text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 1em; /* Font size */
+  font-weight: bold; /* Bold text for emphasis */
+  transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+  margin-left: 45%;
+  margin-top: 5%;
+  opacity: 0;
+  animation: fadeIn 3s forwards; /* Hire Us button fade-in animation */
+}
 
+/* Hover Effect */
+.portbtn:hover {
+  background: #6b5ce7; /* Purple background on hover */
+  color: white; /* White text on hover */
+  border-color: #6b5ce7; /* Match border with background */
+}
+
+/* Focus State for Accessibility */
+.portbtn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(107, 92, 231, 0.5); /* Add a subtle purple glow */
+}
+
+/* Disabled State */
+.portbtn:disabled {
+  background: #e0e0e0; /* Gray background for disabled state */
+  color: #a0a0a0; /* Light gray text */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+  border-color: #e0e0e0; /* Match border with background */
+}
+
+/* Portfolio Us Button */
+.footerbtn {
+  background:transparent; /* Button background color */
+  color: #ffffff; /* Button text color */
+  padding: 12px 24px; /* Padding for a balanced look */
+  border: 2px solid #ffffff; /* Add a border matching the text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 1em; /* Font size */
+  font-weight: bold; /* Bold text for emphasis */
+  transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+  margin-left: 45%;
+  opacity: 0;
+  animation: fadeIn 3s forwards; /* Hire Us button fade-in animation */
+}
+
+/* Hover Effect */
+.footerbtn:hover {
+  background: #6b5ce7; /* Purple background on hover */
+  color: white; /* White text on hover */
+  border-color: #6b5ce7; /* Match border with background */
+}
+
+/* Focus State for Accessibility */
+.footerbtn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(107, 92, 231, 0.5); /* Add a subtle purple glow */
+}
+
+/* Disabled State */
+.footerbtn:disabled {
+  background: #e0e0e0; /* Gray background for disabled state */
+  color: #a0a0a0; /* Light gray text */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+  border-color: #e0e0e0; /* Match border with background */
+}
 
 
 /* Services.css */
@@ -907,7 +984,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #8449f8, #feb47b);
+  background-image: linear-gradient(to bottom, rgba(39, 0, 136, 0.964), rgba(255, 0, 255, 0.8)); /* Blue to Pink Gradient */
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -1108,21 +1185,82 @@
       text-align: left;
   }
 }
-
 .contact-container {
   display: flex;
+  flex-direction: row; /* Default layout for larger screens */
   justify-content: space-between;
   align-items: flex-start;
   padding: 40px;
+  gap: 20px;
 }
 
-/* Left Container */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack containers vertically */
+    align-items: center; /* Center align for better appearance */
+    padding: 20px;
+  }
+
+  .left-container,
+  .right-container {
+    margin-right: 0; /* Remove side margins */
+    width: 100%; /* Take full width */
+    max-width: none; /* Remove max-width for full use of space */
+  }
+
+  .left-container h1,
+  .left-container p,
+  .info-card {
+    margin-left: 0; /* Align content to the left */
+    text-align: center; /* Center align text for better readability */
+  }
+
+  .info-card {
+    width: 80%; /* Adjust card width */
+    margin: 10px auto; /* Center horizontally */
+  }
+}
+
+@media (max-width: 480px) {
+  .left-container h1 {
+    font-size: 24px; /* Smaller font size for headings */
+  }
+
+  .left-container p {
+    font-size: 14px; /* Smaller font size for paragraphs */
+  }
+
+  .info-card {
+    height: auto; /* Allow cards to adapt their height */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .info-card p {
+    font-size: 16px; /* Adjust text size */
+  }
+
+  .right-container {
+    padding: 20px; /* Reduce form container padding */
+    align-items: flex-start;
+  }
+
+  input,
+  textarea {
+    font-size: 14px; /* Smaller text for inputs */
+  }
+
+  button {
+    font-size: 14px; /* Adjust button text size */
+    padding: 10px 15px; /* Adjust padding */
+  }
+}
+
+/* Adjust Left Container */
 .left-container {
   flex: 1;
   margin-right: 20px;
   background: #fff;
   padding: 20px;
-  
 }
 
 .left-container h1 {
@@ -1144,7 +1282,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 20px; /* Increased padding for larger height */
+  padding: 20px;
   height: 80px;
   width: 50%;
   margin-left: 20%;
@@ -1153,7 +1291,6 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   border-bottom: 4px solid #2e4afa;
- 
 }
 
 .info-card:first-child {
@@ -1176,13 +1313,12 @@
   font-weight: bold;
 }
 
-/* Right Container */
+/* Adjust Right Container */
 .right-container {
   flex: 1;
   max-width: 500px;
   background: #fff;
   padding: 50px;
-  margin-right: 10%;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -1195,7 +1331,7 @@ form {
 
 input,
 textarea {
-  width: auto;
+  width: 100%; /* Adjust width for responsiveness */
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -1216,7 +1352,7 @@ textarea {
 }
 
 button {
-  background: linear-gradient(90deg, #af69ff, #ff6b6b);
+  background: linear-gradient(90deg, #af69ff, #6b5ce7);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -1232,8 +1368,9 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(90deg, #ff6b6b, #af69ff);
+  background: linear-gradient(90deg, #6b5ce7, #af69ff);
 }
+
 
 
 
@@ -1317,6 +1454,7 @@ button:hover {
 /* Footer Social */
 .footer-social {
   flex: 1;
+  
 }
 
 .footer-social h3 {
@@ -1328,6 +1466,7 @@ button:hover {
 .social-icons {
   display: flex;
   gap: 10px;
+  
 }
 
 .social-icons a {
@@ -1337,14 +1476,17 @@ button:hover {
   width: 40px;
   height: 40px;
   background: #af69ff;
+  
   border-radius: 50%;
   color: white;
   font-size: 18px;
   transition: background 0.3s ease;
+  
 }
 
 .social-icons a:hover {
-  background: #007BFF;
+  background: #6b5ce7;
+  color: white;
 }
 
 /* Responsive Design */
@@ -1361,3 +1503,30 @@ button:hover {
     margin-bottom: 20px;
   }
 }
+
+.footsocial-icons {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.footsocial-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #af69ff;
+  
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  transition: background 0.3s ease;
+  
+}
+
+.footsocial-icons a:hover {
+  background: #6b5ce7;
+  color: white;
+}
+

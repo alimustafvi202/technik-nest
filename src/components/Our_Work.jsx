@@ -51,7 +51,9 @@ const OurWork = () => {
                     </div>
                 </div>*/}
             </div>
-            <a href="#" className="portfolio-link">Learn More</a>
+            <div>
+            <button className="portbtn">View More</button>
+        </div>
         </div>
     );
 };

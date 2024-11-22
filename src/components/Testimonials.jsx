@@ -1,25 +1,28 @@
 import React from "react";
 import "./styles.css";
+import xup from '../assets/xup.png';
+import SPCAI from '../assets/spcai.png';
+import paf from '../assets/pafiast.png';
 
 const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      logo: "path/to/spcai-logo.png", // Replace with the actual image path
+      logo: SPCAI, // Replace with the actual image path
       name: "SPCAI",
       type: "Startup",
       text: "The graphic designs from Technik Nest beautifully captured our brand's essence. Their creativity and professionalism made the collaboration enjoyable.",
     },
     {
       id: 2,
-      logo: "path/to/xup-studio-logo.png", // Replace with the actual image path
+      logo: xup, // Replace with the actual image path
       name: "XUP Studio",
       type: "Startup",
       text: "Technik Nest created a fantastic mobile app for our studio. Their innovative approach and attention to detail truly enhanced the user experience.",
     },
     {
       id: 3,
-      logo: "path/to/paf-iast-logo.png", // Replace with the actual image path
+      logo: paf, // Replace with the actual image path
       name: "PAF IAST",
       type: "University",
       text: "Technik Nest delivered an outstanding website for our university. Their expertise and professionalism made the entire process seamless, and we are extremely pleased with the result.",

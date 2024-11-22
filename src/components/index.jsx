@@ -14,9 +14,9 @@ const Welcome = () => {
                             <p className="text-white my-4">
                                 Technik Nest is a leading software development house in Pakistan, specializing in crafting custom software solutions, web applications, and mobile apps. Our dedicated team blends cutting-edge technology with industry expertise to deliver innovative and efficient solutions that drive business success. Committed to excellence and customer satisfaction, Technik Nest transforms complex challenges into seamless, user-friendly products that align with your goals and vision.
                             </p>
-                            <div className="button-group">
-                                <button className="btn">Start a Project</button>
-                                <button className="btn">Contact With Us</button>
+                            <div className="button-container">
+                                <button className="mainbtn">Start a Project</button>
+                                <button className="mainbtn1">Contact With Us</button>
                             </div>
                         </div>
                     </div>
