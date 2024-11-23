@@ -8,7 +8,7 @@ import Team from './components/team';
 import Testimonials from './components/Testimonials';
 import Contact from './components/contact';
 import Footer from './components/footer';
-import NavBar from './components/NavBar';
+import Navbar from './components/NavBar';
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
       {!showPreloader && ( // Render other components after Preloader
         <>
         
-        <NavBar/>
+        <Navbar/>
           <Welcome/>
           <Services/>
           <OurWork/>
