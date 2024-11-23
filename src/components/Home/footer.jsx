@@ -51,10 +51,16 @@ const Footer = () => {
        </div>
      </div>
    </footer>
-   <div className="footer-bottom">
-        <p>© 2024 All Rights Reserved</p>
-        <p>Made By <span className="footer-highlight">Technik Nest</span></p>
-      </div>
+  <footer className="foot-bar">
+  <div className="foot-content">
+    <div className="foot-left">
+      &copy; 2024 All Rights Reserved
+    </div>
+    <div className="foot-right">
+      Made with <span className="heart-icon">&hearts;</span> by <a href="https://techniknest.tech" target="_blank" rel="noopener noreferrer">Technik Nest</a>
+    </div>
+  </div>
+</footer>
    </div>
   );
 };
