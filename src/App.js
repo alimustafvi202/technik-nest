@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import Header from './components/header';
-import Preloader from './components/Preloader';
-import Welcome from './components/index';
-import Services from './components/Services-short';
-import OurWork from './components/Our_Work';
-import Team from './components/team';
-import Testimonials from './components/Testimonials';
-import Contact from './components/contact';
-import Footer from './components/footer';
-import Navbar from './components/NavBar';
+import Header from './components/Home/header';
+import Preloader from './components/Home/Preloader';
+import Welcome from './components/Home/index';
+import Services from './components/Home/Services-short';
+import OurWork from './components/Home/Our_Work';
+import Team from './components/Home/team';
+import Testimonials from './components/Home/Testimonials';
+import Contact from './components/Home/contact';
+import Footer from './components/Home/footer';
+import Navbar from './components/Home/NavBar';
 
 
 function App() {
