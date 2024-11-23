@@ -5,13 +5,9 @@ import App from '../../assets/app.png';
 const OurWork = () => {
     return(
         <div className="portfolio">
-            <h1 className="portfolio-title">We provide the best digital services</h1>
+            <h1 className="portfolio-title">Our Work</h1>
             <p className="portfolio-description">
-                Technik Nest is your trusted partner for cutting-edge digital solutions. We offer a
-                comprehensive range of services designed to help your business thrive in the digital age.
-                From website development and mobile app creation to digital marketing and e-commerce
-                solutions, our team of experts delivers innovative and effective strategies tailored to your
-                unique needs.
+            Our recent projects showcase our ability to deliver innovative digital solutions that drive business growth. From developing cutting-edge e-commerce platforms to creating engaging mobile apps, our team has successfully tackled a diverse range of challenges. Explore our portfolio to see how we’ve helped businesses like yours achieve their goals.
             </p>
             <div className="portfolio-grid">
                 <div className="portfolio-card1">

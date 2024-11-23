@@ -85,8 +85,9 @@ const Services = () => {
         </div>
       </div>
     </div>
-      {/* Second shape that will be flipped */}
-      <div className="service-shape-bottom flipped-shape">
+
+
+    <div className="service-shape-bottom1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" fill="#FFFFFF">
           <path
             className="shape-fill"
@@ -94,6 +95,10 @@ const Services = () => {
           ></path>
         </svg>
       </div>
+
+      
+      {/* Second shape that will be flipped */}
+     
     </div>
   );
 };
