@@ -1208,7 +1208,7 @@
 
   .left-container
     {
-      width: 120%; /* Take full width */
+      width: 100%; /* Take full width */
       max-width: none; /* Remove max-width for full use of space */
     }
   
