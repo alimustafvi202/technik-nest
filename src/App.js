@@ -1,25 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home/Home'; // Import the Home component
-import About from './components/AboutUs/About';
-import Services from './components/Services/Services';
-import Team from './components/Team/Team';
-import Portfolio from './components/Portfolio/Portfolio';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home/Home';
+import AboutUs from './components/AboutUs/About';
 
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <Routes>
-        {/* Define routes for different components */}
+      <div className="App">
+        <Routes>
+          
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Services />} />
-        <Route path="team" element={<Team />} />
-        <Route path="portfolio" element={<Portfolio />} />
-      </Routes>
+        <Route path="/about" element={<AboutUs />} />
+        </Routes>
+      </div>
     </Router>
-  );
-};
+  )
+}
 
 export default App;

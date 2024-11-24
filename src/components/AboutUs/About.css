@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1, h2 {
+    color: #4a148c;
+    text-align: center;
+  }
+  
+  p {
+    color: #333;
+  }
+  
+  /* Header */
+  .about-header {
+    background: #4a148c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Intro Section */
+  .about-intro {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .intro-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .intro-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #4a148c;
+  }
+  
+  /* Mission Section */
+  .about-mission {
+    background: #f9f9f9;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* Services Section */
+  .about-services {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .services-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .service-item {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .service-item img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact Section */
+  .about-contact {
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: #4a148c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Footer Section */
+  .about-footer {
+    background: #4a148c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-footer p {
+    margin: 10px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-list {
+      flex-direction: column;
+    }
+  }
+  
