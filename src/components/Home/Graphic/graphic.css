@@ -1,0 +1,221 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+/* Parallax Section */
+.parallax-section {
+    height: 80vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.parallax-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.parallax-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.parallax-content p {
+    font-size: 1.2rem;
+}
+
+/* Content Section */
+.content-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.split-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.split-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.split-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #4e54c8;
+}
+
+.split-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.split-image {
+    flex: 1;
+    text-align: center;
+}
+
+.split-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.split-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.graphic-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4e54c8;
+    color: white;
+    font-size: 1rem;
+}
+
+.graphic-footer .heart {
+    color: red;
+    font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .parallax-content h2 {
+        font-size: 2rem;
+    }
+
+    .split-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .split-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Footer Bar Styles */
+.foot-bar {
+    background-color: #e4e4e49f; /* Dark background */
+    color: #2b2b2b; /* White text color */
+    padding: 10px 120px; /* Padding for spacing */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between left and right content */
+    align-items: center; /* Vertically center items */
+    font-family: Arial, sans-serif; /* Font style */
+    font-size: 14px; /* Font size */
+    
+  }
+  
+  .foot-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .foot-left {
+    margin-left: 10px; /* Add some gap on the left */
+  }
+  
+  .foot-right a {
+    color: #00bcd4; /* Highlighted link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for link */
+  }
+  
+  .foot-right a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .heart-icon {
+    color: red; /* Red color for heart */
+    font-size: 16px; /* Slightly larger heart */
+    margin: 0 5px; /* Add spacing around the heart */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .foot-bar {
+      flex-direction: column; /* Stack content vertically on smaller screens */
+      text-align: center; /* Center text */
+      padding: 10px; /* Add more padding for mobile devices */
+    }
+  
+    .foot-content {
+      flex-direction: column; /* Stack content vertically */
+      justify-content: center; /* Center items */
+      align-items: center; /* Align items in the center */
+    }
+  
+    .foot-left,
+    .footer-right {
+      margin: 5px 0; /* Add margin between sections */
+    }
+  
+    .foot-left {
+      margin-left: 0; /* Remove left margin on smaller screens */
+    }
+  }

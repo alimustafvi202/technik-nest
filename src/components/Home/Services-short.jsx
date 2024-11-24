@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-
+import { Link } from 'react-router-dom';
 const Services = () => {
   
   return (
@@ -10,34 +10,22 @@ const Services = () => {
         <h2>Web Development</h2>
         <p>
           At Technik Nest, we deliver bespoke web development services designed
-          to create engaging, high-performance websites that align with your
-          business goals. Our team specializes in developing responsive,
-          user-centric websites that enhance user experience and drive
-          conversions. We employ the latest technologies and best practices to
-          ensure your website is fast, secure, and optimized for all devices.
+          to create engaging, websites that align with your
+          business goals. 
         </p>
       </div>
       <div className="service-card">
         <h2>App Development</h2>
         <p>
           At Technik Nest, we excel in crafting custom mobile apps that provide
-          seamless experiences on both Android and iOS platforms. Our
-          development process is focused on delivering high-performance apps
-          with intuitive user interfaces and robust functionality. We integrate
-          the latest technologies to ensure your app is scalable, secure, and
-          equipped with advanced features that meet your business objectives.
+          seamless experiences on both Android and iOS platforms.
         </p>
       </div>
       <div className="service-card">
         <h2>Data Analytics</h2>
         <p>
           At Technik Nest, we offer comprehensive data analytics services that
-          turn complex data into clear, actionable insights. Our team employs
-          advanced analytical techniques to analyze your data, identify trends,
-          and provide strategic recommendations that drive business growth and
-          efficiency. We help businesses harness the power of their data by
-          providing detailed reports and visualizations that facilitate informed
-          decision-making.
+          turn complex data into clear, actionable insights. 
         </p>
       </div>
 </div>
@@ -74,7 +62,7 @@ const Services = () => {
             We create high-performance, custom mobile apps with seamless design and functionality,
             ensuring a superior user experience across platforms.
           </p>
-          <a href="#" className="service-link">Learn More</a>
+          <Link to="/graphic" className="service-link">Learn More</Link>
         </div>
         <div className="service-card1">
           <h2 className="service-title">Graphic Designing</h2>
@@ -82,7 +70,7 @@ const Services = () => {
             We create high-impact, custom graphic designs with seamless creativity and precision,
             ensuring a strong brand presence across all platforms.
           </p>
-          <a href="#" className="service-link">Learn More</a>
+          <Link to="/graphic" className="service-link">Learn More</Link>
         </div>
       </div>
     </div>

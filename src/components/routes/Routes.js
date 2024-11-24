@@ -6,6 +6,7 @@ import ServicesMain from '../Services/Services';
 import PastWork from '../Portfolio/Portfolio';
 import HireUs from '../Hire-Us/Hire-Us';
 import Home from '../Home/Home';
+import Graphic from '../Home/Graphic/graphic';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -18,7 +19,7 @@ const AnimatedRoutes = () => {
         <Route path='/services' element={<ServicesMain/>}/>
         <Route path="/portfolio" element={<PastWork />} />
         <Route path="/hiring" element={<HireUs />} />
-
+        <Route path="/graphic" element={<Graphic />} />
       </Routes>
     </AnimatePresence>
   );
