@@ -5,9 +5,14 @@ import OurWork from "../Home/Our_Work";
 import Contact from "../Home/contact";
 import Footer from "../Home/footer";
 import Testimonials from "../Home/Testimonials";
-
+import { motion } from 'framer-motion';
 const PastWork = () => {
   return (
+    <motion.div
+            // Longer duration for a smooth effect
+  >
+   
+  
     <div className="ourwork">
       {/* Header Section */}
       <Navbar/>
@@ -22,6 +27,7 @@ const PastWork = () => {
       <Contact/>
       <Footer/>
       </div>
+      </motion.div>
       );
       }
       export default PastWork;

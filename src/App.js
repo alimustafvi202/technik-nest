@@ -5,20 +5,19 @@ import AboutUs from './components/AboutUs/About';
 import ServicesMain from './components/Services/Services';
 import PastWork from './components/Portfolio/Portfolio';
 import HireUs from './components/Hire-Us/Hire-Us';
+import AnimatedRoutes from './components/routes/Routes';
+import Navbar from './components/Home/';
+
 
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Routes>
-          
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path='/services' element={<ServicesMain/>}/>
-        <Route path="/portfolio" element={<PastWork />} />
-        <Route path="/hiring" element={<HireUs />} />
-        </Routes>
+      
+      <AnimatedRoutes />
+      
+    
       </div>
     </Router>
   )
