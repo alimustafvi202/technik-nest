@@ -1655,6 +1655,9 @@ button:hover {
   background-color: #fff;
   transition: transform 0.3s ease;
 }
+.close-btn{
+  display: none;
+}
 
 /* Responsive Design - Adjustments for Smaller Screens */
 @media (max-width: 768px) {
