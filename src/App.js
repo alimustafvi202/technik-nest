@@ -16,8 +16,6 @@ function App() {
       <div className="App">
       
       <AnimatedRoutes />
-      
-    
       </div>
     </Router>
   )

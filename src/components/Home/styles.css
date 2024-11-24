@@ -597,9 +597,9 @@
 }
 
 .service-card1 {
-  background-color: #8f3be1;
+  background-color: transparent;
   border: 1px solid #000000;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -615,13 +615,13 @@
 
 .service-description {
   font-size: 14px;
-  color: #000000;
+  color: #424242;
   margin-bottom: 20px;
 }
 
 .service-link {
   font-size: 14px;
-  color: #ff0000;
+  color: #767676;
   text-decoration: none;
   font-weight: bold;
 }

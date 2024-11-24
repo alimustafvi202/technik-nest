@@ -9,7 +9,7 @@ import Testimonials from './Testimonials';
 import Contact from './contact';
 import Footer from './footer';
 import Navbar from './NavBar';
-
+import { motion } from 'framer-motion';
 const Home = () => {
   const [showPreloader, setShowPreloader] = useState(true);
 
@@ -22,6 +22,8 @@ const Home = () => {
   }, []);
 
   return (
+  
+
     <>
       {showPreloader ? <Preloader /> : null} {/* Render Preloader only if showPreloader is true */}
       {!showPreloader && ( // Render other components after Preloader
@@ -37,6 +39,7 @@ const Home = () => {
         </>
       )}
     </>
+    
   );
 };
 

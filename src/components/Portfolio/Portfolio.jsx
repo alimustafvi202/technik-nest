@@ -1,33 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react"; // Import useState and useEffect
 import "./Portfolio.css";
 import Navbar from "../Home/NavBar";
 import OurWork from "../Home/Our_Work";
 import Contact from "../Home/contact";
 import Footer from "../Home/footer";
 import Testimonials from "../Home/Testimonials";
-import { motion } from 'framer-motion';
+import Preloader from '../Home/Preloader';
+
 const PastWork = () => {
+  const [showPreloader, setShowPreloader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPreloader(false); // Hide Preloader after 2 seconds
+    }, 500);
+
+    return () => clearTimeout(timer); // Cleanup timer on component unmount
+  }, []);
+
   return (
-    <motion.div
-            // Longer duration for a smooth effect
-  >
-   
-  
-    <div className="ourwork">
-      {/* Header Section */}
-      <Navbar/>
-      <header className="ourwork-header">
-        <div className="ourwork-container">
-          <h1>Our Past Work</h1>
-          <p>Home &gt; HireUs</p>
-        </div>
-      </header>
-      <OurWork/>
-      <Testimonials/>
-      <Contact/>
-      <Footer/>
-      </div>
-      </motion.div>
-      );
-      }
-      export default PastWork;
+    <>
+      {showPreloader ? <Preloader /> : null} {/* Render Preloader only if showPreloader is true */}
+      
+      {/* Render other components after Preloader is hidden */}
+      {!showPreloader && (
+        
+          <div className="ourwork">
+            {/* Header Section */}
+            <Navbar />
+            <header className="ourwork-header">
+              <div className="ourwork-container">
+                <h1>Our Past Work</h1>
+                <p>Home &gt; HireUs</p>
+              </div>
+            </header>
+            <OurWork />
+            <Testimonials />
+            <Contact />
+            <Footer />
+          </div>
+        
+      )}
+    </>
+  );
+};
+
+export default PastWork;
