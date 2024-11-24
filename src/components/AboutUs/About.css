@@ -1,25 +1,3 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  h1, h2 {
-    color: #4a148c;
-    text-align: center;
-  }
-  
-  p {
-    color: #333;
-  }
-  
   /* Header */
   .about-header {
     background: #4a148c;
