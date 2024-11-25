@@ -1,24 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import AboutUs from './components/AboutUs/About';
 import ServicesMain from './components/Services/Services';
 import PastWork from './components/Portfolio/Portfolio';
 import HireUs from './components/Hire-Us/Hire-Us';
-import AnimatedRoutes from './components/routes/Routes';
-import Navbar from './components/Home/';
-
-
+import Graphic from './components/Home/Graphic/graphic';
+import Navbar from './components/Home/NavBar';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-      
-      <AnimatedRoutes />
-      </div>
-    </Router>
-  )
+    
+    <BrowserRouter>
+    
+      <Routes>
+        
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/services" element={<ServicesMain />} />
+        <Route path="/portfolio" element={<PastWork />} />
+        <Route path="/hiring" element={<HireUs />} />
+        <Route path="/graphic" element={<Graphic />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

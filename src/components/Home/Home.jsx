@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Header from './header';
 import Preloader from './Preloader';
 import Welcome from './index';
 import Services from './Services-short';
@@ -8,7 +7,7 @@ import Team from './team';
 import Testimonials from './Testimonials';
 import Contact from './contact';
 import Footer from './footer';
-import { motion } from 'framer-motion';
+
 const Home = () => {
   const [showPreloader, setShowPreloader] = useState(true);
 

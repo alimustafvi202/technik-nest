@@ -1,10 +1,13 @@
 import React from "react";
 import './styles.css';
 import Image from '../../assets/s.png';
+import Navbar from "./NavBar";
 
 const Welcome = () => {
     return (
+        
         <section id="home" className="section welcome-area bg-overlay overflow-hidden d-flex align-items-center">
+            <Navbar/>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-12 col-md-7">
