@@ -1413,74 +1413,158 @@ button:hover {
 }
 
 
+/* Base Navbar Styling */
 .navbar {
   display: flex;
-  width: 97%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: transparent;
   color: #ffffff;
-
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Ensure it stays on top */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-/* Default Navbar Styling */
-.navbar {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: transparent; /* Start with transparent background */
-  color: #ffffff; /* Text is white by default */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* Ensure it's always on top */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Default Navbar Styling */
-.navbar {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: transparent; /* Default transparent background */
-  color: #ffffff; /* Default white text */
-  position: fixed; /* Fixed to the top */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* Ensure it's always on top */
+  z-index: 1000;
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 /* Navbar Scrolled State */
 .navbar.scrolled {
-  background-color: #ffffff; /* White background when scrolled */
-  color: #000000; /* Black text */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.navbar.scrolled span{
+
+.navbar.scrolled span {
   background-color: #000000;
 }
-/* Link and Hover Styling in Scrolled State */
+
 .navbar.scrolled a {
-  color: #000000; /* Black links */
+  color: #000000;
 }
+
 .navbar.scrolled button {
   color: black;
   border: 2px solid #000000;
 }
+
 .navbar.scrolled a:hover {
-  color: #2200ff; /* Hover color */
+  color: #2200ff;
 }
+
+/* Responsive Settings */
+
+/* Tablet Portrait and Smaller Desktops */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .navbar button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Devices <= 991px */
+@media (max-width: 991px) {
+  .navbar {
+    flex-wrap: wrap; /* Allow items to wrap */
+  }
+
+  .navbar a,
+  .navbar button {
+    margin: 5px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+}
+
+/* Devices <= 767px */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+
+  .navbar a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .navbar button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .navbar .menu-toggle {
+    display: block; /* Show toggle button */
+  }
+
+  .navbar .menu-items {
+    display: none; /* Hide menu items initially */
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  .navbar .menu-items a {
+    text-align: center;
+    padding: 10px 0;
+    color: #000000;
+  }
+
+  .navbar.scrolled .menu-items a {
+    color: #000000;
+  }
+}
+
+/* Devices <= 575px */
+@media (max-width: 575px) {
+  .navbar {
+    flex-direction: row; /* Stack navbar items */
+    padding: 5px;
+    width: 100%;
+  }
+
+  .navbar a {
+    font-size: 10px;
+    margin: 0 0px;
+  }
+
+  .navbar button {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .navbar .menu-items {
+    display: none; /* Hide the menu items */
+  }
+
+  .navbar .menu-toggle {
+    display: block; /* Show toggle button */
+  }
+}
+
+/* Toggle Menu Functionality */
+.menu-toggle {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.menu-toggle:hover {
+  color: #2200ff;
+}
+
 
 .logo img {
   height: 90px;
