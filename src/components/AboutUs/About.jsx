@@ -1,21 +1,41 @@
-import React from "react";
+import {React, useState, useEffect } from "react";
 import "./About.css";
 import Footer from "../Home/footer";
 import Contact from "../Home/contact";
+import Navbar from "../Home/NavBar";
+import Preloader from "../Home/Preloader";
+
+// Import images
+import aboutThumb1 from "../../assets/about/about_thumb_1.jpg";
+import missionImage from "../../assets/about/about_thumb_2.png";
+import whatWeDoImage from "../../assets/about/about_thumb_3.png";
 
 const AboutUs = () => {
-  return (
+
+  const [showPreloader, setShowPreloader] = useState(true);
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowPreloader(false); // Hide Preloader after 2 seconds
+      }, 500);
+  
+      return () => clearTimeout(timer); // Cleanup timer on component unmount
+    }, []);
+  
+    return (
+      <>
+        {showPreloader ? <Preloader /> : null} {/* Render Preloader only if showPreloader is true */}
+        
+        {/* Render other components after Preloader is hidden */}
+        {!showPreloader && (
+
     <div className="about-us">
+      <Navbar />
 
       {/* Intro Section */}
       <section className="about-intro">
         <div className="container">
           <div className="intro-content">
-            <img
-              src="/images/intro-image.png" // Replace with your actual image path
-              alt="Introduction"
-              className="intro-image"
-            />
             <h1>ABOUT US</h1>
             <p className="intro-text">
               We provide solutions that grow your business.
@@ -25,66 +45,62 @@ const AboutUs = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="about-mission">
+      <section className="overview-section">
         <div className="container">
-          <h2>Our Mission</h2>
-          <p>
-            Our mission is to empower businesses and institutions with
-            state-of-the-art software solutions that drive efficiency, enhance
-            user experiences, and foster growth. We strive to be a trusted
-            partner in navigating the ever-evolving landscape of technology,
-            providing our clients with the tools and support they need to
-            succeed.
-          </p>
-        </div>
-      </section>
+          {/* First Row - Image on Right */}
+          <div className="row reverse">
+            <div className="col text-column">
+              <h2>We provide solutions that grow your business.</h2>
+              <p>
+                At TechX Hub, we believe in building long-lasting relationships
+                with our clients. Our focus is on delivering reliable, scalable,
+                and innovative solutions tailored to meet your business goals.
+                We’re committed to exceeding your expectations and helping your
+                business thrive.
+              </p>
+            </div>
+            <div className="col image-column">
+              <img src={aboutThumb1} alt="Coder Illustration" />
+            </div>
+          </div>
 
-      {/* What We Do Section */}
-      <section className="about-services">
-        <div className="container">
-          <h2>What We Do</h2>
-          <div className="services-list">
-            <div className="service-item">
-              <img
-                src="/images/software-dev.png" // Replace with your actual image path
-                alt="Custom Software Development"
-              />
-              <h3>Custom Software Development</h3>
+          {/* Second Row - Image on Right */}
+          <div className="row reverse">
+            <div className="col image-column">
+              <img src={missionImage} alt="Mission Illustration" />
+            </div>
+            <div className="col text-column">
+              <h2>Our Mission</h2>
               <p>
-                We design and develop specific solutions that address unique
-                challenges and opportunities.
+                Our mission is to empower businesses and institutions with
+                state-of-the-art software solutions that drive efficiency,
+                enhance user experiences, and foster growth. We strive to
+                provide tools and support that help you succeed.
               </p>
             </div>
-            <div className="service-item">
-              <img
-                src="/images/mobile-app.png" // Replace with your actual image path
-                alt="Mobile App Development"
-              />
-              <h3>Mobile App Development</h3>
-              <p>
-                Deliver intuitive and engaging apps that enhance the mobile
-                experience.
-              </p>
+          </div>
+
+          {/* Third Row - Image on Left */}
+          <div className="row">
+            <div className="col image-column">
+              <img src={whatWeDoImage} alt="What We Do Illustration" />
             </div>
-            <div className="service-item">
-              <img
-                src="/images/game-dev.png" // Replace with your actual image path
-                alt="Game Development"
-              />
-              <h3>Game Development</h3>
+            <div className="col text-column">
+              <h2>What We Do</h2>
               <p>
-                We craft immersive games that captivate players and bring
-                creative visions to life.
+                Custom Software Development: We design and develop specific
+                solutions that address unique challenges and opportunities.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-        <Contact />
-
-        <Footer />
+      <Contact />
+      <Footer />
     </div>
+       )}
+    </>
   );
 };
 
