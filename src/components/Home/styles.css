@@ -567,34 +567,35 @@
 /* ******************************
 :: 8.0 WELCOME AREA CSS
 ****************************** */
+/* Base CSS */
 .welcome-area {
   display: flex;
-    height: 700px;
-    max-width: 100%;
-}
-.welcome-intro h1, .welcome-intro h2 {
-    line-height: 1; /* Remove extra line spacing */
-    margin: 0; /* Remove any default margin */
-    margin-left: 120px;
-    color: white;
-    position: relative;
-    top: 130px;
-    
-}
-.welcome-intro h1 {
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: -1.6px;
-}
-.welcome-intro h2 {
-    font-size: 70px;
-    font-weight: 700;
-    letter-spacing: -1.6px;
-    
+  height: 700px;
+  max-width: 100%;
 }
 
+.welcome-intro h1, .welcome-intro h2 {
+  line-height: 1;
+  margin: 0;
+  margin-left: 120px;
+  color: white;
+  position: relative;
+  top: 130px;
+}
+
+.welcome-intro h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -1.6px;
+}
+
+.welcome-intro h2 {
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: -1.6px;
+}
 .welcome-area.bg-overlay::after {
-    z-index: -2;
+  z-index: -2;
 }
 .welcome-intro p {
   font-size: 16px;
@@ -603,127 +604,254 @@
   top: 150px;
   left: 120px;
   width: 750px; /* Specify width of the paragraph block */
-  height: auto; /* Automatically adjust the height based on content */
-  max-width: 90%; /* Optional: to ensure the paragraph doesn't stretch too wide on large screens */
-  margin: 0; /* Remove any default margin */
-  padding: 10px; /* Optional: padding for some space inside the paragraph */
+  height: auto;
+  max-width: 90%;
+  margin: 0;
   box-sizing: border-box;
+  line-height: 1.4;
 }
 
-@media (max-width:768px) {
+.welcome-thumb-wrapper {
+  position: absolute;
+  text-align: right;
+  margin-bottom: 90%;
+  overflow: visible;
+}
+
+.welcome-thumb-1 {
+  display: flex;
+  margin-left: 170%;
+  margin-bottom: 90%;
+  height: 380px;
+  animation: moveUpDown 5s ease-in-out infinite;
+  transform: scale(1);
+}
+
+/* Animation for the image movement */
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-350px);
+  }
+  50% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(-350px);
+  }
+}
+@media (max-width:1467px){
+.welcome-intro p{
+  width:40% ;
+}
+.welcome-thumb-1 {
+  max-width: 0%; /* Scale the image to fit the container */
+  margin-left: 150%; /* Remove left margin */
+  margin-bottom: 10px; /* Reduce margin to fit content */
+  height: 350px; /* Adjust image size to maintain aspect ratio */
+  transform: scale(1);
+}
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-500px);
+  }
+  50% {
+    transform: translateY(-480px);
+  }
+  100% {
+    transform: translateY(-500px);
+  }
+}
+
+}
+/* Adjustments for screens with width <= 1280px */
+@media (max-width: 1280px) {
+  /* Paragraph Styling */
   .welcome-intro p {
     margin: 0;
-       margin-left: 40px;
-      padding: 0; /* Remove padding */
-      width: 100%; /* Make the paragraph take up the full width of its container */
-      text-align: left; /* Align text content to the left */
-      position: relative; /* Keep position relative */
-      left: 0; /* Move the paragraph to the left */
-      box-sizing: border-box; /* Ensure consistent width calculation */
-  }
-}
-@media (max-width: 768px) {
-  .welcome-area {
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      justify-content: flex-start; /* Align items to the top */
-      align-items: flex-start; /* Align all content to the left */
-      padding: 10px; /* Add padding for spacing */
+    margin-left: 10px; /* Move the paragraph closer to the left */
+    padding: 0;
+    width: 40%; /* Adjust width for better responsiveness */
+    text-align: left;
+    position: relative;
+    left: 0;
+    box-sizing: border-box;
+    line-height: 1.5; /* Add line spacing for readability */
   }
 
-  .welcome-intro {
-      align-self: flex-start; /* Align the intro section to the left */
-      text-align: left; /* Ensure text alignment */
-      margin: 0; /* Remove any left margin */
-      padding: 0; /* Remove unnecessary padding */
+  /* Heading Styling */
+  .welcome-intro h1,
+  .welcome-intro h2 {
+    margin-left: 10px; /* Reduce left margin */
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  /* Image Styling */
+  .welcome-thumb-1 {
+    max-width: 40%; /* Scale the image to fit the container */
+    margin-left: 110%; /* Remove left margin */
+    margin-bottom: 10px; /* Reduce margin to fit content */
+    height: 320px; /* Adjust image size to maintain aspect ratio */
+    transform: scale(1);
+  }
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(-450px);
+    }
+    50% {
+      transform: translateY(-400px);
+    }
+    100% {
+      transform: translateY(-450px);
+    }
+  }
+  
+}
+
+/* Further Adjustments for screens <= 991px */
+@media (max-width: 991px) {
+  .welcome-intro p {
+    margin: 0;
+    margin-left: 40px;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    left: 0;
+    box-sizing: border-box;
   }
 
   .welcome-intro h1,
   .welcome-intro h2 {
-      margin-left: 30px; /* Remove any additional left margin */
-      text-align: left; /* Ensure text alignment */
-      align-self: flex-start; /* Explicitly align to the left */
-  }
-
-  .button-container {
-      display: flex;
-      flex-direction: column; /* Stack buttons vertically */
-      align-items: flex-start; /* Align buttons to the left */
-      
-  }
-
-  .button-container .mainbtn1
-    {
-      
-      margin: 76px ; /* Add spacing between buttons */
-      align-self: flex-start; /* Align buttons to the left */
-  }
-  
-  .button-container .mainbtn {
-    display: none;
+    margin-left: 30px;
+    text-align: left;
+    align-self: flex-start;
   }
 
   .welcome-thumb-wrapper {
-      display: none; /* Hide thumbnails on small screens */
+    display: none; /* Hide thumbnail images on small screens */
   }
+
 }
 
-.welcome-thumb-wrapper {
+/* Adjustments for smaller screens <= 768px */
+@media (max-width: 768px) {
+  .welcome-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .welcome-intro {
+    align-self: flex-start;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .welcome-intro p {
+    margin: 0;
+    margin-left: 40px;
+    padding: 0;
+    width: 100%;
+    text-align: left;
     position: relative;
-    text-align: right;
-     /* Align the image to the right */
-}
-
-.welcome-thumb-1 {
-    display: flex; /* Ensure the image behaves like a block element */
-    margin-left: 65%;
-    max-width: 150%;
-    margin-bottom: 90%;
-    animation: moveUpDown 5s ease-in-out infinite; /* Add the animation */
-}
-
-.welcome-animation {
-    max-width: 160%; /* Ensure it doesn't overflow the container */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 160%;
+    left: 0;
+    box-sizing: border-box;
   }
 
-/* Keyframe Animation for Up and Down Movement */
-@keyframes moveUpDown {
-    0% {
-        transform: translateY(-300px); /* Initial position */
-    }
-    50% {
-        transform: translateY(-350px); /* Move up */
-    }
-    100% {
-        transform: translateY(-300px); /* Return to initial position */
-    }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+.mainbtn{
+  margin: 190px 10px;
+  padding: 12px 24px;
+  
+}
+.mainbtn1{
+  display: none;
+}
+  .welcome-thumb-wrapper {
+    display: none;
+  }
 }
 
-/* Portfolio Us Button */
+
+/* Base Button Container Styling */
 .button-container {
-  display: flex; /* Use flexbox for horizontal alignment */
+  display: flex; /* Use flexbox for alignment */
   justify-content: center; /* Center the buttons horizontally */
-  align-items: center; /* Align the buttons vertically */
-  gap: 20px; /* Add space between the buttons */
-  margin-top: 24%; /* Adjust the top margin for the container */
-  margin-right: 20%;
+  align-items: center; /* Align buttons vertically */
+  gap: 20px; /* Space between buttons */
+  margin-top: 24%; /* Default top margin */
+  margin-right: 20%; /* Default right margin */
 }
 
 .mainbtn, .mainbtn1 {
-  background: transparent; /* Button background color */
-  color: #ffffff; /* Button text color */
-  padding: 12px 24px; /* Padding for a balanced look */
-  border: 2px solid #ffffff; /* Add a border matching the text color */
-  cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 30px; /* Rounded corners */
-  font-size: 1em; /* Font size */
-  font-weight: bold; /* Bold text for emphasis */
-  transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+  background: transparent;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
   opacity: 0;
-  animation: fadeIn 3s forwards; /* Fade-in animation */
+  animation: fadeIn 3s forwards;
 }
+
+/* Buttons Styling for <= 1467px */
+@media (max-width: 1467px) {
+  .button-container {
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 20%; /* Adjust the top margin */
+    margin-right: 15%; /* Reduce right margin for smaller screens */
+  }
+
+  .mainbtn, .mainbtn1 {
+    font-size: 0.9em; /* Slightly reduce button size */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Buttons Styling for <= 1280px */
+@media (max-width: 1280px) {
+  .button-container {
+    justify-content: flex-start; /* Align buttons to the left */
+    margin-top: 18%; /* Adjust the top margin */
+    margin-left: 10%; /* Add left margin for alignment */
+  }
+
+  .mainbtn, .mainbtn1 {
+    font-size: 0.85em; /* Further reduce button size */
+    padding: 8px 18px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Buttons Styling for <= 991px */
+@media (max-width: 991px) {
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: flex-start; /* Align buttons to the top */
+    align-items: flex-start; /* Align buttons to the left */
+    margin-top: 10%; /* Adjust the top margin */
+    margin-left: 5%; /* Reduce left margin */
+  }
+
+  .mainbtn, .mainbtn1 {
+    width: 100%; /* Make buttons full-width */
+    text-align: center; /* Center text inside the button */
+    padding: 12px 24px; /* Reset padding for better touch targets */
+    margin-bottom: 10px; /* Add spacing between buttons */
+  }
+}
+
 
 /* Hover Effect */
 .mainbtn:hover, .mainbtn1:hover {
