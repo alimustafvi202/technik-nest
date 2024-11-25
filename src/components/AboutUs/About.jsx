@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.css";
-import Navbar from "../Home/NavBar";
 import Footer from "../Home/footer";
 import Contact from "../Home/contact";
 
