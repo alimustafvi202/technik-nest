@@ -7,10 +7,6 @@ import Contact from "../Home/contact";
 const AboutUs = () => {
   return (
     <div className="about-us">
-      {/* Header Section */}
-      <header className="about-header">
-        < Navbar/>
-      </header>
 
       {/* Intro Section */}
       <section className="about-intro">
@@ -85,15 +81,9 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="about-contact">
         <Contact />
-      </section>
 
-      {/* Footer Section */}
-      <footer className="about-footer">
         <Footer />
-      </footer>
     </div>
   );
 };

@@ -1,15 +1,10 @@
-  /* Header */
-  .about-header {
-    background: #4a148c;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
+
   
   /* Intro Section */
   .about-intro {
     text-align: center;
-    padding: 20px 0;
+    background-color: #4a148c;
+    padding: 150px 0;
   }
   
   .intro-image {
@@ -20,7 +15,7 @@
   .intro-text {
     margin-top: 10px;
     font-size: 1.2rem;
-    color: #4a148c;
+    color: white;
   }
   
   /* Mission Section */

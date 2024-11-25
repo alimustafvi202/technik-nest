@@ -312,69 +312,6 @@
     z-index: -1;
 }
 
-/*BACKGROUND COLORS*/
-.color-1 {
-    color: #be63f9;
-}
-
-.color-2 {
-    color: #26c6da;
-}
-
-.color-3 {
-    color: #fc573b;
-}
-
-.color-4 {
-    color: #34FF92;
-}
-
-.color-5 {
-    color: #ffd200;
-}
-
-.color-6 {
-    color: #ff9d45;
-}
-
-.color-1.bg-hover:hover::after,
-.color-1.bg-hover.active::after {
-    background-color: #be63f9;
-}
-
-.color-2.bg-hover:hover::after,
-.color-2.bg-hover.active::after {
-    background-color: #26c6da;
-}
-
-.color-3.bg-hover:hover::after,
-.color-3.bg-hover.active::after {
-    background-color: #fc573b;
-}
-
-.color-4.bg-hover:hover::after,
-.color-4.bg-hover.active::after {
-    background-color: #34FF92;
-}
-
-.color-5.bg-hover:hover::after,
-.color-5.bg-hover.active::after {
-    background-color: #ffd200;
-}
-
-.color-6.bg-hover:hover::after,
-.color-6.bg-hover.active::after {
-    background-color: #ff9d45;
-}
-
-.text-muted {
-    color: #888 !important;
-}
-
-.bg-grey {
-    background-color: #f4f4f4;
-}
-
 .bg-inherit {
     background: inherit !important;
 }
@@ -395,21 +332,25 @@
     height: 700px;
     max-width: 100%;
 }
-.welcome-intro h1, .welcome-intro h2 {
-    line-height: 1; /* Remove extra line spacing */
-    margin: 0; /* Remove any default margin */
-    margin-left: 120px;
-    color: white;
-    position: relative;
-    top: 130px;
-    
-}
+
 .welcome-intro h1 {
+  line-height: 1; /* Remove extra line spacing */
+  margin: 0; /* Remove any default margin */
+  margin-left: 120px;
+  color: white;
+  position: relative;
+  top: 130px;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: -1.6px;
 }
 .welcome-intro h2 {
+  line-height: 1; /* Remove extra line spacing */
+  margin: 0; /* Remove any default margin */
+  margin-left: 120px;
+  color: white;
+  position: relative;
+  top: 130px;
     font-size: 70px;
     font-weight: 700;
     letter-spacing: -1.6px;
@@ -444,52 +385,51 @@
       left: 0; /* Move the paragraph to the left */
       box-sizing: border-box; /* Ensure consistent width calculation */
   }
-}
-@media (max-width: 768px) {
   .welcome-area {
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      justify-content: flex-start; /* Align items to the top */
-      align-items: flex-start; /* Align all content to the left */
-      padding: 10px; /* Add padding for spacing */
-  }
-
-  .welcome-intro {
-      align-self: flex-start; /* Align the intro section to the left */
-      text-align: left; /* Ensure text alignment */
-      margin: 0; /* Remove any left margin */
-      padding: 0; /* Remove unnecessary padding */
-  }
-
-  .welcome-intro h1,
-  .welcome-intro h2 {
-      margin-left: 30px; /* Remove any additional left margin */
-      text-align: left; /* Ensure text alignment */
-      align-self: flex-start; /* Explicitly align to the left */
-  }
-
-  .button-container {
-      display: flex;
-      flex-direction: column; /* Stack buttons vertically */
-      align-items: flex-start; /* Align buttons to the left */
-      
-  }
-
-  .button-container .mainbtn1
-    {
-      
-      margin: 76px ; /* Add spacing between buttons */
-      align-self: flex-start; /* Align buttons to the left */
-  }
-  
-  .button-container .mainbtn {
-    display: none;
-  }
-
-  .welcome-thumb-wrapper {
-      display: none; /* Hide thumbnails on small screens */
-  }
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Align all content to the left */
+    padding: 10px; /* Add padding for spacing */
 }
+
+.welcome-intro {
+    align-self: flex-start; /* Align the intro section to the left */
+    text-align: left; /* Ensure text alignment */
+    margin: 0; /* Remove any left margin */
+    padding: 0; /* Remove unnecessary padding */
+}
+
+.welcome-intro h1,
+.welcome-intro h2 {
+    margin-left: 30px; /* Remove any additional left margin */
+    text-align: left; /* Ensure text alignment */
+    align-self: flex-start; /* Explicitly align to the left */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+    
+}
+
+.button-container .mainbtn1
+  {
+    
+    margin: 76px ; /* Add spacing between buttons */
+    align-self: flex-start; /* Align buttons to the left */
+}
+
+.button-container .mainbtn {
+  display: none;
+}
+
+.welcome-thumb-wrapper {
+    display: none; /* Hide thumbnails on small screens */
+}
+}
+
 
 .welcome-thumb-wrapper {
     position: relative;
@@ -828,6 +768,8 @@
   }
 
 }
+
+
 /* Services.css */
 .services-container {
   display: flex;

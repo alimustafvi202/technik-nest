@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from '../Home/NavBar';
 import { AnimatePresence } from 'framer-motion';
 import AboutUs from '../AboutUs/About';
 import ServicesMain from '../Services/Services';
@@ -12,6 +13,8 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
+    <>
+    <Navbar />
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
       <Route path="/" element={<Home />} />
@@ -22,6 +25,8 @@ const AnimatedRoutes = () => {
         <Route path="/graphic" element={<Graphic />} />
       </Routes>
     </AnimatePresence>
+    </>
+    
   );
 };
 
