@@ -19,7 +19,7 @@ const Contact = () => {
         </div>
         <div className="info-card">
           <FaEnvelope className="icon" />
-          <p>info@techniknest.com</p>
+          <p>info@techniknest.tech</p>
         </div>
       </div>
       <div className="right-container">

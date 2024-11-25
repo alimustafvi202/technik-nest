@@ -190,13 +190,26 @@
   z-index: 1000;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+/* Navbar Scrolled State */
 .navbar.scrolled {
   background-color: #ffffff; /* White background when scrolled */
   color: #000000; /* Black text */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
-
+.navbar.scrolled span{
+  background-color: #000000;
+}
+/* Link and Hover Styling in Scrolled State */
+.navbar.scrolled a {
+  color: #000000; /* Black links */
+}
+.navbar.scrolled button {
+  color: black;
+  border: 2px solid #000000;
+}
+.navbar.scrolled a:hover {
+  color: #2200ff; /* Hover color */
+}
 .logo img {
   height: 80px;
   margin: 10px 60px;

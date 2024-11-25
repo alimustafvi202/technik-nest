@@ -33,7 +33,7 @@ const Footer = () => {
      <div className="footer-contact">
        <h3>Contact Us</h3>
        <p>+92 3165601184</p>
-       <p>info@techniknest.com</p>
+       <p>info@techniknest.tech</p>
      </div>
      <div className="footer-social">
        <h3>Follow Us</h3>
