@@ -153,58 +153,6 @@
       font: bold 2em "Poppins", sans-serif;
     }
   }
-
-/* Header Styling */
-
-  
-  /* Hire Us Button */
-  .hire-us {
-    background:transparent; /* Button background color */
-    color: #ffffff; /* Button text color */
-    padding: 12px 24px; /* Padding for a balanced look */
-    border: 2px solid #ffffff; /* Add a border matching the text color */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 30px; /* Rounded corners */
-    font-size: 1em; /* Font size */
-    font-weight: bold; /* Bold text for emphasis */
-    transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
-    margin-right: 5%;
-    opacity: 0;
-    animation: fadeIn 3s forwards; /* Hire Us button fade-in animation */
-  }
-  
-  /* Hover Effect */
-  .hire-us:hover {
-    background: #6b5ce7; /* Purple background on hover */
-    color: white; /* White text on hover */
-    border-color: #6b5ce7; /* Match border with background */
-  }
-  
-  /* Focus State for Accessibility */
-  .hire-us:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 5px rgba(107, 92, 231, 0.5); /* Add a subtle purple glow */
-  }
-  
-  /* Disabled State */
-  .hire-us:disabled {
-    background: #e0e0e0; /* Gray background for disabled state */
-    color: #a0a0a0; /* Light gray text */
-    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
-    border-color: #e0e0e0; /* Match border with background */
-  }
-  
-  /* Animation Keyframes */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  
   /* Media Queries */
   @media screen and (max-width: 767px) {
     .preloader-animation .spinner {
@@ -225,7 +173,223 @@
       font: bold 2em "Poppins", sans-serif;
     }
   }
+ /* Base Navbar Styling */
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap if necessary */
+  justify-content: space-between; /* Space items apart */
+  align-items: center; /* Align items vertically */
+  width: 100%;
+  padding: 10px 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent; /* Transparent background by default */
+  color: #ffffff; /* White text */
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #ffffff; /* White background when scrolled */
+  color: #000000; /* Black text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.logo img {
+  height: 80px;
+  margin: 10px 60px;
+}
+
+/* Flex container for the menu and buttons */
+.navbar-content {
+  display: flex;
+  flex: 1; /* Allow content to grow or shrink */
+  justify-content: space-between; /* Spread out content */
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Menu Styling */
+.menu {
+  display: flex;
+  flex: 1; /* Take up available space */
+  justify-content: flex-end; /* Align menu to the right */
+  gap: 15px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.menu ul li {
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #2200ff; /* Hover color */
+}
+
+/* Social Icons and Hire Us Section */
+.social-hire {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Wrap items if needed */
+  margin: 10px 80px;
+}
+
+.hire-us {
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hire-us:hover {
+  background-color: #6b5ce7;
+  border-color: #6b5ce7;
+  color: #fff;
+}
+
+/* Hamburger Menu for smaller screens */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+.close-btn{
+  display: none;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width:1204px) {
+  .social-hire{
+    display: none;
+  }
+.menu ul{
+  margin: 0px 80px;
+}
+}
+  
+
+@media (max-width: 991px) {
+  .navbar-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+  }
+
+  .menu {
+    justify-content: flex-start; /* Align menu to the left */
+  }
+
+  .menu ul {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu */
+  }
+
+  .menu {
+    display: none; /* Hide menu initially */
+  }
+
+  .menu.open {
+    display: flex; /* Show menu when open */
+  }
+  .social-hire{
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .logo img {
     
+    height: 60px; /* Smaller logo */
+  }
+
+ /* Display hamburger menu */
+ .hamburger {
+  display: flex;
+  margin-right: 10%;
+}
+
+/* Hide the menu by default */
+.menu {
+  display: none;
+  flex-direction: column; /* Stack menu items vertically */
+  align-items: center; /* Center menu items */
+  gap: 10px;
+  position: absolute;
+  top: 0px; /* Adjust to position below navbar */
+  height: 740%;
+  width: 20%;
+  left:69%;
+  background-color: #933fe3; /* Background color for the menu */
+  padding: 20px;
+  z-index: 1001;
+}
+
+/* Open menu when hamburger is clicked */
+.menu.open {
+  display: flex;
+}
+
+/* Adjust the styling for the menu items in column */
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Stack menu items vertically */
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Adjust the close button visibility */
+.close-btn {
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+  right: 10px;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+  .social-hire{
+    display: none;
+  }
+}
+
 /*BG SHAPE*/
 .shape {
     position: absolute;
@@ -1469,264 +1633,6 @@ button:hover {
   background: #6b5ce7;
   color: white;
 }
-
-
-.navbar {
-  display: flex;
-  width: 97%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: transparent;
-  color: #ffffff;
-
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* Ensure it stays on top */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-/* Default Navbar Styling */
-.navbar {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: transparent; /* Start with transparent background */
-  color: #ffffff; /* Text is white by default */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* Ensure it's always on top */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Default Navbar Styling */
-.navbar {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: transparent; /* Default transparent background */
-  color: #ffffff; /* Default white text */
-  position: fixed; /* Fixed to the top */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* Ensure it's always on top */
-  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-}
-
-/* Navbar Scrolled State */
-.navbar.scrolled {
-  background-color: #ffffff; /* White background when scrolled */
-  color: #000000; /* Black text */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
-.navbar.scrolled span{
-  background-color: #000000;
-}
-/* Link and Hover Styling in Scrolled State */
-.navbar.scrolled a {
-  color: #000000; /* Black links */
-}
-.navbar.scrolled button {
-  color: black;
-  border: 2px solid #000000;
-}
-.navbar.scrolled a:hover {
-  color: #2200ff; /* Hover color */
-}
-
-.logo img {
-  height: 90px;
-  width: auto;
-  margin-left: 20%;
-}
-
-/* Menu Styling */
-.menu {
-  display: flex;
-  justify-content: flex-start; /* Align menu items to the left */
-  gap: 20px; /* Spacing between menu items */
-}
-
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 20px; /* Proper spacing between list items */
-  margin: 0; /* Reset default margin */
-  padding: 0; /* Reset padding */
-  margin-left: 70%;
-  font-weight: bold;
-}
-
-.menu ul li {
-  white-space: nowrap; /* Prevent line breaks within list items */
-}
-
-.menu ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  position: relative;
-  padding: 5px;
-  transition: color 0.3s ease;
-}
-
-.menu ul li a:hover {
-  color: #2200ff;
-}
-
-.menu ul li a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #2200ff;
-  left: 0;
-  bottom: -3px;
-  transition: width 0.3s ease-in-out;
-}
-
-.menu ul li a:hover::after {
-  width: 100%;
-}
-
-/* Social and Hire Us Section */
-.social-hire {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Space items apart */
-  gap: 20px;
-  width: 100%; /* Full width for proper spacing */
-}
-
-/* Social Icons Styling - Aligned to the left */
-.social-icons {
-  display: flex;
-  gap: 20px;
-  margin-left: 45%; /* Push icons to the left */
-}
-
-.social-icons a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #ffffff;
-}
-
-/* Hire Us Button - Positioned on the right */
-.hire-us {
-  background-color: transparent;
-  color: #fff;
-  padding: 13px 40px;
-  font-size: 1rem;
-  margin-left: 0;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.hire-us:hover {
-  background-color: #2694f5b7;
-  transform: scale(1.05);
-}
-
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-}
-.close-btn{
-  display: none;
-}
-
-/* Responsive Design - Adjustments for Smaller Screens */
-@media (max-width: 768px) {
-  /* Decrease the logo size and move it to the left */
-  .logo img {
-    height: 60px;
-    margin-left: 10%; /* Adjust the left margin */
-  }
-
-  /* Display hamburger menu */
-  .hamburger {
-    display: flex;
-    margin-right: 10%;
-  }
-
-  /* Hide the menu by default */
-  .menu {
-    display: none;
-    flex-direction: column; /* Stack menu items vertically */
-    align-items: center; /* Center menu items */
-    gap: 10px;
-    position: absolute;
-    top: 0px; /* Adjust to position below navbar */
-    height: 740%;
-    width: 20%;
-    left:64%;
-    background-color: #933fe3; /* Background color for the menu */
-    padding: 20px;
-    z-index: 1001;
-  }
-
-  /* Open menu when hamburger is clicked */
-  .menu.open {
-    display: flex;
-  }
-
-  /* Adjust the styling for the menu items in column */
-  .menu ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column; /* Stack menu items vertically */
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Adjust the close button visibility */
-  .close-btn {
-    display: block;
-    font-size: 24px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    top: 0px;
-    right: 10px;
-  }
-
-  .close-btn:hover {
-    color: #ff0000;
-  }
-
-  /* Hide the social and hire-us section in the mobile view */
-  .social-hire {
-    display: none;
-  }
-}
-
 
 /* Footer Bar Styles */
 .foot-bar {
