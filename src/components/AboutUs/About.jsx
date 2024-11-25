@@ -16,6 +16,7 @@ const AboutUs = () => {
               alt="Introduction"
               className="intro-image"
             />
+            <h1>ABOUT US</h1>
             <p className="intro-text">
               We provide solutions that grow your business.
             </p>
