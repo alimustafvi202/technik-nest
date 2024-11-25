@@ -14,9 +14,10 @@ const AnimatedRoutes = () => {
 
   return (
     <>
-    <Navbar />
+    
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+      <Navbar />
       <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path='/services' element={<ServicesMain/>}/>
