@@ -9,7 +9,7 @@ const Welcome = () => {
         <section id="home" className="section welcome-area bg-overlay overflow-hidden d-flex align-items-center">
             <Navbar/>
             <div className="container">
-                <div className="row align-items-center">
+                <div className="row1 align-items-center">
                     <div className="col-12 col-md-7">
                         <div className="welcome-intro">
                             <h1 className="text-white">Welcome To</h1>
