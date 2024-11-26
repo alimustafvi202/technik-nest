@@ -1,0 +1,152 @@
+/* Team cards container */
+.team-section {
+    text-align: center;
+    padding: 0px 190px;
+    justify-content: flex-start;
+  }
+  
+  .team-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .team-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+  }
+  
+  .team-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 1rem; /* Space between cards */
+    margin: 0;
+  }
+  
+  /* Team card styles */
+  .team-card {
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 200px; /* Adjust card width */
+    margin: 20px 40px; /* Closer horizontal margin */
+  }
+  
+  .team-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Image container dynamically sized */
+  .image-container {
+    position: relative;
+    width: 130%;
+    height: auto;
+  }
+  
+  .team-image {
+    display: block;
+    width: 130%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  /* Overlay styles */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 118%;
+    height: 94%;
+    background-image: linear-gradient(to bottom, rgba(39, 0, 136, 0.964), rgba(255, 0, 255, 0.8));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    align-items: center;
+    opacity: 0;
+    text-align: center;
+    padding: 1rem;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .overlay p {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    color: #ffbf00;
+  }
+  
+  .overlay span {
+    font-size: 0.9rem;
+    color: #ffffff;
+    width: 85%;
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .team-cards {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .team-cards {
+      grid-template-columns: 1fr; /* Single card per row */
+      gap: 0.5rem; /* Small gap on mobile screens */
+    }
+  
+    .team-card {
+      margin: 20px 40px ; /* Center cards on smaller screens */
+      max-width:50%; /* Allow cards to take up most of the width */
+    }
+    
+    .team-section {
+      padding: 0 20px; /* Reduce padding on smaller screens */
+      text-align: center; /* Center-align text for smaller screens */
+    }
+  
+    .team-section h1 {
+      font-size: 2rem; /* Slightly smaller font size for headings */
+    }
+  
+    .team-section p {
+      font-size: 1rem;
+      margin: 0 auto 20px auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-section h1 {
+      font-size: 1.8rem;
+    }
+  
+    .team-section p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+  
+    .overlay h3 {
+      font-size: 1rem; /* Adjust text size for smaller screens */
+    }
+  
+    .overlay p {
+      font-size: 0.85rem;
+    }
+  
+    .overlay span {
+      font-size: 0.8rem;
+    }
+  }
+  

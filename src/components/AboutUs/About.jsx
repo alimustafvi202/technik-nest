@@ -1,9 +1,9 @@
 import {React, useState, useEffect } from "react";
 import "./About.css";
-import Footer from "../Home/footer";
-import Contact from "../Home/contact";
-import Navbar from "../Home/NavBar";
-import Preloader from "../Home/Preloader";
+import Footer from "../Home/Footer/footer";
+import Contact from "../Home/Contact/contact";
+import Navbar from "../Home/Navbar/NavBar";
+import Preloader from "../Home/Preloader/Preloader";
 
 // Import images
 import aboutThumb1 from "../../assets/about/about_thumb_1.jpg";

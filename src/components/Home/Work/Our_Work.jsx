@@ -1,7 +1,7 @@
 import React from "react";
-import './styles.css';
-import Web from '../../assets/Web.png';
-import App from '../../assets/app.png';
+import './port.css';
+import Web from '../../../assets/Services/Web.png';
+import App from '../../../assets/Services/app.png';
 const OurWork = () => {
     return(
         <div className="portfolio">

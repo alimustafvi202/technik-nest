@@ -1,0 +1,129 @@
+/* Services.css */
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px;
+    background-color: #ffffff;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  }
+  .services-description {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+  }
+  .service-card {
+    flex: 1;
+    max-width: 270px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 20px;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #007bff;
+  }
+  
+  .service-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .service-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Specific Shape for service section */
+  .service-shape-bottom {
+    display: block;
+    width: 100%;
+    background-color: #ebebebb0;
+    
+  }
+  
+  .service-shape-bottom1 {
+    display: block;
+    width: 100%;
+    background-color: #ebebebb0;
+    transform: scaleY(-1); 
+  }
+
+  /* Services.css */
+.services-container1 {
+    padding: 40px;
+    background-color: #dfdfdf68;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .services-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .services-description {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .service-card1 {
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+  }
+  
+  .service-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .service-description {
+    font-size: 14px;
+    color: #424242;
+    margin-bottom: 20px;
+  }
+  
+  .service-link {
+    font-size: 14px;
+    color: #767676;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .service-link:hover {
+    text-decoration: underline;
+  }
+  .service-card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #007bff;
+  }
+  
+  

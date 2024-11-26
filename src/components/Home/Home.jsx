@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Preloader from './Preloader';
-import Welcome from './index';
-import Services from './Services-short';
-import OurWork from './Our_Work';
-import Team from './team';
-import Testimonials from './Testimonials';
-import Contact from './contact';
-import Footer from './footer';
+import Preloader from './Preloader/Preloader';
+import Welcome from './Main/index';
+import Services from './Serv/Services-short';
+import OurWork from './Work/Our_Work';
+import Team from './MainTeam/team';
+import Testimonials from './Testimonial/Testimonials';
+import Contact from './Contact/contact';
+import Footer from './Footer/footer';
 
 const Home = () => {
   const [showPreloader, setShowPreloader] = useState(true);

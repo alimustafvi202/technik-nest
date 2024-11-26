@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles.css";
+import "./contact.css";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import Swal from 'sweetalert2'
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css"; // Ensure you import any required CSS
+import "./preloader.css"; // Ensure you import any required CSS
 
 const Preloader = () => {
     return (

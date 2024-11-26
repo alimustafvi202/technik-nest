@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"; // Import useState and useEffect
 import "./Portfolio.css";
-import Navbar from "../Home/NavBar";
-import OurWork from "../Home/Our_Work";
-import Contact from "../Home/contact";
-import Footer from "../Home/footer";
-import Testimonials from "../Home/Testimonials";
-import Preloader from '../Home/Preloader';
+import Navbar from "../Home/Navbar/NavBar";
+import OurWork from "../Home/Work/Our_Work";
+import Contact from "../Home/Contact/contact";
+import Footer from "../Home/Footer/footer";
+import Testimonials from "../Home/Testimonial/Testimonials";
+import Preloader from '../Home/Preloader/Preloader';
 
 const PastWork = () => {
   const [showPreloader, setShowPreloader] = useState(true);

@@ -1,9 +1,9 @@
 import React from 'react';
 import './graphic.css';
-import designImage1 from '../../../assets/wallpaperflare.com_wallpaper.jpg';
-import designImage2 from '../../../assets/1684418406-GRD101_Image.jpg';
-import designImage3 from '../../../assets/gray-desk-with-laptop-notepad-with-blank-sheet-pot-flower-stylus-tablet-retouching.jpg';
-import Navbar from '../NavBar';
+import designImage1 from '../../../assets/Graphic/wallpaperflare.com_wallpaper.jpg';
+import designImage2 from '../../../assets/Graphic/1684418406-GRD101_Image.jpg';
+import designImage3 from '../../../assets/Graphic/gray-desk-with-laptop-notepad-with-blank-sheet-pot-flower-stylus-tablet-retouching.jpg';
+import Navbar from '../Navbar/NavBar';
 
 const Graphic = () => {
     return (

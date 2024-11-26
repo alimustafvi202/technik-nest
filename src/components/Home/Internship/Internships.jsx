@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Internships.css";
-import Navbar from "../NavBar";
-import Preloader from '../Preloader';
-import Footer from '../footer';
+import Navbar from "../Navbar/NavBar";
+import Preloader from '../Preloader/Preloader';
+import Footer from '../Footer/footer';
 import Img1 from "../../../assets/internship/intern1.jpg";
 import Img2 from "../../../assets/internship/intern2.webp";
 import Img3 from "../../../assets/internship/intern3.jpg";

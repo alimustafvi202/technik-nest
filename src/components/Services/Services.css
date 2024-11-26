@@ -1,6 +1,6 @@
 .services-header {
     position: relative; /* Required for positioning the pseudo-element */
-    background: #4a148c url('/src/assets/welcome_bg.jpg') no-repeat center center;
+    background: #4a148c url('/src/assets/Bg/welcome_bg.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
     text-align: center;

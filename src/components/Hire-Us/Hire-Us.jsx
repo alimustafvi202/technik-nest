@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hire-Us.css";
-import Navbar from "../Home/NavBar";
+import Navbar from "../Home/Navbar/NavBar";
 
 const HireUs = () => {
   return (

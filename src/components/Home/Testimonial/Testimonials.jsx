@@ -1,8 +1,8 @@
 import React from "react";
-import "./styles.css";
-import xup from '../../assets/xup.png';
-import SPCAI from '../../assets/spcai.png';
-import paf from '../../assets/pafiast.png';
+import "./testim.css";
+import xup from '../../../assets/Testimonials/xup.png';
+import SPCAI from '../../../assets/Testimonials/spcai.png';
+import paf from '../../../assets/Testimonials/pafiast.png';
 
 const Testimonials = () => {
   const testimonials = [

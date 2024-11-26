@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './styles.css';
-import logo from '../../assets/logo.png';
+import './nav.css';
+import logo from '../../../assets/logo/logo.png';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

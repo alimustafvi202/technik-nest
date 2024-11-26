@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"; // Import useState and useEffect
 import "./Services.css";
-import Navbar from "../Home/NavBar";
-import Services from "../Home/Services-short";
-import Footer from "../Home/footer";
-import Preloader from '../Home/Preloader';
+import Navbar from "../Home/Navbar/NavBar";
+import Services from "../Home/Serv/Services-short";
+import Footer from "../Home/Footer/footer";
+import Preloader from '../Home/Preloader/Preloader';
 const ServicesMain = () => {
     const [showPreloader, setShowPreloader] = useState(true);
 

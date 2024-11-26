@@ -1,0 +1,212 @@
+
+
+/* Welcome Section */
+.welcome-area {
+    background: linear-gradient(to bottom, #6b5ce7, #413b93);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .welcome-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .welcome-text {
+    flex: 1;
+    max-width: 800px;
+    margin: 50px;
+    text-align: left;
+    margin-left: -150px; /* Default left positioning for larger screens */
+  }
+  
+  .welcome-text h1, 
+  .welcome-text h2 {
+    margin-bottom: 10px;
+    white-space: nowrap; 
+  }
+  
+  .welcome-text h1 {
+    font-size: 2rem;
+    margin-bottom: -50px;
+  }
+  
+  .welcome-text h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  
+  .welcome-text p {
+    font-size: 1rem;
+    margin: 20px 0;
+    line-height: 1.8;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .mainbtn, .mainbtn1 {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .mainbtn1:hover, .mainbtn:hover {
+    background-color: #6b5ce7;
+    border-color: #6b5ce7;
+    color: #fff;
+  }
+  
+  .mainbtn::before, .mainbtn1::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+    z-index: 0;
+  }
+  
+  .mainbtn:active::before, .mainbtn1:active::before {
+    width: 300%;
+    height: 300%;
+    top: -100%;
+    left: -100%;
+    transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+  }
+  
+  .mainbtn, .mainbtn1 {
+    z-index: 1; /* Ensures text stays above the ripple */
+  }
+  
+  .mainbtn span, .mainbtn1 span {
+    position: relative;
+    z-index: 2; /* Keeps text above the ripple effect */
+  }
+  /* Image Styling */
+  .welcome-image {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .welcome-image img {
+    width: 100%;
+    height: auto;
+    animation: moveUpDown 3s infinite;
+    margin-right: 0;
+  }
+  
+  @keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 2000px) {
+    .welcome-text {
+        margin-left: -100px; /* Adjust left alignment for medium screens */
+   
+      }
+    .welcome-image {
+      margin-left: 150px; /* Move the image slightly left */
+  }
+  
+  
+  }
+  @media (max-width:1490px){
+    .welcome-text {
+      margin-left: -10px; /* Adjust further as screen narrows */
+  }
+  
+  
+  
+  }
+  @media (max-width: 1200px) {
+    .welcome-text {
+        margin-left: -10px; /* Adjust further as screen narrows */
+        padding-top:40px ;
+        max-width: 80%;
+      }
+    .welcome-text h1{
+      font-size: 1.5rem;
+    }
+    .welcome-text h2{
+      font-size: 3.0rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .welcome-text {
+        max-width: 100%;
+        text-align: center; /* Center align for smaller screens */
+        margin-left: 0; /* Reset left margin for smaller screens */
+        padding-top:40px ;
+      }
+  
+    .button-container {
+        flex-direction: column;
+    }
+  
+    .welcome-image {
+        margin-top: 20px;
+        margin-left:-20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+  
+    .welcome-text h2 {
+        font-size: 2.5rem;
+    }
+  
+    .welcome-text p {
+        font-size: 0.9rem;
+    }
+  
+    .button-container button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+  }
+  

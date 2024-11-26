@@ -1,10 +1,10 @@
 import React from "react";
-import "./styles.css";
-import Aleem from "../../assets/Aleem.png";
-import Ali from "../../assets/Ali.png";
-import Ahsan from "../../assets/Ahsan.png";
-import Fahad from "../../assets/Fahad.png";
-import Hassan from "../../assets/Hassan.png";
+import "./team.css";
+import Aleem from "../../../assets/Team/Aleem.png";
+import Ali from "../../../assets/Team/Ali.png";
+import Ahsan from "../../../assets/Team/Ahsan.png";
+import Fahad from "../../../assets/Team/Fahad.png";
+import Hassan from "../../../assets/Team/Hassan.png";
 
 const teamMembers = [
   { name: "Muhammad Ali", role: "Founder & CEO", description: "Muhammad Ali, the Founder and CEO of Technik Nest, leads the company with a vision to transform businesses through innovative technology solutions. A Software Engineering student and passionate entrepreneur, Muhammad Ali brings a wealth of experience in app development, artificial intelligence, and custom software design. Under his leadership, Technik Nest has grown into a trusted partner for businesses looking to navigate the complexities of digital transformation. Muhammad Ali’s leadership philosophy is centered on collaboration, creativity, and adaptability, ensuring that the company delivers cutting-edge solutions tailored to clients' unique needs. He is dedicated to fostering a culture of innovation within his team, empowering them to push boundaries and redefine what’s possible in the digital landscape.", image: Ali },

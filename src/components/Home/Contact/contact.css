@@ -1,0 +1,192 @@
+.contact-container {
+    display: flex;
+    flex-direction: row; /* Default layout for larger screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column; /* Stack containers vertically */
+      align-items: center; /* Center align for better appearance */
+      padding: 20px;
+    }
+  
+    .left-container
+      {
+        width: 100%; /* Take full width */
+        max-width: none; /* Remove max-width for full use of space */
+      }
+    
+    .right-container {
+      margin-right: 0; /* Remove side margins */
+      width: 80%; /* Take full width */
+      max-width: 90%; /* Remove max-width for full use of space */
+    }
+  
+    .left-container h1,
+    .left-container p,
+    .info-card {
+      margin-left: 0; /* Align content to the left */
+      text-align:left; /* Center align text for better readability */
+    }
+  
+    .info-card {
+      width: 100%; /* Adjust card width */
+      margin: 10px auto; /* Center horizontally */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .left-container h1 {
+      font-size: 24px; /* Smaller font size for headings */
+    }
+  
+    .left-container p {
+      font-size: 14px; /* Smaller font size for paragraphs */
+    }
+  
+    .info-card {
+      height: auto;
+      max-width: 100%;/* Allow cards to adapt their height */
+      padding: 15px; /* Reduce padding for smaller screens */
+    }
+  
+    .info-card p {
+      font-size: 16px; /* Adjust text size */
+    }
+  
+    .right-container {
+      padding: 10px; /* Reduce form container padding */
+      align-items: flex-start;
+    }
+  
+    input,
+    textarea {
+      font-size: 14px; /* Smaller text for inputs */
+    }
+  
+    button {
+      font-size: 14px; /* Adjust button text size */
+      padding: 10px 15px; /* Adjust padding */
+    }
+  }
+  
+  /* Adjust Left Container */
+  .left-container {
+    flex: 1;
+    margin-right: 20px;
+    background: #fff;
+    padding: 20px;
+  }
+  
+  .left-container h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-left: 20%;
+  }
+  
+  .left-container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-left: 20%;
+  }
+  
+  .info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    height: 80px;
+    width: 60%;
+    margin-left: 20%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    border-bottom: 4px solid #2e4afa;
+  }
+  
+  .info-card:first-child {
+    border-bottom-color: #af69ff;
+  }
+  
+  .info-card:last-child {
+    border-bottom-color: #ff6b6b;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #6b6b6b;
+  }
+  
+  .info-card p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Adjust Right Container */
+  .right-container {
+    flex: 1;
+    max-width: 500px;
+    background: #fff;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input,
+  textarea {
+    width: 100%; /* Adjust width for responsiveness */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #af69ff;
+    outline: none;
+  }
+  
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  button {
+    background: linear-gradient(90deg, #af69ff, #6b5ce7);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(90deg, #6b5ce7, #af69ff);
+  }
+  
