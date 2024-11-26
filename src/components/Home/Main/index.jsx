@@ -3,13 +3,20 @@ import './index.css';
 import Image from '../../../assets/Welcome/s.png';
 import Navbar from "../Navbar/NavBar";
 import { Link } from "react-router-dom";
+import Video from "../../../assets/Video/Video.mp4";
 
 const Welcome = () => {
     return (
         <section className="welcome-area">
             <Navbar />
-            <div className="container">
+            {/* Background Video */}
+            <video className="background-video" autoPlay muted loop>
+                <source src = {Video} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div className="shape">
                 <div className="welcome-content">
+                    {/* Welcome Text Section */}
                     <div className="welcome-text">
                         <h1>Welcome To</h1>
                         <h2>Technik Nest</h2>
@@ -21,6 +28,7 @@ const Welcome = () => {
                             <Link to="/contact" className="mainbtn1">Contact With Us</Link>
                         </div>
                     </div>
+                    {/* Welcome Image Section */}
                     <div className="welcome-image">
                         <img src={Image} alt="Technik Nest" />
                     </div>

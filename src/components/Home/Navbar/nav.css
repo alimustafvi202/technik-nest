@@ -11,6 +11,7 @@
     left: 0;
     right: 0;
     background-color: transparent; /* Transparent background by default */
+    backdrop-filter: blur(50px);
     color: #ffffff; /* White text */
     z-index: 1000;
     transition: background-color 0.3s ease, color 0.3s ease;
