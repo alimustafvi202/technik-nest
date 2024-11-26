@@ -34,10 +34,10 @@ const AboutUs = () => {
 
       {/* Intro Section */}
       <section className="about-intro">
-        <div className="container">
-          <div className="intro-content">
+        <div className="about-container">
+          <div className="about-intro-content">
             <h1>ABOUT US</h1>
-            <p className="intro-text">
+            <p className="about-intro-text">
               We provide solutions that grow your business.
             </p>
           </div>
@@ -45,11 +45,11 @@ const AboutUs = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="overview-section">
-        <div className="container">
+      <section className="about-overview-section">
+        <div className="about-container">
           {/* First Row - Image on Right */}
-          <div className="row reverse">
-            <div className="col text-column">
+          <div className="about-row reverse">
+            <div className="col about-text-column">
               <h2>We provide solutions that grow your business.</h2>
               <p>
                 At TechX Hub, we believe in building long-lasting relationships
@@ -59,17 +59,17 @@ const AboutUs = () => {
                 business thrive.
               </p>
             </div>
-            <div className="col image-column">
+            <div className="about-col image-column">
               <img src={aboutThumb1} alt="Coder Illustration" />
             </div>
           </div>
 
           {/* Second Row - Image on Right */}
-          <div className="row reverse">
-            <div className="col image-column">
+          <div className="about-row reverse">
+            <div className="about-col image-column">
               <img src={missionImage} alt="Mission Illustration" />
             </div>
-            <div className="col text-column">
+            <div className="col about-text-column">
               <h2>Our Mission</h2>
               <p>
                 Our mission is to empower businesses and institutions with
@@ -81,11 +81,11 @@ const AboutUs = () => {
           </div>
 
           {/* Third Row - Image on Left */}
-          <div className="row">
-            <div className="col image-column">
+          <div className="about-row">
+            <div className="about-col image-column">
               <img src={whatWeDoImage} alt="What We Do Illustration" />
             </div>
-            <div className="col text-column">
+            <div className="col about-text-column">
               <h2>What We Do</h2>
               <p>
                 Custom Software Development: We design and develop specific

@@ -568,19 +568,7 @@
     background: linear-gradient(-45deg, #af52ed 0%, #8830df 100%);
 }
 
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  background: #f4f4f4;
-  line-height: 1.6;
-}
 
 /* Welcome Section */
 .welcome-area {
