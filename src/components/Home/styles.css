@@ -263,7 +263,9 @@
   flex-wrap: wrap; /* Wrap items if needed */
   margin: 10px 80px;
 }
-
+.social-hire a {
+  text-decoration: none;
+}
 .hire-us {
   padding: 10px 20px;
   border: 2px solid #fff;
@@ -604,19 +606,20 @@
 .welcome-text {
   flex: 1;
   max-width: 800px;
-  margin: 20px;
+  margin: 50px;
   text-align: left;
   margin-left: -150px; /* Default left positioning for larger screens */
 }
 
 .welcome-text h1, 
 .welcome-text h2 {
-  margin-bottom: -20px;
+  margin-bottom: 10px;
   white-space: nowrap; 
 }
 
 .welcome-text h1 {
   font-size: 2rem;
+  margin-bottom: -50px;
 }
 
 .welcome-text h2 {
@@ -636,23 +639,51 @@
 }
 
 .mainbtn, .mainbtn1 {
-  background-color: #fff !important;
-  color: #ffffff;
+  padding: 10px 20px;
   border: 2px solid #fff;
-  padding: 12px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  white-space: nowrap; 
-  border-radius: 30px;
+  border-radius: 20px;
+  background: transparent;
+  color: #fff;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.mainbtn:hover, .mainbtn1:hover {
-  background-color:transparent;
+.mainbtn1:hover, .mainbtn:hover {
+  background-color: #6b5ce7;
+  border-color: #6b5ce7;
   color: #fff;
 }
 
+.mainbtn::before, .mainbtn1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+  z-index: 0;
+}
+
+.mainbtn:active::before, .mainbtn1:active::before {
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+}
+
+.mainbtn, .mainbtn1 {
+  z-index: 1; /* Ensures text stays above the ripple */
+}
+
+.mainbtn span, .mainbtn1 span {
+  position: relative;
+  z-index: 2; /* Keeps text above the ripple effect */
+}
 /* Image Styling */
 .welcome-image {
   flex: 1;
@@ -680,10 +711,12 @@
 @media (max-width: 2000px) {
   .welcome-text {
       margin-left: -100px; /* Adjust left alignment for medium screens */
-  }
+ 
+    }
   .welcome-image {
     margin-left: 150px; /* Move the image slightly left */
 }
+
 
 }
 @media (max-width:1490px){

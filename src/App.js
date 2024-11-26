@@ -6,7 +6,7 @@ import ServicesMain from './components/Services/Services';
 import PastWork from './components/Portfolio/Portfolio';
 import HireUs from './components/Hire-Us/Hire-Us';
 import Graphic from './components/Home/Graphic/graphic';
-import Navbar from './components/Home/NavBar';
+import Internships from './components/Home/Internship/Internships';
 
 function App() {
   return (
@@ -16,11 +16,12 @@ function App() {
       <Routes>
         
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/services" element={<ServicesMain />} />
-        <Route path="/portfolio" element={<PastWork />} />
-        <Route path="/hiring" element={<HireUs />} />
-        <Route path="/graphic" element={<Graphic />} />
+        <Route path="/About" element={<AboutUs />} />
+        <Route path="/Services" element={<ServicesMain />} />
+        <Route path="/Portfolio" element={<PastWork />} />
+        <Route path="/Hiring" element={<HireUs />} />
+        <Route path="/Graphic" element={<Graphic />} />
+        <Route path="/Internships" element={<Internships />} />
       </Routes>
     </BrowserRouter>
   );

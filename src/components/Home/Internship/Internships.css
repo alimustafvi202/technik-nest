@@ -1,0 +1,30 @@
+
+.mainbtn::before, .mainbtn1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+  z-index: 0;
+}
+
+.mainbtn:active::before, .mainbtn1:active::before {
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+}
+
+.mainbtn, .mainbtn1 {
+  z-index: 1; /* Ensures text stays above the ripple */
+}
+
+.mainbtn span, .mainbtn1 span {
+  position: relative;
+  z-index: 2; /* Keeps text above the ripple effect */
+}
