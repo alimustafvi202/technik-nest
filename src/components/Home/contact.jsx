@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import Swal from 'sweetalert2'
 
 const Contact = () => {
   const [submissionStatus, setSubmissionStatus] = useState(null);
@@ -25,10 +26,12 @@ const Contact = () => {
       }).then((res) => res.json());
 
       if (res.success) {
-        setSubmissionStatus("Your message has been sent successfully!");
-      } else {
-        setSubmissionStatus("Oops! Something went wrong. Please try again.");
-      }
+        Swal.fire({
+          title: "Success!",
+          text: "Message Sent Successfully!",
+          icon: "Success"
+        });
+      } 
     } catch (error) {
       setSubmissionStatus("An error occurred. Please check your connection and try again.");
     }
