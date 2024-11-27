@@ -1,152 +1,186 @@
 /* Team cards container */
 .team-section {
-    text-align: center;
-    padding: 0px 190px;
-    justify-content: flex-start;
-  }
-  
-  .team-section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .team-section p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-  }
-  
-  .team-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap: 1rem; /* Space between cards */
-    margin: 0;
-  }
-  
-  /* Team card styles */
+  text-align: center;
+  padding: 0 20px; /* Adaptive padding for all devices */
+  margin: 0 auto;
+}
+
+.team-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.team-section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* Flexbox layout for team cards */
+.team-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: center; /* Center align cards */
+  gap: 1.5rem; /* Space between cards */
+  margin: 0 auto;
+}
+
+/* Team card styles */
+.team-card {
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: calc(33.33% - 1rem); /* 3 cards per row by default */
+  max-width: 300px;
+  margin: 0;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image container and image styles */
+.image-container {
+  position: relative;
+  width: 100%; /* Full width of the card */
+}
+
+.team-image {
+  display: block;
+  width: 100%; /* Responsive width */
+  border-radius: 15px;
+}
+
+/* Overlay styles */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 89.6%; /* Full width */
+  height: 93.4%;
+  background-image: linear-gradient(to bottom, rgba(39, 0, 136, 0.964), rgba(255, 0, 255, 0.8));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  opacity: 0;
+  text-align: center;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.overlay p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  color: #ffbf00;
+}
+
+.overlay span {
+  font-size: 0.9rem;
+  color: #ffffff;
+  width: 85%;
+  text-align: center;
+}
+/* Style for social icons container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* Space between icons */
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular icons */
+  background-color: #6c63ff; /* Default background color */
+  color: #fff; /* Icon color */
+  text-decoration: none;
+  font-size: 1.2rem; /* Adjust icon size */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #ff007f; /* Change color on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Example specific platform colors */
+.social-icons .facebook {
+  background-color: #3b5998; /* Facebook blue */
+}
+
+.social-icons .linkedin {
+  background-color: #0077b5; /* LinkedIn blue */
+}
+
+.social-icons .instagram {
+  background-color: #e4405f; /* Instagram gradient start */
+}
+
+.social-icons a.facebook:hover,
+.social-icons a.linkedin:hover,
+.social-icons a.instagram:hover {
+  opacity: 0.9; /* Slight transparency on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
   .team-card {
-    position: relative;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    max-width: 200px; /* Adjust card width */
-    margin: 20px 40px; /* Closer horizontal margin */
+    width: calc(50% - 1rem); /* 2 cards per row on large tablets */
   }
-  
-  .team-card:hover {
-    transform: translateY(-8px);
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    width: calc(100% - 1rem); /* Single card per row on small tablets and phones */
+    margin: 0 auto; /* Center-align cards */
   }
-  
-  /* Image container dynamically sized */
-  .image-container {
-    position: relative;
-    width: 130%;
-    height: auto;
+
+  .team-section h1 {
+    font-size: 2rem;
   }
-  
-  .team-image {
-    display: block;
-    width: 130%;
-    height: auto;
-    border-radius: 15px;
-  }
-  
-  /* Overlay styles */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 118%;
-    height: 94%;
-    background-image: linear-gradient(to bottom, rgba(39, 0, 136, 0.964), rgba(255, 0, 255, 0.8));
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    align-items: center;
-    opacity: 0;
-    text-align: center;
-    padding: 1rem;
-    transition: opacity 0.3s ease;
-  }
-  
-  .image-container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .overlay h3 {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }
-  
-  .overlay p {
+
+  .team-section p {
     font-size: 1rem;
-    margin: 0.3rem 0;
-    color: #ffbf00;
   }
-  
-  .overlay span {
+}
+
+@media (max-width: 480px) {
+  .team-section h1 {
+    font-size: 1.8rem; /* Adjust heading font size */
+  }
+
+  .team-section p {
     font-size: 0.9rem;
-    color: #ffffff;
-    width: 85%;
-    text-align: center;
+    line-height: 1.4;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 1024px) {
-    .team-cards {
-      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-      gap: 1rem;
-    }
+
+  .overlay h3 {
+    font-size: 1rem; /* Adjust overlay text size */
   }
-  
-  @media (max-width: 768px) {
-    .team-cards {
-      grid-template-columns: 1fr; /* Single card per row */
-      gap: 0.5rem; /* Small gap on mobile screens */
-    }
-  
-    .team-card {
-      margin: 20px 40px ; /* Center cards on smaller screens */
-      max-width:50%; /* Allow cards to take up most of the width */
-    }
-    
-    .team-section {
-      padding: 0 20px; /* Reduce padding on smaller screens */
-      text-align: center; /* Center-align text for smaller screens */
-    }
-  
-    .team-section h1 {
-      font-size: 2rem; /* Slightly smaller font size for headings */
-    }
-  
-    .team-section p {
-      font-size: 1rem;
-      margin: 0 auto 20px auto;
-    }
+
+  .overlay p {
+    font-size: 0.85rem;
   }
-  
-  @media (max-width: 480px) {
-    .team-section h1 {
-      font-size: 1.8rem;
-    }
-  
-    .team-section p {
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-  
-    .overlay h3 {
-      font-size: 1rem; /* Adjust text size for smaller screens */
-    }
-  
-    .overlay p {
-      font-size: 0.85rem;
-    }
-  
-    .overlay span {
-      font-size: 0.8rem;
-    }
+
+  .overlay span {
+    font-size: 0.8rem;
   }
-  
+}
