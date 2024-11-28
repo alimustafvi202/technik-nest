@@ -7,6 +7,7 @@ import Team from './MainTeam/team';
 import Testimonials from './Testimonial/Testimonials';
 import Contact from './Contact/contact';
 import Footer from './Footer/footer';
+import About from './About/Abouth';
 
 const Home = () => {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -27,6 +28,7 @@ const Home = () => {
       {!showPreloader && ( // Render other components after Preloader
         <>
           <Welcome />
+          <About/>
           <Services />
           <OurWork />
           <Team />

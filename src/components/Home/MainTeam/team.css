@@ -2,7 +2,7 @@
 .team-section {
   text-align: center;
   padding: 0 20px; /* Adaptive padding for all devices */
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .team-section h1 {
@@ -32,7 +32,7 @@
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  width: calc(33.33% - 1rem); /* 3 cards per row by default */
+  flex-basis: calc(20% - 1.5rem); /* 3 cards per row with correct gap */
   max-width: 300px;
   margin: 0;
 }
@@ -45,11 +45,14 @@
 .image-container {
   position: relative;
   width: 100%; /* Full width of the card */
+  overflow: hidden; /* Prevents the overlay from overflowing */
+  border-radius: 15px;
 }
 
 .team-image {
   display: block;
   width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 15px;
 }
 
@@ -58,9 +61,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 89.6%; /* Full width */
-  height: 93.4%;
-  background-image: linear-gradient(to bottom, rgba(39, 0, 136, 0.964), rgba(255, 0, 255, 0.8));
+  width: 100%; /* Ensure the overlay spans the full width of the image */
+  height: 100%; /* Ensure the overlay spans the full height of the image */
+  background-image: linear-gradient(to bottom, rgba(39, 0, 136, 0.9), rgba(255, 0, 255, 0.8));
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -77,6 +80,7 @@
   opacity: 1;
 }
 
+/* Text styles inside overlay */
 .overlay h3 {
   font-size: 1.2rem;
   margin: 0.5rem 0;
@@ -94,62 +98,17 @@
   width: 85%;
   text-align: center;
 }
-/* Style for social icons container */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem; /* Space between icons */
-  margin-top: 1rem;
-}
-
-.social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%; /* Circular icons */
-  background-color: #6c63ff; /* Default background color */
-  color: #fff; /* Icon color */
-  text-decoration: none;
-  font-size: 1.2rem; /* Adjust icon size */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-  background-color: #ff007f; /* Change color on hover */
-  transform: scale(1.1); /* Slight zoom effect */
-}
-
-/* Example specific platform colors */
-.social-icons .facebook {
-  background-color: #3b5998; /* Facebook blue */
-}
-
-.social-icons .linkedin {
-  background-color: #0077b5; /* LinkedIn blue */
-}
-
-.social-icons .instagram {
-  background-color: #e4405f; /* Instagram gradient start */
-}
-
-.social-icons a.facebook:hover,
-.social-icons a.linkedin:hover,
-.social-icons a.instagram:hover {
-  opacity: 0.9; /* Slight transparency on hover */
-}
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .team-card {
-    width: calc(50% - 1rem); /* 2 cards per row on large tablets */
+    flex-basis: calc(50% - 1.5rem); /* 2 cards per row on large tablets */
   }
 }
 
 @media (max-width: 768px) {
   .team-card {
-    width: calc(100% - 1rem); /* Single card per row on small tablets and phones */
+    flex-basis: calc(100% - 1.5rem); /* Single card per row on small tablets and phones */
     margin: 0 auto; /* Center-align cards */
   }
 

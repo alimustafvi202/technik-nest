@@ -1,0 +1,117 @@
+/* About Section Styling */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+  
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  /* About Content */
+  .about-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .about-content h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .about-content h2::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: #007bff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .about-content p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .learn-more-btn {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* About Image */
+  .about-image {
+    flex: 1;
+    max-width: 400px;
+    overflow: hidden;
+    animation: slideIn 1.5s ease-in-out;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-content {
+      max-width: 100%;
+    }
+  
+    .about-image {
+      max-width: 100%;
+    }
+  }

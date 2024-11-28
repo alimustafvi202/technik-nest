@@ -19,7 +19,7 @@
   
   .footer-branding h2 {
     font-size: 24px;
-    color: #af69ff;
+    color: #007bff;
     margin-bottom: 10px;
   }
   
@@ -27,7 +27,53 @@
     font-size: 14px;
     line-height: 1.6;
   }
-  
+    /* Portfolio Us Button */
+    .footerbtn {
+      background:transparent; /* Button background color */
+      color: #ffffff; /* Button text color */
+      padding: 12px 24px; /* Padding for a balanced look */
+      border: 2px solid #ffffff; /* Add a border matching the text color */
+      cursor: pointer; /* Pointer cursor on hover */
+      border-radius: 30px; /* Rounded corners */
+      font-size: 1em; /* Font size */
+      font-weight: bold; /* Bold text for emphasis */
+      transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+      margin-left: 45%;
+      opacity: 0;
+      white-space: nowrap;
+      animation: fadeIn 3s forwards; /* Hire Us button fade-in animation */
+    }
+    
+    /* Hover Effect */
+    .footerbtn:hover {
+      background: #6b5ce7; /* Purple background on hover */
+      color: white; /* White text on hover */
+      border-color: #6b5ce7; /* Match border with background */
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Focus State for Accessibility */
+    .footerbtn:focus {
+      outline: none; /* Remove default focus outline */
+      box-shadow: 0 0 5px rgba(107, 92, 231, 0.5); /* Add a subtle purple glow */
+    }
+    
+    /* Disabled State */
+    .footerbtn:disabled {
+      background: #e0e0e0; /* Gray background for disabled state */
+      color: #a0a0a0; /* Light gray text */
+      cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+      border-color: #e0e0e0; /* Match border with background */
+    }
+    @media (max-width: 768px) {
+      .footerbtn {
+          margin-left: 0; /* Remove the 45% margin that centers the button */
+          margin: 0 150px;
+          white-space: nowrap; /* Optional: Add some spacing from the edges */
+      }
+    
+    }
   /* Footer Links */
   .footer-links {
     flex: 1;
@@ -56,7 +102,8 @@
   }
   
   .footer-links ul li a:hover {
-    color: #af69ff;
+    color: #007bff;
+    
   }
   
   /* Footer Contact */
@@ -88,30 +135,7 @@
     color: #ff6b6b;
   }
   
-  .social-icons {
-    display: flex;
-    gap: 10px;
-    
-  }
-  
-  .social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: #af69ff;
-    border-radius: 50%;
-    color: white;
-    font-size: 18px;
-    transition: background 0.3s ease;
-    
-  }
-  
-  .social-icons a:hover {
-    background: #6b5ce7;
-    color: white;
-  }
+
   
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -140,7 +164,7 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: #af69ff;
+    background: #007bff;
     border-radius: 50%;
     color: white;
     font-size: 18px;
@@ -151,6 +175,8 @@
   .footsocial-icons a:hover {
     background: #6b5ce7;
     color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
   /* Footer Bar Styles */

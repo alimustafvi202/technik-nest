@@ -5,34 +5,61 @@ import Ali from "../../../assets/Team/Ali.png";
 import Ahsan from "../../../assets/Team/Ahsan.png";
 import Fahad from "../../../assets/Team/Fahad.png";
 import Hassan from "../../../assets/Team/Hassan.png";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const teamMembers = [
-  { name: "Muhammad Ali", role: "Founder & CEO",  image: Ali,socials: {
-    facebook: "https://facebook.com/syedaleem",
-    linkedin: "https://linkedin.com/in/syedaleem",
-    instagram: "https://instagram.com/syedaleem",
-  }, },
-  { name: "Syed Aleem", role: "HR Manager", image: Aleem,socials: {
-    facebook: "https://facebook.com/syedaleem",
-    linkedin: "https://linkedin.com/in/syedaleem",
-    instagram: "https://instagram.com/syedaleem",
-  }, },
-  { name: "Ahsan Naseer", role: "IT Manager",  image: Ahsan,socials: {
-    facebook: "https://facebook.com/syedaleem",
-    linkedin: "https://linkedin.com/in/syedaleem",
-    instagram: "https://instagram.com/syedaleem",
-  }, },
-  { name: "Fahad Sajid", role: "Project Manager",  image: Fahad,socials: {
-    facebook: "https://facebook.com/syedaleem",
-    linkedin: "https://linkedin.com/in/syedaleem",
-    instagram: "https://instagram.com/syedaleem",
-  }, },
-  { name: "Hassan Ali", role: "Software Developer", image: Hassan ,socials: {
-    facebook: "https://facebook.com/syedaleem",
-    linkedin: "https://linkedin.com/in/syedaleem",
-    instagram: "https://instagram.com/syedaleem",
-  },},
+  {
+    name: "Muhammad Ali",
+    role: "Founder & CEO",
+    image: Ali,
+    socials: {
+      facebook: "https://facebook.com/alimustafviofficial1",
+      linkedin: "https://linkedin.com/in/alimustafviofficial1",
+      instagram: "https://instagram.com/alimustafviofficial1",
+    },
+  },
+  {
+    name: "Syed Aleem",
+    role: "HR Manager",
+    image: Aleem,
+    socials: {
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      instagram: "https://instagram.com/",
+    },
+  },
+  {
+    name: "Ahsan Naseer",
+    role: "IT Manager",
+    image: Ahsan,
+    socials: {
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      instagram: "https://instagram.com/",
+    },
+  },
+  {
+    name: "Fahad Sajid",
+    role: "Project Manager",
+    image: Fahad,
+    socials: {
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      instagram: "https://instagram.com/",
+    },
+  },
+  {
+    name: "Hassan Ali",
+    role: "Software Developer",
+    image: Hassan,
+    socials: {
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      instagram: "https://instagram.com/",
+    },
+  },
 ];
+
 const Team = () => {
   return (
     <section className="team-section">
@@ -52,13 +79,19 @@ const Team = () => {
                 <p>{member.role}</p>
                 <div className="social-icons">
                   {member.socials.facebook && (
-                    <a href={member.socials.facebook} target="_blank" rel="noopener noreferrer" className="icon fb-icon"></a>
+                    <a href={member.socials.facebook} target="_blank" rel="noopener noreferrer" className="icon fb-icon">
+                      <FaFacebookF />
+                    </a>
                   )}
                   {member.socials.linkedin && (
-                    <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="icon linkedin-icon"></a>
+                    <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="icon linkedin-icon">
+                      <FaLinkedinIn />
+                    </a>
                   )}
                   {member.socials.instagram && (
-                    <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="icon insta-icon"></a>
+                    <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="icon insta-icon">
+                      <FaInstagram />
+                    </a>
                   )}
                 </div>
               </div>

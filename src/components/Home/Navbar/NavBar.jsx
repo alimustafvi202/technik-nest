@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './nav.css';
 import logo from '../../../assets/logo/logo.png';
-
+import { FaFacebookF,  FaLinkedinIn, FaInstagram } from "react-icons/fa";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -53,16 +53,16 @@ const Navbar = () => {
       <div className={`social-hire ${menuOpen ? 'hidden' : ''}`}>
         <div className="social-icons">
           <a href="https://facebook.com/techniknest" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook"></i>
+            <FaFacebookF/>
           </a>
           <a href="https://instagram.com/techniknest" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
+            <FaInstagram/>
           </a>
           <a href="https://linkedin.com/company/techniknest" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin"></i>
+            <FaLinkedinIn/>
           </a>
         </div>
-        <button className="hire-us">Hire Us</button>
+        <button className="hire-us"><i class="fas fa-user-tie contact-icon mr-md-2"></i>Hire Us</button>
       </div>
     </header>
   );

@@ -30,12 +30,14 @@
   .navbar.scrolled a {
     color: #000000; /* Black links */
   }
+ 
   .navbar.scrolled button {
     color: black;
     border: 2px solid #000000;
   }
   .navbar.scrolled a:hover {
     color: #2200ff; /* Hover color */
+    
   }
   .logo img {
     height: 60px;
@@ -80,6 +82,8 @@
   
   .menu ul li a:hover {
     color: #2200ff; /* Hover color */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
   .social-hire {
@@ -89,7 +93,7 @@
     left:-20px;
     margin: 10px 90px;
     position: relative;
-    top: -10px; /* Adjusted to move the whole section up */
+    
   }
   
   .hire-us {
@@ -102,15 +106,47 @@
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-    top: 15px; /* Move just the button up */
+    align-items: center; /* Center icon and text vertically */
+    gap: 10px;
   }
-  
+  .contact-icon {
+    font-size: 16px; /* Icon size */
+    transform: translateY(-1px); /* Moves icon up slightly */
+    display: inline-block;
+  }
   .hire-us:hover {
     background-color: #6b5ce7;
     border-color: #6b5ce7;
     color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    
   }
   
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    transition: background 0.3s ease;
+    
+  }
+  
+  .social-icons a:hover {
+    background: #ffffff;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
   .hamburger {
     display: none; /* Hidden by default */
   }
