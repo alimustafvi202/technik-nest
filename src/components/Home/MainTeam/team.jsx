@@ -5,7 +5,7 @@ import Ali from "../../../assets/Team/Ali.png";
 import Ahsan from "../../../assets/Team/Ahsan.png";
 import Fahad from "../../../assets/Team/Fahad.png";
 import Hassan from "../../../assets/Team/Hassan.png";
-import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 
 const teamMembers = [
   {
@@ -53,9 +53,8 @@ const teamMembers = [
     role: "Software Developer",
     image: Hassan,
     socials: {
-      facebook: "https://facebook.com/",
-      linkedin: "https://linkedin.com/in/",
-      instagram: "https://instagram.com/",
+      github: "https://github.com/hassanali167",
+      linkedin: "https://www.linkedin.com/in/hassanali202/",
     },
   },
 ];
@@ -91,6 +90,11 @@ const Team = () => {
                   {member.socials.instagram && (
                     <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="icon insta-icon">
                       <FaInstagram />
+                    </a>
+                  )}
+                  {member.socials.github && (
+                    <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="icon github-icon">
+                      <FaGithub />
                     </a>
                   )}
                 </div>
