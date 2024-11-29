@@ -1,7 +1,7 @@
 import React from "react";
 import "./Abouth.css";
-import AboutImage from '../../../assets/about/about_thumb_1.jpg'; // Renamed the import to avoid conflict
-
+import AboutImage from '../../../assets/about/1.svg'; // Renamed the import to avoid conflict
+import { Link } from "react-router-dom";
 const AboutSection = () => {
   return (
     <div className="about-section">
@@ -16,7 +16,7 @@ const AboutSection = () => {
           Our dedicated team of experts ensures every project is a fusion of creativity, 
           technology, and strategy, tailored to meet your unique needs.
         </p>
-        <button className="learn-more-btn">Learn More</button>
+        <Link to ="/about" className="learn-more-btn">Learn More</Link>
       </div>
       <div className="about-image">
         <img

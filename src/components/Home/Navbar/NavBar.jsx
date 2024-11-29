@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './nav.css';
 import logo from '../../../assets/logo/logo.png';
 import { FaFacebookF,  FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -62,7 +63,7 @@ const Navbar = () => {
             <FaLinkedinIn/>
           </a>
         </div>
-        <button className="hire-us"><i class="fas fa-user-tie contact-icon mr-md-2"></i>Hire Us</button>
+        <Link to ="/hire" className="hire-us"><i class="fas fa-user-tie contact-icon mr-md-2"></i>Hire Us</Link>
       </div>
     </header>
   );

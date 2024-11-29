@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px;
+    padding: 0px 80px;
   
-    gap: 50px;
+    gap: 100px;
     flex-wrap: wrap;
   }
   
@@ -42,19 +42,25 @@
   }
   
   .learn-more-btn {
-    padding: 12px 25px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    background:transparent; /* Button background color */
+    color: #007bff; /* Button text color */
+    padding: 12px 24px; /* Padding for a balanced look */
+    border: 2px solid #007bff; /* Add a border matching the text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    font-weight: bold; /* Bold text for emphasis */
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+    opacity: 0;
+    white-space: nowrap;
+    animation: fadeIn 3s forwards; /* Hire Us button fade-in animation */
   }
   
   .learn-more-btn:hover {
-    background-color: #0056b3;
+    background: #007bff; /* Purple background on hover */
+    color: white; /* White text on hover */
+    border-color:#007bff; /* Match border with background */
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
@@ -62,7 +68,7 @@
   /* About Image */
   .about-image {
     flex: 1;
-    max-width: 400px;
+    max-width: 900px;
     overflow: hidden;
     animation: slideIn 1.5s ease-in-out;
   }

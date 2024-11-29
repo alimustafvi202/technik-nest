@@ -20,9 +20,10 @@
 }
 
 .shape {
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  background:transparent; /* Semi-transparent white background */
   padding: 40px;
   border-radius: 25px;
+  backdrop-filter: blur(50px);
   max-width: 1200px;
   margin: 120px auto; 
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -46,7 +47,7 @@
 .welcome-text h1,
 .welcome-text h2 {
   margin-bottom: 0px;
-  color: #007bff;
+  color: #ffffff;
 }
 
 .welcome-text h1 {
@@ -63,6 +64,7 @@
   font-size: 1rem;
   margin: 20px 0;
   line-height: 1.8;
+  color: black;
 }
 
 .button-container {
@@ -73,10 +75,10 @@
 .mainbtn,
 .mainbtn1 {
   padding: 10px 20px;
-  border: 2px solid #007bff;
+  border: 2px solid #ffffff;
   border-radius: 20px;
   background: transparent;
-  color: #007bff;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;

@@ -22,6 +22,7 @@ function App() {
         <Route path="/Hiring" element={<HireUs />} />
         <Route path="/Graphic" element={<Graphic />} />
         <Route path="/Internships" element={<Internships />} />
+        <Route path='/hire' element={<HireUs/>}/>
       </Routes>
     </BrowserRouter>
   );

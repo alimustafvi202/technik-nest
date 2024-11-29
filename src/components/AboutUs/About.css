@@ -89,11 +89,16 @@
 }
 
 .image-column img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
 }
+
+/* Adjustments for Alternating Rows */
+.about-row.reverse {
+  flex-direction: row-reverse; /* Reverse layout for alternating rows */
+}
+
 
 /* Responsive Design */
 @media (max-width: 991px) {
