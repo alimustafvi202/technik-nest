@@ -32,7 +32,7 @@ const Services = () => {
             At Technik Nest, we build responsive, user-friendly websites tailored to drive
             engagement and optimize performance for businesses.
           </p>
-          <a href="#" className="service-link">Learn More</a>
+          <Link to="/web" className="service-link">Learn More</Link>
         </div>
         <div className="service-card1">
           <h2 className="service-title">App Development</h2>
@@ -40,7 +40,7 @@ const Services = () => {
             We create high-performance, custom mobile apps with seamless design and functionality,
             ensuring a superior user experience across platforms.
           </p>
-          <Link to="/graphic" className="service-link">Learn More</Link>
+          <Link to="/app" className="service-link">Learn More</Link>
         </div>
         <div className="service-card1">
           <h2 className="service-title">Graphic Designing</h2>

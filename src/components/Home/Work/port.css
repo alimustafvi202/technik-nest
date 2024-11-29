@@ -101,6 +101,7 @@
   
   /* Portfolio Us Button */
   .portbtn {
+    position: relative;
     background:transparent; /* Button background color */
     color: #4800ff; /* Button text color */
     padding: 12px 24px; /* Padding for a balanced look */
@@ -109,9 +110,8 @@
     border-radius: 30px; /* Rounded corners */
     font-size: 1em; /* Font size */
     font-weight: bold; /* Bold text for emphasis */
+    top:40px;
     transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
-    margin-left: 45%;
-    margin-top: 5%;
     opacity: 0;
     white-space: nowrap;
     animation: fadeIn 3s forwards; /* Hire Us button fade-in animation */

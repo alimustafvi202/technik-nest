@@ -5,8 +5,11 @@ import AboutUs from './components/AboutUs/About';
 import ServicesMain from './components/Services/Services';
 import PastWork from './components/Portfolio/Portfolio';
 import HireUs from './components/Hire-Us/Hire-Us';
-import Graphic from './components/Home/Graphic/graphic';
+import Graphic from './components/Home/Serv/ServicesModule/Graphic/graphic';
 import Internships from './components/Home/Internship/Internships';
+import WebDevelopmentPage from './components/Home/Serv/ServicesModule/WebdevelopmentPage/Web';
+import AppDevelopmentPage from './components/Home/Serv/ServicesModule/App/app';
+import ServicesPage from './components/Home/Serv/ServicesModule/serveicemodal';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         <Route path="/Graphic" element={<Graphic />} />
         <Route path="/Internships" element={<Internships />} />
         <Route path='/hire' element={<HireUs/>}/>
+        <Route path='/web' element={<WebDevelopmentPage/>}/>
+        <Route path='/app' element={<AppDevelopmentPage/>}/>
+        <Route path='/allservices' element={<ServicesPage/>}/>
       </Routes>
     </BrowserRouter>
   );

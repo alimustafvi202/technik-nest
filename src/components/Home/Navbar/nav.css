@@ -5,7 +5,7 @@
     justify-content: space-between; /* Space items apart */
     align-items: center; /* Align items vertically */
     width: 100%;
-    padding: 10px 5px;
+    padding: 0px 5px;
     position: fixed;
     top: 0;
     left: 0;
@@ -31,9 +31,9 @@
     color: #000000; /* Black links */
   }
  
-  .navbar.scrolled button {
-    color: black;
-    border: 2px solid #000000;
+  .navbar.scrolled a.hire-us {
+    border: 2px solid #000000; /* Black border */
+    color: inherit; /* Keeps the text color unchanged */
   }
   .navbar.scrolled a:hover {
     color: #2200ff; /* Hover color */

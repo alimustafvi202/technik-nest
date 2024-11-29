@@ -2,6 +2,7 @@ import React from "react";
 import './port.css';
 import Web from '../../../assets/Services/Web.png';
 import App from '../../../assets/Services/app.png';
+import { Link } from "react-router-dom";
 const OurWork = () => {
     return(
         <div className="portfolio">
@@ -48,7 +49,7 @@ const OurWork = () => {
                 </div>*/}
             </div>
             <div>
-            <button className="portbtn">View More</button>
+            <Link to = '/allservices' className="portbtn">View More</Link>
         </div>
         </div>
     );

@@ -63,7 +63,9 @@ const Navbar = () => {
             <FaLinkedinIn/>
           </a>
         </div>
-        <Link to ="/hire" className="hire-us"><i class="fas fa-user-tie contact-icon mr-md-2"></i>Hire Us</Link>
+        <Link to="/hire" className="hire-us">
+        <i className="fas fa-user-tie contact-icon mr-md-2"></i>Hire Us
+      </Link>
       </div>
     </header>
   );
