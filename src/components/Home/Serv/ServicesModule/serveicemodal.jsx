@@ -2,54 +2,82 @@ import React, { useState } from "react";
 import Navbar from "../../Navbar/NavBar";
 import Footer from "../../Footer/footer";
 import HeroImage from "../../../../assets/web/WebImage.jpg";
-
-
+import Img1 from '../../../../assets/Services/app/1.png';
+import Img2 from '../../../../assets/Services/app/2.png';
+import Img3 from '../../../../assets/Services/app/3.png';
+import Img4 from '../../../../assets/Services/app/4.png';
+import Img5 from '../../../../assets/Services/app/5.png';
+import Img6 from '../../../../assets/Services/app/6.png';
+import Img7 from '../../../../assets/Services/app/7.jpg';
+import Img8 from '../../../../assets/Services/app/8.webp';
+import Img9 from '../../../../assets/Services/app/9.png';
+import Img10 from '../../../../assets/Services/app/10.png';
+import App1 from '../../../../assets/Services/graphic/1.jpg';
+import App2 from '../../../../assets/Services/graphic/2.jpg';
+import App3 from '../../../../assets/Services/graphic/3.jpg';
+import App4 from '../../../../assets/Services/graphic/4.jpg';
+import App5 from '../../../../assets/Services/graphic/5.jpg';
+import App6 from '../../../../assets/Services/graphic/6.jpg';
+import App7 from '../../../../assets/Services/graphic/7.jpg';
+import App8 from '../../../../assets/Services/graphic/8.jpg';
+import App9 from '../../../../assets/Services/graphic/9.jpg';
+import App10 from '../../../../assets/Services/graphic/10.png';
+import Web1 from '../../../../assets/Services/web/1.jpg';
+import Web2 from '../../../../assets/Services/web/Img2.avif';
+import Web3 from '../../../../assets/Services/web/Img4.jpeg';
+import Web4 from '../../../../assets/Services/web/Img3.jpg';
+import Web5 from '../../../../assets/Services/web/Img5.webp';
+import Web6 from '../../../../assets/Services/web/Img6.png';
+import Web7 from '../../../../assets/Services/web/Img27.webp';
+import Web8 from '../../../../assets/Services/web/Img8.jpg';
+import Web9 from '../../../../assets/Services/web/Img9.png';
+import Web10 from '../../../../assets/Services/web/Img10.png';
 const ServicesPage = () => {
   // Categories and Subcategories
   const services = [
     {
       category: "Web Development",
       items: [
-        { name: "E-commerce Website", description: "Sell your products online seamlessly.", img: "/images/web1.jpg" },
-        { name: "Portfolio Website", description: "Showcase your work beautifully.", img: "/images/web2.jpg" },
-        { name: "Corporate Website", description: "Professional websites for businesses.", img: "/images/web3.jpg" },
-        { name: "Educational Website", description: "Online learning platforms.", img: "/images/web4.jpg" },
-        { name: "Blog Website", description: "Personal or multi-author blogs.", img: "/images/web5.jpg" },
-        { name: "News Website", description: "Publish news and articles.", img: "/images/web6.jpg" },
-        { name: "Landing Page", description: "Promote products or campaigns.", img: "/images/web7.jpg" },
-        { name: "Non-Profit Website", description: "Raise awareness and donations.", img: "/images/web8.jpg" },
-        { name: "Real Estate Website", description: "List properties with ease.", img: "/images/web9.jpg" },
-        { name: "Event Website", description: "Manage events and tickets online.", img: "/images/web10.jpg" },
+        { name: "E-commerce Website", description: "Sell your products online seamlessly.", img: Web1 },
+        { name: "Portfolio Website", description: "Showcase your work beautifully.", img: Web2 },
+        { name: "Corporate Website", description: "Professional websites for businesses.", img: Web3 },
+        { name: "Educational Website", description: "Online learning platforms.", img: Web4 },
+        { name: "Blog Website", description: "Personal or multi-author blogs.", img: Web5 },
+        { name: "News Website", description: "Publish news and articles.", img: Web6 },
+        { name: "Landing Page", description: "Promote products or campaigns.", img: Web7 },
+        { name: "Non-Profit Website", description: "Raise awareness and donations.", img: Web8 },
+        { name: "Real Estate Website", description: "List properties with ease.", img: Web9 },
+        { name: "Event Website", description: "Manage events and tickets online.", img: Web10 },
       ],
     },
     {
       category: "Graphic Designing",
       items: [
-        { name: "Logo Design", description: "Custom logo for your brand.", img: "/images/graphic1.jpg" },
-        { name: "Flyer Design", description: "Promote your events effectively.", img: "/images/graphic2.jpg" },
-        { name: "Business Card Design", description: "Professional business cards.", img: "/images/graphic3.jpg" },
-        { name: "Brochure Design", description: "Informative brochures.", img: "/images/graphic4.jpg" },
-        { name: "Social Media Graphics", description: "Stand out on social platforms.", img: "/images/graphic5.jpg" },
-        { name: "Infographic Design", description: "Visual storytelling.", img: "/images/graphic6.jpg" },
-        { name: "Poster Design", description: "Eye-catching posters.", img: "/images/graphic7.jpg" },
-        { name: "Web Banner Design", description: "Attractive banners.", img: "/images/graphic8.jpg" },
-        { name: "Packaging Design", description: "Product packaging solutions.", img: "/images/graphic9.jpg" },
-        { name: "Presentation Design", description: "Make impactful presentations.", img: "/images/graphic10.jpg" },
+        { name: "Logo Design", description: "Custom logo for your brand.", img: App1},
+        { name: "Flyer Design", description: "Promote your events effectively.", img: App2},
+        { name: "Business Card Design", description: "Professional business cards.", img: App3},
+        { name: "Brochure Design", description: "Informative brochures.", img: App4 },
+        { name: "Social Media Graphics", description: "Stand out on social platforms.", img: App5 },
+        { name: "Infographic Design", description: "Visual storytelling.", img: App6},
+        { name: "Poster Design", description: "Eye-catching posters.", img: App7 },
+        { name: "Web Banner Design", description: "Attractive banners.", img: App8},
+        { name: "Packaging Design", description: "Product packaging solutions.", img: App9},
+        { name: "Presentation Design", description: "Make impactful presentations.", img: App10 },
       ],
     },
     {
       category: "App Development",
       items: [
-        { name: "Fitness App", description: "Track workouts and health.", img: "/images/app1.jpg" },
-        { name: "E-commerce App", description: "Sell products on mobile.", img: "/images/app2.jpg" },
-        { name: "Food Delivery App", description: "Deliver food conveniently.", img: "/images/app3.jpg" },
-        { name: "Educational App", description: "Learn anywhere, anytime.", img: "/images/app4.jpg" },
-        { name: "Task Management App", description: "Boost productivity.", img: "/images/app5.jpg" },
-        { name: "Social Media App", description: "Connect with others.", img: "/images/app6.jpg" },
-        { name: "Healthcare App", description: "Book doctor appointments.", img: "/images/app7.jpg" },
-        { name: "News App", description: "Stay updated.", img: "/images/app8.jpg" },
-        { name: "Travel App", description: "Book tickets and hotels.", img: "/images/app9.jpg" },
-        { name: "Messaging App", description: "Real-time communication.", img: "/images/app10.jpg" },
+        { name: "Fitness App", description: "Track workouts and health.", img: Img1 },
+        { name: "E-commerce App", description: "Sell products on mobile.", img:Img2  },
+        { name: "Food Delivery App", description: "Deliver food conveniently.", img:Img3  },
+        { name: "Educational App", description: "Learn anywhere, anytime.", img: Img4  },
+        { name: "Task Management App", description: "Boost productivity.", img: Img5  },
+        { name: "Social Media App", description: "Connect with others.", img: Img6 },
+        { name: "Healthcare App", description: "Book doctor appointments.", img: Img7 },
+        { name: "News App", description: "Stay updated.", img:Img8 },
+        { name: "Travel App", description: "Book tickets and hotels.", img: Img9  },
+        { name: "Messaging App", description: "Real-time communication.", img: Img10  },
       ],
     },
   ];
@@ -104,10 +132,15 @@ const ServicesPage = () => {
                 alt={item.name}
                 className="w-full h-48 object-cover group-hover:opacity-80 transition"
               />
-              <div className="p-4">
+              <div className="p-4 flex items-center justify-between">
+              <div >
                 <h4 className="text-xl font-bold mb-2">{item.name}</h4>
                 <p className="text-gray-600">{item.description}</p>
               </div>
+              <button className="px-6 py-2 text-lg font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 whitespace-nowrap">
+  Order Now
+</button>
+</div>
             </div>
           ))}
         </div>

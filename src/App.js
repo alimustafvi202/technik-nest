@@ -10,6 +10,7 @@ import Internships from './components/Home/Internship/Internships';
 import WebDevelopmentPage from './components/Home/Serv/ServicesModule/WebdevelopmentPage/Web';
 import AppDevelopmentPage from './components/Home/Serv/ServicesModule/App/app';
 import ServicesPage from './components/Home/Serv/ServicesModule/serveicemodal';
+import Team from './components/Team/Team';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/web' element={<WebDevelopmentPage/>}/>
         <Route path='/app' element={<AppDevelopmentPage/>}/>
         <Route path='/allservices' element={<ServicesPage/>}/>
+        <Route path='/team' element={<Team/>}/>
       </Routes>
     </BrowserRouter>
   );

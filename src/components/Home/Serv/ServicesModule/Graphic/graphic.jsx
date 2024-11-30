@@ -3,19 +3,28 @@ import GraphicImage from '../../../../../assets/Graphic/graphic.jpg';
 import Navbar from '../../../../Home/Navbar/NavBar';
 import Footer from "../../../../Home/Footer/footer";
 import Contact from "../../../../Home/Contact/contact";
-
+import Img1 from '../../../../../assets/Services/graphic/1.jpg';
+import Img2 from '../../../../../assets/Services/graphic/2.jpg';
+import Img3 from '../../../../../assets/Services/graphic/3.jpg';
+import Img4 from '../../../../../assets/Services/graphic/4.jpg';
+import Img5 from '../../../../../assets/Services/graphic/5.jpg';
+import Img6 from '../../../../../assets/Services/graphic/6.jpg';
+import Img7 from '../../../../../assets/Services/graphic/7.jpg';
+import Img8 from '../../../../../assets/Services/graphic/8.jpg';
+import Img9 from '../../../../../assets/Services/graphic/9.jpg';
+import Img10 from '../../../../../assets/Services/graphic/10.png';
 const GraphicDesigningPage = () => {
   const projects = [
-    { name: "Logo Design", description: "Modern and sleek logo design.", img: "/images/design1.jpg" },
-    { name: "Business Card", description: "Professional and stylish cards.", img: "/images/design2.jpg" },
-    { name: "Social Media Kit", description: "Eye-catching templates.", img: "/images/design3.jpg" },
-    { name: "Poster Design", description: "Creative and impactful posters.", img: "/images/design4.jpg" },
-    { name: "Brochure Design", description: "Elegant and informative brochures.", img: "/images/design5.jpg" },
-    { name: "Flyer Design", description: "Captivating flyers for promotion.", img: "/images/design6.jpg" },
-    { name: "Brand Identity", description: "Complete branding solutions.", img: "/images/design7.jpg" },
-    { name: "Illustrations", description: "Unique hand-drawn art.", img: "/images/design8.jpg" },
-    { name: "Product Packaging", description: "Creative and engaging packaging.", img: "/images/design9.jpg" },
-    { name: "UI/UX Design", description: "User-friendly and modern interfaces.", img: "/images/design10.jpg" },
+    { name: "Logo Design", description: "Modern and sleek logo design.", img: Img1 },
+    { name: "Business Card", description: "Professional and stylish cards.", img: Img2 },
+    { name: "Social Media Kit", description: "Eye-catching templates.", img: Img3 },
+    { name: "Poster Design", description: "Creative and impactful posters.", img: Img4 },
+    { name: "Brochure Design", description: "Elegant and informative brochures.", img:Img5 },
+    { name: "Flyer Design", description: "Captivating flyers for promotion.", img:Img6 },
+    { name: "Brand Identity", description: "Complete branding solutions.", img: Img7 },
+    { name: "Illustrations", description: "Unique hand-drawn art.", img: Img8},
+    { name: "Product Packaging", description: "Creative and engaging packaging.", img: Img9 },
+    { name: "UI/UX Design", description: "User-friendly and modern interfaces.", img:Img10 },
   ];
 
   return (
@@ -35,8 +44,8 @@ const GraphicDesigningPage = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="container mx-auto px-4 py-16">
+     {/* Portfolio Section */}
+     <section id="portfolio" className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-8">Our Portfolio</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -49,9 +58,14 @@ const GraphicDesigningPage = () => {
                 alt={project.name}
                 className="w-full h-48 object-cover group-hover:opacity-80 transition"
               />
-              <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-                <p className="text-gray-600">{project.description}</p>
+              <div className="p-4 flex items-center justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                  <p className="text-gray-600">{project.description}</p>
+                </div>
+                <button className="px-6 py-2 text-lg font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 whitespace-nowrap">
+  Order Now
+</button>
               </div>
             </div>
           ))}

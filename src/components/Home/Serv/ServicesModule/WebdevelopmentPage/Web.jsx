@@ -2,25 +2,35 @@ import React from "react";
 import Navbar from "../../../Navbar/NavBar";
 import Footer from "../../../Footer/footer";
 import WebImage from '../../../../../assets/web/WebImage.jpg';
+import Img1 from '../../../../../assets/Services/web/1.jpg';
+import Img2 from '../../../../../assets/Services/web/Img2.avif';
+import Img3 from '../../../../../assets/Services/web/Img4.jpeg';
+import Img4 from '../../../../../assets/Services/web/Img3.jpg';
+import Img5 from '../../../../../assets/Services/web/Img5.webp';
+import Img6 from '../../../../../assets/Services/web/Img6.png';
+import Img7 from '../../../../../assets/Services/web/Img27.webp';
+import Img8 from '../../../../../assets/Services/web/Img8.jpg';
+import Img9 from '../../../../../assets/Services/web/Img9.png';
+import Img10 from '../../../../../assets/Services/web/Img10.png';
 
 const WebDevelopmentPage = () => {
   const websites = [
-    { name: "E-commerce Website", description: "Sell your products online seamlessly.", img: "/images/web1.jpg" },
-    { name: "Portfolio Website", description: "Showcase your work beautifully.", img: "/images/web2.jpg" },
-    { name: "Corporate Website", description: "Professional websites for businesses.", img: "/images/web3.jpg" },
-    { name: "Educational Website", description: "Online learning platforms.", img: "/images/web4.jpg" },
-    { name: "Blog Website", description: "Personal or multi-author blogs.", img: "/images/web5.jpg" },
-    { name: "News Website", description: "Publish news and articles.", img: "/images/web6.jpg" },
-    { name: "Landing Page", description: "Promote products or campaigns.", img: "/images/web7.jpg" },
-    { name: "Non-Profit Website", description: "Raise awareness and donations.", img: "/images/web8.jpg" },
-    { name: "Real Estate Website", description: "List properties with ease.", img: "/images/web9.jpg" },
-    { name: "Event Website", description: "Manage events and tickets online.", img: "/images/web10.jpg" },
+    { name: "E-commerce Website", description: "Sell your products online seamlessly.", img: Img1 },
+    { name: "Portfolio Website", description: "Showcase your work beautifully.", img: Img2 },
+    { name: "Corporate Website", description: "Professional websites for businesses.", img: Img3 },
+    { name: "Educational Website", description: "Online learning platforms.", img: Img4 },
+    { name: "Blog Website", description: "Personal or multi-author blogs.", img: Img5 },
+    { name: "News Website", description: "Publish news and articles.", img: Img6 },
+    { name: "Landing Page", description: "Promote products or campaigns.", img: Img7 },
+    { name: "Non-Profit Website", description: "Raise awareness and donations.", img: Img8 },
+    { name: "Real Estate Website", description: "List properties with ease.", img: Img9 },
+    { name: "Event Website", description: "Manage events and tickets online.", img: Img10 },
   ];
 
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
-      <Navbar/>
+      <Navbar />
 
       {/* Hero Section */}
       <section
@@ -49,9 +59,14 @@ const WebDevelopmentPage = () => {
                 alt={website.name}
                 className="w-full h-48 object-cover group-hover:opacity-80 transition"
               />
-              <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">{website.name}</h3>
-                <p className="text-gray-600">{website.description}</p>
+              <div className="p-4 flex items-center justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{website.name}</h3>
+                  <p className="text-gray-600">{website.description}</p>
+                </div>
+                <button className="px-6 py-2 text-lg font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 whitespace-nowrap">
+  Order Now
+</button>
               </div>
             </div>
           ))}
@@ -59,7 +74,7 @@ const WebDevelopmentPage = () => {
       </section>
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };
