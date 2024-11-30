@@ -26,11 +26,14 @@ const Services = () => {
     return () => clearInterval(interval);
   }, [services.length]);
 
-  const visibleServices = services.slice(currentIndex, currentIndex + 3).concat(
-    currentIndex + 3 > services.length
-      ? services.slice(0, (currentIndex + 3) % services.length)
+  const visibleServices =window.innerWidth <= 768 
+  ? [services[currentIndex]] // Show one service at a time on mobile
+  : services.slice(currentIndex, currentIndex + 4).concat(
+    currentIndex + 4 > services.length
+      ? services.slice(0, (currentIndex + 4) % services.length)
       : []
   );
+ 
 
   return (
     <div>
