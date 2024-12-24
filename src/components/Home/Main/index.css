@@ -46,7 +46,7 @@
 
 .welcome-text h1,
 .welcome-text h2 {
-  margin-bottom: 0px;
+  margin-bottom: -15px;
   color: #ffffff;
 }
 
@@ -61,10 +61,11 @@
 }
 
 .welcome-text p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 20px 0;
-  line-height: 1.8;
-  color: black;
+  line-height: 1.6;
+  color: rgb(0, 0, 0);
+  text-justify: right;
 }
 
 .button-container {
@@ -86,10 +87,10 @@
 
 .mainbtn:hover,
 .mainbtn1:hover {
-  background: #007bff;
-  color: #fff;
+  background: #00fbff;
+  color: #000000;
   transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: none;
 }
 
 /* Image Styling */

@@ -21,14 +21,15 @@ const Home = () => {
   }, []);
 
   return (
-  
-
     <>
-      {showPreloader ? <Preloader /> : null} {/* Render Preloader only if showPreloader is true */}
-      {!showPreloader && ( // Render other components after Preloader
+      {/* Render Preloader while it is active */}
+      {showPreloader && <Preloader />}
+
+      {/* Render the rest of the content after the preloader */}
+      {!showPreloader && (
         <>
           <Welcome />
-          <About/>
+          <About />
           <Services />
           <OurWork />
           <Team />
@@ -38,7 +39,6 @@ const Home = () => {
         </>
       )}
     </>
-    
   );
 };
 

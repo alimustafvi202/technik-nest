@@ -1,71 +1,129 @@
 import React, { useState, useEffect } from 'react';
-import './nav.css';
 import logo from '../../../assets/logo/logo.png';
-import { FaFacebookF,  FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { Link, useLocation } from 'react-router-dom';
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();  // To get the current path
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  // Detect scroll event and set 'scrolled' state
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true); // Set scrolled to true if user scrolls down
-      } else {
-        setScrolled(false); // Set scrolled to false if at the top
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 0);
     window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Function to check if the current path matches the link
+  const isActiveLink = (path) => location.pathname === path ? 'text-teal-400' : 'text-white';
+
   return (
-    <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="logo">
-        <img src={logo} alt="Logo" />
-      </div>
-      <button className="hamburger" onClick={toggleMenu}>
-        <span className="line"></span>
-        <span className="line"></span>
-        <span className="line"></span>
-      </button>
-      <nav className={`menu ${menuOpen ? 'open' : ''}`}>
-        <button className="close-btn" onClick={toggleMenu}>
-          &times;
-        </button>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/team">Team</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-        </ul>
-      </nav>
-      <div className={`social-hire ${menuOpen ? 'hidden' : ''}`}>
-        <div className="social-icons">
-          <a href="https://facebook.com/techniknest" target="_blank" rel="noopener noreferrer">
-            <FaFacebookF/>
-          </a>
-          <a href="https://instagram.com/techniknest" target="_blank" rel="noopener noreferrer">
-            <FaInstagram/>
-          </a>
-          <a href="https://linkedin.com/company/techniknest" target="_blank" rel="noopener noreferrer">
-            <FaLinkedinIn/>
-          </a>
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md ${
+        scrolled ? 'bg-gray-900 shadow-lg' : 'bg-gray-900/30'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src={logo} alt="Logo" className="h-16" />
         </div>
-        <Link to="/hire" className="hire-us">
-        <i className="fas fa-user-tie contact-icon mr-md-2"></i>Hire Us
-      </Link>
+
+        {/* Hamburger Menu */}
+        <button
+          className="sm:hidden flex flex-col justify-center items-center space-y-1 "
+          onClick={toggleMenu}
+        >
+          <span className="w-6 h-0.5 bg-white"></span>
+          <span className="w-6 h-0.5 bg-white"></span>
+          <span className="w-6 h-0.5 bg-white"></span>
+        </button>
+
+        {/* Navigation Links */}
+        <nav
+          className={`${
+            menuOpen ? 'block' : 'hidden'
+          } sm:flex absolute sm:static top-16 sm:top-0 left-0 right-0 bg-gray-900 sm:bg-transparent text-center sm:text-left transition-all duration-300`}
+        >
+          <ul className="space-y-4 sm:space-y-0 sm:flex sm:space-x-8 py-4 sm:py-0">
+            <li>
+              <a
+                href="/"
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/')}`}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about"
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/about')}`}
+              >
+                About Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="/services"
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/services')}`}
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/team"
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/team')}`}
+              >
+                Team
+              </a>
+            </li>
+            <li>
+              <a
+                href="/portfolio"
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/portfolio')}`}
+              >
+                Portfolio
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Social Icons */}
+        <div className="hidden sm:flex items-center space-x-4">
+          <a
+            href="https://facebook.com/techniknest"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white bg-gray-700 hover:bg-teal-400 w-10 h-10 flex items-center justify-center rounded-full transition-all text-xl"
+          >
+            <FaFacebookF />
+          </a>
+          <a
+            href="https://instagram.com/techniknest"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white bg-gray-700 hover:bg-teal-400 w-10 h-10 flex items-center justify-center rounded-full transition-all text-xl"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://linkedin.com/company/techniknest"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white bg-gray-700 hover:bg-teal-400 w-10 h-10 flex items-center justify-center rounded-full transition-all text-xl"
+          >
+            <FaLinkedinIn />
+          </a>
+          <Link
+            to="/hire"
+            className="text-white bg-teal-600 px-4 py-2 rounded-lg hover:bg-teal-700 transition duration-300"
+          >
+            Hire Us
+          </Link>
+        </div>
       </div>
     </header>
   );

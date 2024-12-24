@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import Video from "../../../assets/Video/Video.mp4";
 
 const Welcome = () => {
+    
     return (
+        
         <section className="welcome-area">
             <Navbar />
             {/* Background Video */}

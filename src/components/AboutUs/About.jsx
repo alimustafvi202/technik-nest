@@ -12,22 +12,9 @@ import whatWeDoImage from "../../assets/about/about_thumb_3.png";
 
 const AboutUs = () => {
 
-  const [showPreloader, setShowPreloader] = useState(true);
-
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setShowPreloader(false); // Hide Preloader after 2 seconds
-      }, 500);
-  
-      return () => clearTimeout(timer); // Cleanup timer on component unmount
-    }, []);
   
     return (
-      <>
-        {showPreloader ? <Preloader /> : null} {/* Render Preloader only if showPreloader is true */}
-        
-        {/* Render other components after Preloader is hidden */}
-        {!showPreloader && (
+    
 
 <div className="about-us">
       <Navbar />
@@ -97,8 +84,7 @@ const AboutUs = () => {
       <Contact />
       <Footer />
     </div>
-       )}
-    </>
+      
   );
 };
 
