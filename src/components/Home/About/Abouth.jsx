@@ -81,7 +81,7 @@ const AboutUs = () => {
           className={`mt-8 transform transition-all duration-1000 ${buttonInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
         >
           <button
-            className="bg-transparent text-blue-600 py-3 px-8 border-2 border-blue-600 rounded-full font-semibold hover:bg-teal-600 hover:border-teal-600 hover:text-white transition duration-300 ease-in-out"
+            className="bg-transparent text-blue-600 py-3 px-8 border-2 border-blue-600 rounded-full font-semibold hover:bg-teal-600 hover:border-teal-600 hover:text-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
             onClick={handleViewMore}
           >
             View More

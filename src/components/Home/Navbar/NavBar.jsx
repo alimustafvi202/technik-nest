@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import logo from '../../../assets/logo/logo.png';
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { Link, useLocation } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserTie } from '@fortawesome/free-solid-svg-icons';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -118,11 +119,12 @@ const Navbar = () => {
             <FaLinkedinIn />
           </a>
           <Link
-            to="/hire"
-            className="text-white bg-teal-600 px-4 py-2 rounded-lg hover:bg-teal-700 transition duration-300"
-          >
-            Hire Us
-          </Link>
+      to="/hire"
+      className="text-white bg-transparent px-4 py-2 border-2 border-white rounded-full hover:bg-teal-400 hover:border-teal-400 transition duration-300 flex items-center space-x-2 transform hover:scale-105 hover:shadow-lg"
+    >
+      <FontAwesomeIcon icon={faUserTie} className="text-lg transform -translate-y-0.8" />
+      <span>Join Us</span>
+    </Link>
         </div>
       </div>
     </header>

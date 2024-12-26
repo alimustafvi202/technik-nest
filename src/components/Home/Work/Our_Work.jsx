@@ -106,7 +106,7 @@ const PastWork = () => {
         {/* View More Button */}
         <div className="text-center mt-8">
           <button
-            className="bg-transparent text-blue-600 py-3 px-8 border-2 border-blue-600 rounded-full font-semibold hover:bg-teal-600 hover:border-teal-600 hover:text-white transition duration-300 ease-in-out"
+            className="bg-transparent text-blue-600 py-3 px-8 border-2 border-blue-600 rounded-full font-semibold hover:bg-teal-600 hover:border-teal-600 hover:text-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
             onClick={handleViewMore}
           >
             View More

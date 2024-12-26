@@ -5,7 +5,7 @@ import { FaUsers, FaTrophy, FaBriefcase } from "react-icons/fa"; // Import Font 
 const CompanyInfo = () => {
   return (
     <section className="company-info py-16 bg-teal-500" id="company-info">
-      <div className="company-info-header text-center mb-16">
+      <div className="company-info-header text-center mb-16 px-4 sm:px-4">
         <h1 className="text-4xl font-extrabold text-white mb-6 tracking-wide">
           Why Choose Us
         </h1>
