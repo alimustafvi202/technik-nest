@@ -1,62 +1,54 @@
 import React from "react";
-import "./testim.css";
-import xup from '../../../assets/Testimonials/xup.png';
-import SPCAI from '../../../assets/Testimonials/spcai.png';
-import paf from '../../../assets/Testimonials/pafiast.png';
+import CountUp from "react-countup";
+import { FaUsers, FaTrophy, FaBriefcase } from "react-icons/fa"; // Import Font Awesome icons
 
-const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      logo: SPCAI, // Replace with the actual image path
-      name: "SPCAI",
-      type: "Startup",
-      text: "The graphic designs from Technik Nest beautifully captured our brand's essence. Their creativity and professionalism made the collaboration enjoyable.",
-    },
-    {
-      id: 2,
-      logo: xup, // Replace with the actual image path
-      name: "XUP Studio",
-      type: "Startup",
-      text: "Technik Nest created a fantastic mobile app for our studio. Their innovative approach and attention to detail truly enhanced the user experience.",
-    },
-    {
-      id: 3,
-      logo: paf, // Replace with the actual image path
-      name: "PAF IAST",
-      type: "University",
-      text: "Technik Nest delivered an outstanding website for our university. Their expertise and professionalism made the entire process seamless, and we are extremely pleased with the result.",
-    },
-  ];
-
+const CompanyInfo = () => {
   return (
-    <section className="testimonials">
-      <div className="testimonials-header">
-        <h1>Our clients say</h1>
-        <p>
-          Hear from our satisfied clients about their experiences working with
-          Technik Nest. Our commitment to delivering exceptional service and
-          innovative solutions has earned us the trust of businesses across
-          various industries. Discover how our partnership has helped them
-          achieve their goals and drive growth.
+    <section className="company-info py-16 bg-teal-500" id="company-info">
+      <div className="company-info-header text-center mb-16">
+        <h1 className="text-5xl font-extrabold text-white mb-6 tracking-wide">
+          Why Choose Us
+        </h1>
+        <p className="text-xl text-white max-w-4xl mx-auto">
+          Discover what sets Technik Nest apart. Our dedication to quality, innovation, and customer satisfaction has helped us build strong relationships across various industries. Here's why our clients trust us.
         </p>
       </div>
-      <div className="testimonials-cards">
-        {testimonials.map((testimonial) => (
-          <div key={testimonial.id} className="testimonial-card">
-            <p>{testimonial.text}</p>
-            <div className="testimonial-footer">
-              <img src={testimonial.logo} alt={`${testimonial.name} logo`} />
-              <div>
-                <h3>{testimonial.name}</h3>
-                <p>{testimonial.type}</p>
-              </div>
-            </div>
+      <div className="company-info-stats grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        {/* Number of Clients */}
+        <div className="info-stat text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="flex justify-center items-center mb-4">
+            <FaUsers className="text-6xl text-teal-500" />
           </div>
-        ))}
+          <h3 className="text-5xl font-extrabold text-teal-500 mb-4">
+            <CountUp start={0} end={50} duration={5} />+
+          </h3>
+          <p className="text-gray-700 text-xl font-medium">Clients Served</p>
+        </div>
+        
+        {/* Award Winning */}
+        <div className="info-stat text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="flex justify-center items-center mb-4">
+            <FaTrophy className="text-6xl text-teal-500" />
+          </div>
+          <h3 className="text-5xl font-extrabold text-teal-500 mb-4">
+            <CountUp start={0} end={10} duration={8} />+
+          </h3>
+          <p className="text-gray-700 text-xl font-medium">Award Winning</p>
+        </div>
+        
+        {/* Years of Experience */}
+        <div className="info-stat text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="flex justify-center items-center mb-4">
+            <FaBriefcase className="text-6xl text-teal-500" />
+          </div>
+          <h3 className="text-5xl font-extrabold text-teal-500 mb-4">
+            <CountUp start={0} end={5} duration={8} />+
+          </h3>
+          <p className="text-gray-700 text-xl font-medium">Years of Experience</p>
+        </div>
       </div>
     </section>
   );
 };
 
-export default Testimonials;
+export default CompanyInfo;

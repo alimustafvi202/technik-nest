@@ -5,17 +5,18 @@ const Footer = () => {
   
   return (
     <div>
-    <section className="testimonials">
-      <div className="testimonials-header">
-        <h1>Looking For The Best Solution Tech For Your Bussiness?</h1>
-        <p>
-        Have questions or need more information? Feel free to reach out to our team. We`re here to assist you and provide personalized solutions tailored to your specific needs. Contact us today for a consultation.
-        </p>
-        <div>
-            <button className="footerbtn">Contact Us</button>
+    {/* Testimonials Section */}
+    <section className="bg-teal-400 text-white py-16">
+        <div className="container mx-auto text-center">
+          <h1 className="text-3xl font-bold mb-4">Looking For The Best Solution Tech For Your Business?</h1>
+          <p className="text-lg mb-6 max-w-3xl mx-auto">
+            Have questions or need more information? Feel free to reach out to our team. We’re here to assist you and provide personalized solutions tailored to your specific needs. Contact us today for a consultation.
+          </p>
+          <button className="bg-transparent text-white py-3 px-8 border-2 border-white rounded-full font-semibold hover:bg-blue-600 hover:border-blue-600 transition duration-300 ease-in-out">
+            Contact Us
+          </button>
         </div>
-      </div>
-    </section>
+      </section>
      <footer className="footer-container">
      <div className="footer-branding">
        <h2>Technik Nest</h2>
@@ -32,8 +33,8 @@ const Footer = () => {
      </div>
      <div className="footer-contact">
        <h3>Contact Us</h3>
-       <p>+92 3165601184</p>
-       <p>info@techniknest.tech</p>
+       <p>+92 311 9614327</p>
+       <p>techniknestofficial@gmail.com</p>
      </div>
      <div className="footer-social">
        <h3>Follow Us</h3>

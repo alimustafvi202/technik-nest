@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./contact.css";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import Swal from 'sweetalert2'
+import { FaPhoneAlt, FaEnvelope, FaGlobe ,FaLinkedin } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const [submissionStatus, setSubmissionStatus] = useState(null);
@@ -10,72 +9,132 @@ const Contact = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
+    // Add the Web3Forms API key
     formData.append("access_key", "3ff4cc31-4978-4e14-9298-6e5e52cac905");
 
-    const object = Object.fromEntries(formData);
+    // Convert FormData to JSON
+    const object = Object.fromEntries(formData.entries());
     const json = JSON.stringify(object);
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json"
+          Accept: "application/json",
         },
-        body: json
-      }).then((res) => res.json());
+        body: json,
+      });
 
-      if (res.success) {
+      const result = await response.json();
+
+      if (result.success) {
         Swal.fire({
           title: "Success!",
           text: "Message Sent Successfully!",
-          icon: "Success"
+          icon: "success",
         });
-      } 
+        event.target.reset(); // Reset the form after successful submission
+      } else {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to send the message. Please try again.",
+          icon: "error",
+        });
+      }
     } catch (error) {
-      setSubmissionStatus("An error occurred. Please check your connection and try again.");
+      Swal.fire({
+        title: "Error",
+        text: "An error occurred. Please check your connection and try again.",
+        icon: "error",
+      });
     }
 
-    
+    // Clear the status message after 5 seconds
     setTimeout(() => {
       setSubmissionStatus(null);
     }, 5000);
   };
 
   return (
-    <div className="contact-container">
-      <div className="left-container">
-        <h1>Let's connect!</h1>
-        <p>
+    <div className="flex flex-col md:flex-row justify-between items-start gap-6 p-8">
+      {/* Left Container */}
+      <div className="flex-1 bg-white p-6">
+      <h1 className="text-5xl text-blue-600 font-bold mb-4">Let's connect!</h1>
+        <p className="text-lg text-gray-600 mb-8">
           Ready to take your business to the next level? Contact us today to
           discuss your project and learn how our digital solutions can help you
           achieve your goals. Let’s connect and explore the possibilities
           together.
         </p>
-        <div className="info-card">
-          <FaPhoneAlt className="icon" />
-          <p>+923165601184</p>
-        </div>
-        <div className="info-card">
-          <FaEnvelope className="icon" />
-          <p>info@techniknest.tech</p>
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  {/* First Row - Phone and Email */}
+  <div className="flex items-center gap-4 p-4 bg-white shadow-lg rounded-lg border-b-4 border-indigo-600 w-auto">
+    <FaPhoneAlt className="text-xl text-gray-600" />
+    <p className="text-l font-semibold">+923165601184</p>
+  </div>
+  <div className="flex items-center gap-4 p-4 bg-white shadow-lg rounded-lg border-b-4 border-red-600 w-auto">
+    <FaEnvelope className="text-xl text-gray-600" />
+    <p className="text-l font-semibold sm:text-lg md:text-base">techniknestofficial@gmail.com</p>
+  </div>
+
+  {/* Second Row - Website and LinkedIn */}
+  <div className="flex items-center gap-4 p-4 bg-white shadow-lg rounded-lg border-b-4 border-green-600 w-auto">
+    <FaGlobe className="text-xl text-gray-600" />
+    <p className="text-l font-semibold">techniknest.tech</p>
+  </div>
+  <div className="flex items-center gap-4 p-4 bg-white shadow-lg rounded-lg border-b-4 border-blue-600 w-auto">
+    <FaLinkedin className="text-xl text-gray-600" />
+    <p className="text-l font-semibold">techniknest</p>
+  </div>
+</div>
+
+
       </div>
-      <div className="right-container">
-        <form onSubmit={onSubmit}>
-          <input type="text" placeholder="Name" name="name" required />
-          <input type="email" placeholder="Email" name="email" required />
-          <input type="tel" placeholder="Phone" name="phone" />
-          <textarea placeholder="Message" name="message" required></textarea>
-          <button type="submit">
-            <span>Send Message</span>
+
+      {/* Right Container */}
+      <div className="flex-1 max-w-lg bg-white p-8 rounded-lg shadow-lg w-full sm:w-4/5 md:w-3/4 lg:w-1/2">
+        <form onSubmit={onSubmit} className="flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            required
+            className="p-3 border border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            required
+            className="p-3 border border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none"
+          />
+          <input
+            type="tel"
+            placeholder="Phone"
+            name="phone"
+            className="p-3 border border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none"
+          />
+          <textarea
+            placeholder="Message"
+            name="message"
+            required
+            className="p-3 border border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none resize-none"
+            rows="5"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold p-3 rounded-lg hover:from-purple-600 hover:to-indigo-600"
+          >
+            Send Message
           </button>
         </form>
-        {submissionStatus && <p className="confirmation-message">{submissionStatus}</p>}
+        {submissionStatus && (
+          <p className="text-center text-red-600 mt-4">{submissionStatus}</p>
+        )}
       </div>
     </div>
   );
 };
 
 export default Contact;
-
