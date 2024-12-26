@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -6,6 +6,19 @@ import { FaCode, FaMobileAlt, FaBrush, FaBullhorn, FaShoppingCart, FaDesktop, Fa
 import "swiper/css/bundle";
 
 const Services = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const swiperRef = useRef(null); // Reference for Swiper instance
+
+  // Update screen size on load and resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize(); // Check screen size on component mount
+    window.addEventListener("resize", handleResize); // Update screen size on resize
+    return () => window.removeEventListener("resize", handleResize); // Clean up on unmount
+  }, []);
+
   const services = [
     { title: "Web Development", description: "Responsive, user-friendly websites for businesses.", link: "/web", icon: <FaCode className="text-blue-500 text-5xl" /> },
     { title: "App Development", description: "High-performance custom mobile apps with seamless design.", link: "/app", icon: <FaMobileAlt className="text-green-500 text-5xl" /> },
@@ -18,6 +31,14 @@ const Services = () => {
     { title: "AI & Machine Learning", description: "Automate processes and gain insights with AI solutions.", link: "/ai-ml", icon: <FaRobot className="text-gray-500 text-5xl" /> },
     { title: "Software Development", description: "Custom software solutions for streamlined operations.", link: "/software", icon: <FaCogs className="text-pink-500 text-5xl" /> },
   ];
+
+  const handlePrevClick = () => {
+    if (swiperRef.current) swiperRef.current.swiper.slidePrev();
+  };
+
+  const handleNextClick = () => {
+    if (swiperRef.current) swiperRef.current.swiper.slideNext();
+  };
 
   return (
     <div>
@@ -36,43 +57,62 @@ const Services = () => {
 
       {/* Services Section */}
       <div className="py-12 px-6 bg-gray-200 text-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">We Provide the Best Digital Services</h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-6">
+          We Provide the Best Digital Services
+        </h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-10">
           Technik Nest is your trusted partner for cutting-edge digital solutions. We offer a comprehensive range of services designed to help your business thrive in the digital age.
         </p>
 
         {/* Swiper Services Carousel */}
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          autoplay={{ delay: 3000 }}
-          loop={true} // Enables looping
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 },
-          }}
-          className="max-w-6xl mx-auto"
-        >
-          {services.map((service, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="border border-gray-300 rounded-lg shadow-lg p-6 hover:shadow-xl transform hover:-translate-y-2 transition duration-300"
-                style={{ width: "260px", height: "300px", margin: "auto" }} // Fixed size
-              >
-                <div className="flex justify-center mb-4">{service.icon}</div>
-                <h2 className="text-xl font-semibold text-gray-800 mb-4">{service.title}</h2>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <Link
-                  to={service.link}
-                  className="inline-block text-teal-400 font-semibold hover:underline"
+        <div className="relative">
+          <Swiper
+            ref={swiperRef}
+            modules={[Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}  // Ensure only 1 slide is visible on mobile
+            autoplay={{ delay: 3000 }}
+            loop={true} // Enables looping
+            breakpoints={{
+              768: { slidesPerView: 2 },  // 2 slides for tablets
+              1024: { slidesPerView: 4 }, // 4 slides for desktop
+            }}
+            className="max-w-6xl mx-auto"
+          >
+            {services.map((service, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  className="border border-gray-300 rounded-lg shadow-lg p-6 hover:shadow-xl transform transition-all duration-500"
+                  style={{ width: "260px", height: "300px", margin: "auto" }} // Fixed size
                 >
-                  Learn More
-                </Link>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                  <div className="flex justify-center mb-4">{service.icon}</div>
+                  <h2 className="text-xl font-semibold text-gray-800 mb-4">{service.title}</h2>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <Link to={service.link} className="inline-block text-teal-400 font-semibold hover:underline">
+                    Learn More
+                  </Link>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Arrows for mobile */}
+          <button
+            onClick={handlePrevClick}
+            className="absolute top-1/2 left-2 transform -translate-y-1/2 text-3xl text-gray-500 cursor-pointer transition-all duration-300 sm:hidden"
+            style={{ zIndex: 10 }}
+          >
+            &#8592; {/* Left Arrow */}
+          </button>
+
+          <button
+            onClick={handleNextClick}
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 text-3xl text-gray-500 cursor-pointer transition-all duration-300 sm:hidden"
+            style={{ zIndex: 10 }}
+          >
+            &#8594; {/* Right Arrow */}
+          </button>
+        </div>
       </div>
 
       {/* Bottom Flipped SVG Shape */}

@@ -62,8 +62,8 @@ const teamMembers = [
 const Team = () => {
   return (
     <section className="team-section">
-      <h1>Our Team</h1>
-      <p>
+      <h1 className="text-4xl font-bold text-center text-blue-600 mb-6">Our Team</h1>
+      <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-10">
         We foster a collaborative environment that encourages creativity and growth.
         Each member is dedicated to turning ideas into reality with precision and passion.
         Our commitment to quality and client satisfaction sets us apart in the industry.
