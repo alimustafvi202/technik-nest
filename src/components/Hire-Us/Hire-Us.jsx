@@ -135,14 +135,14 @@ const Form = () => {
             >
               <option value="">Select Semester</option>
               {qualification === "BS"
-                ? ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"].map(
+                ? ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th","Complete"].map(
                     (sem, idx) => (
                       <option key={idx} value={sem}>
                         {sem}
                       </option>
                     )
                   )
-                : ["1st", "2nd", "3rd", "4th"].map((sem, idx) => (
+                : ["1st", "2nd", "3rd", "4th","Complete"].map((sem, idx) => (
                     <option key={idx} value={sem}>
                       {sem}
                     </option>

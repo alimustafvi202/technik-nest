@@ -31,7 +31,7 @@ const PastWork = () => {
             <header className="ourwork-header">
               <div className="ourwork-container">
                 <h1>Our Past Work</h1>
-                <p>Home &gt; HireUs</p>
+                
               </div>
             </header>
             <OurWork />
