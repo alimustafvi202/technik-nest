@@ -3,23 +3,75 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules"; 
 import { useNavigate } from "react-router-dom";
 import "swiper/css/bundle"; 
+import Img1 from '../../../assets/work/broucher.jpg';
+import Img2 from '../../../assets/work/summer.jpg';
+import Img3 from '../../../assets/work/my.png';
+import Img4 from '../../../assets/work/vote.png';
+import Img5 from '../../../assets/work/markaz e ilm.png';
+import Img6 from '../../../assets/work/chatbot.png';
+import Img7 from '../../../assets/work/chatting.png';
+import Img8 from '../../../assets/work/Create-a-free-ecommerce-website.jpg';
+import Img9 from '../../../assets/work/portfolio.png';
+import Img10 from '../../../assets/work/ATS-Password-Checker-Tool.jpg.png';
 
 const PastWork = () => {
   const [leftArrowActive, setLeftArrowActive] = useState(false);
   const [rightArrowActive, setRightArrowActive] = useState(false);
 
   const projects = [
-    { title: "Project 1", description: "Description of project 1", image: "https://via.placeholder.com/300" },
-    { title: "Project 2", description: "Description of project 2", image: "https://via.placeholder.com/300" },
-    { title: "Project 3", description: "Description of project 3", image: "https://via.placeholder.com/300" },
-    { title: "Project 4", description: "Description of project 4", image: "https://via.placeholder.com/300" },
-    { title: "Project 5", description: "Description of project 5", image: "https://via.placeholder.com/300" },
-    { title: "Project 6", description: "Description of project 6", image: "https://via.placeholder.com/300" },
-    { title: "Project 7", description: "Description of project 7", image: "https://via.placeholder.com/300" },
-    { title: "Project 8", description: "Description of project 8", image: "https://via.placeholder.com/300" },
-    { title: "Project 9", description: "Description of project 9", image: "https://via.placeholder.com/300" },
-    { title: "Project 10", description: "Description of project 10", image: "https://via.placeholder.com/300" },
+    {
+      title: "Broucher Design",
+      description: "Graphic Designing Project",
+      image: Img1,
+    },
+    {
+      title: "Poster Design",
+      description: "Graphic Designing Project",
+      image: Img2,
+    },
+    {
+      title: "Card Design",
+      description: "Graphic Designing Project",
+      image: Img3,
+    },
+    {
+      title: "Voting System",
+      description: "Web Development Project",
+      image: Img4,
+    },
+    {
+      title: "Markaz e ilm",
+      description: "Full Stack Project",
+      image: Img5,
+    },
+    {
+      title: "Personalized Chatbot",
+      description: "AI/ML Project",
+      image: Img6,
+    },
+    {
+      title: "Chatting App",
+      description: "AI Project",
+      image: Img7,
+    },
+    {
+      title: "E-commerce",
+      description: "App Development Project ",
+      image: Img8,
+    },
+    {
+      title: "Portfolio",
+      description: "3D Modeling Website Project",
+      image: Img9,
+    },
+    {
+      title: "Pass Strength Meter",
+      description: "Cyber Security Project",
+      image: Img10,
+    },
   ];
+  
+  
 
   const swiperRef = useRef(null);
   const navigate = useNavigate();

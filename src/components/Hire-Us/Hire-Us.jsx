@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Home/Navbar/NavBar";
 import Contact from "../Home/Contact/contact";
 import Footer from "../Home/Footer/footer";
-import Logo from '../../assets/logo/logo1.png';
+import Logo from "../../assets/logo/logo1.png";
 
 const Form = () => {
   const [qualification, setQualification] = useState("");
@@ -17,9 +17,10 @@ const Form = () => {
     message: "",
   });
   const [imageVisible, setImageVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
 
   useEffect(() => {
-    // Trigger the image transition when the component mounts
     setImageVisible(true);
   }, []);
 
@@ -31,35 +32,78 @@ const Form = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!formData.cv) {
       alert("Please upload your resume.");
       return;
     }
-    alert("Form submitted successfully!");
+
+    setLoading(true);
+    setResponseMessage("");
+
+    // Prepare Form Data
+    const formPayload = new FormData();
+    formPayload.append("access_key", "3ff4cc31-4978-4e14-9298-6e5e52cac905");
+    formPayload.append("name", formData.name);
+    formPayload.append("email", formData.email);
+    formPayload.append("phone", formData.phone);
+    formPayload.append("qualification", formData.qualification);
+    formPayload.append("semester", formData.semester);
+    formPayload.append("experience", formData.experience);
+    formPayload.append("message", formData.message);
+    formPayload.append("cv", formData.cv);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formPayload,
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        setResponseMessage("Form submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          qualification: "",
+          semester: "",
+          experience: "",
+          cv: null,
+          message: "",
+        });
+      } else {
+        setResponseMessage("Error submitting the form. Please try again.");
+      }
+    } catch (error) {
+      setResponseMessage("An error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-6">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-12">
       <Navbar />
-      
-      {/* Animated Picture Section with margin-top */}
+
       <div
         className={`transition-all duration-700 ease-out transform mt-12 ${
           imageVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
         }`}
       >
         <img
-          src={Logo}// Replace with your image path
+          src={Logo}
           alt="Company Logo"
           className="w-32 h-32 rounded-full shadow-lg"
         />
-        <h1 className="text-2xl font-bold mt-4 text-gray-800">Welcome to Technik Nest</h1>
+        <h1 className="text-2xl font-bold mt-4 text-gray-800">
+          Welcome to Technik Nest
+        </h1>
         <p className="text-gray-600 italic">"Innovative Mind, Nesting Success"</p>
       </div>
 
-      {/* Form Section with margin-top */}
       <form
         onSubmit={handleSubmit}
         className="mt-12 w-full max-w-xl bg-white p-6 shadow-lg rounded-lg space-y-4"
@@ -135,14 +179,14 @@ const Form = () => {
             >
               <option value="">Select Semester</option>
               {qualification === "BS"
-                ? ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th","Complete"].map(
+                ? ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "Complete"].map(
                     (sem, idx) => (
                       <option key={idx} value={sem}>
                         {sem}
                       </option>
                     )
                   )
-                : ["1st", "2nd", "3rd", "4th","Complete"].map((sem, idx) => (
+                : ["1st", "2nd", "3rd", "4th", "Complete"].map((sem, idx) => (
                     <option key={idx} value={sem}>
                       {sem}
                     </option>
@@ -190,10 +234,17 @@ const Form = () => {
         <button
           type="submit"
           className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors duration-300"
+          disabled={loading}
         >
-          Submit
+          {loading ? "Submitting..." : "Submit"}
         </button>
       </form>
+
+      {responseMessage && (
+        <div className={`mt-4 p-4 rounded ${loading ? "bg-gray-200" : "bg-green-200"}`}>
+          {responseMessage}
+        </div>
+      )}
 
       <Contact />
       <Footer />
