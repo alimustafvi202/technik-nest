@@ -22,6 +22,16 @@ const teamMembers = [
     },
   },
   {
+    name: "Fahad Sajid",
+    role: "Project Manager",
+    image: Fahad,
+    socials: {
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      instagram: "https://instagram.com/",
+    },
+  },
+  {
     name: "Syed Aleem",
     role: "HR Manager",
     image: Aleem,
@@ -41,16 +51,7 @@ const teamMembers = [
       instagram: "https://instagram.com/",
     },
   },
-  {
-    name: "Fahad Sajid",
-    role: "Project Manager",
-    image: Fahad,
-    socials: {
-      facebook: "https://facebook.com/",
-      linkedin: "https://linkedin.com/in/",
-      instagram: "https://instagram.com/",
-    },
-  },
+  
   {
     name: "Hassan Ali",
     role: "Software Developer",
