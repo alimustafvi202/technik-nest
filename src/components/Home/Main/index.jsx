@@ -7,7 +7,7 @@ import Bg from '../../../assets/Bg/bg234.jpg';
 const Welcome = () => {
     return (
         <section 
-    className="relative w-full min-h-[880px] bg-cover bg-center backdrop-blur-sm bg-no-repeat mb-10 lg:min-h-[700px]" // Maintained for both views
+    className="relative w-full min-h-[1000px] bg-cover bg-center backdrop-blur-sm bg-no-repeat mb-10 lg:min-h-[700px]" // Maintained for both views
     style={{ backgroundImage: `url(${Bg})` }} // Background set with inline styles
 >
     <Navbar />
