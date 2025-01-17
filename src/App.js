@@ -35,7 +35,7 @@ function App() {
         <Route path='/allservices' element={<ServicesPage/>}/>
         <Route path='/team' element={<Team/>}/>
         <Route path='/cloudservices' element={<Cloud/>}/>
-        <Route path='/ecommerence' element={<EcommercePage/>}/>
+        <Route path='/ecommerce' element={<EcommercePage/>}/>
         <Route path='/ux/ui' element={<UIUX/>}/>
         <Route path='/DigitalMarketing' element={<DigitalMarketingPage/>}/>
         
