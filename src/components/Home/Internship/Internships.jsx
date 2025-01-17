@@ -63,7 +63,7 @@ const Internships = () => {
                 <div className="internship-item-content">
                   <h3 className="internship-item-title">{internship.title}</h3>
                   <p className="internship-item-description">{internship.description}</p>
-                  <a href="#" className="internship-apply-btn">Apply Now</a>
+                  <a href="/hire" className="internship-apply-btn">Apply Now</a>
                 </div>
                 
               </div>

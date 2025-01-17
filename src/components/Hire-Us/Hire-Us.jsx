@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Home/Navbar/NavBar";
 import Contact from "../Home/Contact/contact";
 import Footer from "../Home/Footer/footer";
-import Logo from "../../assets/logo/logo1.png";
+import Logo from "../../assets/logo/1Logo (3).png";
 
 const Form = () => {
   const [qualification, setQualification] = useState("");
@@ -85,6 +85,7 @@ const Form = () => {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-12">
       <Navbar />
 
@@ -245,10 +246,10 @@ const Form = () => {
           {responseMessage}
         </div>
       )}
-
+</div>
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 };
 
