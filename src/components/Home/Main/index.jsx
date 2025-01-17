@@ -1,38 +1,37 @@
 import React from "react";
-import './index.css';
 import Image from '../../../assets/Welcome/s.png';
 import Navbar from "../Navbar/NavBar";
 import { Link } from "react-router-dom";
-import Video from "../../../assets/Video/Video.mp4";
+import Bg from '../../../assets/Bg/bg234.jpg';
 
 const Welcome = () => {
-    
     return (
-        
-        <section className="welcome-area">
+        <section 
+            className="relative w-full h-screen bg-cover bg-center bg-no-repeat" 
+            style={{ backgroundImage: `url(${Bg})` }} // Corrected the inline style for background image
+        >
             <Navbar />
-            {/* Background Video */}
-            <video className="background-video" autoPlay muted loop>
-                <source src = {Video} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <div className="shape">
-                <div className="welcome-content">
-                    {/* Welcome Text Section */}
-                    <div className="welcome-text">
-                        <h1>Welcome To</h1>
-                        <h2>Technik Nest</h2>
-                        <p>
-                            Technik Nest is a leading software development house in Pakistan, specializing in crafting custom software solutions, web applications, and mobile apps. Our dedicated team blends cutting-edge technology with industry expertise to deliver innovative and efficient solutions that drive business success. Committed to excellence and customer satisfaction, Technik Nest transforms complex challenges into seamless, user-friendly products that align with your goals and vision.
-                        </p>
-                        <div className="button-container">
-                            <Link to="/Internships" className="mainbtn">Start Internship</Link>
-                            <Link to="/contact" className="mainbtn1">Contact With Us</Link>
+            {/* Shape Section */}
+            <div className="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-sm flex justify-center items-center">
+                <div className="max-w-6xl w-full px-4 py-10 transition-all duration-300 backdrop-blur-md rounded-3xl shadow-lg">
+                    <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left space-y-8 lg:space-y-0">
+                        {/* Welcome Text Section */}
+                        <div className="w-full lg:w-1/2 text-white px-6">
+                            <h1 className="text-4xl font-semibold text-stroke">Welcome To</h1>
+                            <h2 className="text-5xl font-extrabold mt-2 text-stroke">Technik Nest</h2>
+                            <p className="mt-4 text-lg text-gray-200 font-semibold leading-relaxed">
+                                                Technik Nest is a leading software development house in Pakistan, specializing in crafting custom software solutions, web applications, and mobile apps. Our dedicated team blends cutting-edge technology with industry expertise to deliver innovative and efficient solutions that drive business success. Committed to excellence and customer satisfaction, Technik Nest transforms complex challenges into seamless, user-friendly products that align with your goals and vision.
+                             </p>
+    <div className="mt-6 flex gap-4 justify-center lg:justify-start">
+        <Link to="/Internships" className="py-2 px-6 border-2 border-white rounded-full text-white hover:bg-cyan-400 hover:text-black transition-all duration-300 text-stroke">Start Internship</Link>
+        <Link to="/contact" className="py-2 px-6 border-2 border-white rounded-full text-white hover:bg-cyan-400 hover:text-black transition-all duration-300 text-stroke">Contact With Us</Link>
+    </div>
+</div>
+
+                        {/* Welcome Image Section */}
+                        <div className="w-full lg:w-1/2 text-center">
+                            <img src={Image} alt="Technik Nest" className="mx-auto w-full max-w-xs lg:max-w-md" />
                         </div>
-                    </div>
-                    {/* Welcome Image Section */}
-                    <div className="welcome-image">
-                        <img src={Image} alt="Technik Nest" />
                     </div>
                 </div>
             </div>

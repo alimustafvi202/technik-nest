@@ -1,66 +1,65 @@
-import React from "react";
-import Navbar from '../../../../Home/Navbar/NavBar';
-import Footer from "../../../../Home/Footer/footer";
-import EcommerceImage from '../../../../../assets/Bg/blog_bg.jpg';
-import Img1 from '../../../../../assets/web/WebImage.jpg';
-import Img2 from '../../../../../assets/web/WebImage.jpg';
-// Add other images...
+// import React from "react";
+// import Navbar from '../../../../Home/Navbar/NavBar';
+// import Footer from "../../../../Home/Footer/footer";
+// import HeroImage from '../../../../../assets/Services/uxui/hero.jpg';
+// import Img1 from '../../../../../assets/Services/uxui/1.png';
+// import Img2 from '../../../../../assets/Services/uxui/2.png';
+// import Img3 from '../../../../../assets/Services/uxui/3.jpg';
+// import Img4 from '../../../../../assets/Services/uxui/4.jpg';
+// import Img5 from '../../../../../assets/Services/uxui/5.jpg';
+// import Img6 from '../../../../../assets/Services/uxui/6.jpg';
+// import Img7 from '../../../../../assets/Services/uxui/7.jpg';
+// import Img8 from '../../../../../assets/Services/uxui/8.jpg';
+// import Img9 from '../../../../../assets/Services/uxui/9.jpg';
+// import Img10 from '../../../../../assets/Services/uxui/10.jpg';
 
-const EcommercePage = () => {
-  const services = [
-    { name: "Store Design", description: "Create a stunning online store.", img: Img1 },
-    { name: "Payment Integration", description: "Secure and fast payment options.", img: Img2 },
-    { name: "Shopping Cart", description: "Seamless shopping experience for users.", img: Img1 },
-    { name: "Product Pages", description: "Design detailed product pages to enhance sales.", img: Img2 },
-    { name: "Order Management", description: "Manage customer orders efficiently.", img: Img1 },
-    { name: "Customer Support Integration", description: "Provide 24/7 support to customers.", img: Img2 },
-    { name: "Inventory Management", description: "Track and manage inventory effectively.", img: Img1 },
-    { name: "SEO for E-commerce", description: "Optimize your store for search engines.", img: Img2 },
-    { name: "E-commerce Analytics", description: "Track and analyze your store's performance.", img: Img1 },
-    { name: "Mobile-Friendly Store", description: "Ensure your store is mobile responsive.", img: Img2 },
-  ];
+// const UXUIPage = () => {
+//   const features = [
+//     { name: "User Research & Analysis", description: "Understand user needs to craft better experiences.", img: Img1 },
+//     { name: "Wireframing & Prototyping", description: "Visualize your app with interactive prototypes.", img: Img2 },
+//     { name: "Responsive Design", description: "Ensure seamless user experience across all devices.", img: Img3 },
+//     { name: "Mobile App UI/UX Design", description: "Create intuitive and engaging mobile interfaces.", img: Img4 },
+//     { name: "Web App UI/UX Design", description: "Design compelling and user-friendly web apps.", img: Img5 },
+//     { name: "Interaction Design", description: "Enhance user engagement with thoughtful interactions.", img: Img6 },
+//     { name: "Design Systems", description: "Develop consistent and scalable design systems.", img: Img7 },
+//     { name: "Usability Testing", description: "Identify and solve usability challenges effectively.", img: Img8 },
+//     { name: "Visual Design", description: "Craft visually stunning designs that captivate users.", img: Img9 },
+//     { name: "Accessibility Design", description: "Design inclusive experiences for all users.", img: Img10 },
+//   ];
 
-  return (
-    <div className="min-h-screen bg-gray-100">
-      <Navbar />
-      <section
-        className="relative bg-cover bg-center h-[400px] flex items-center justify-center text-white"
-        style={{ backgroundImage: `url(${EcommerceImage})` }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative text-center z-10">
-          <h2 className="text-4xl font-bold mb-4">Build Your Online Store with Ease</h2>
-          <p className="text-lg mb-6">We provide end-to-end solutions for e-commerce businesses to grow online.</p>
-        </div>
-      </section>
+//   return (
+//     <div className="min-h-screen bg-gray-100">
+//       <Navbar />
+//       <section
+//         className="relative bg-cover bg-center h-[400px] flex items-center justify-center text-white"
+//         style={{ backgroundImage: `url(${HeroImage})` }}
+//       >
+//         <div className="absolute inset-0 bg-black opacity-50"></div>
+//         <div className="relative text-center z-10">
+//           <h2 className="text-4xl font-bold mb-4">Deliver Exceptional User Experiences</h2>
+//           <p className="text-lg mb-6">Innovative UX/UI design solutions tailored to your business needs.</p>
+//         </div>
+//       </section>
+//       <section className="container mx-auto px-4 py-16">
+//         <h2 className="text-3xl font-bold text-center mb-8">Our UX/UI Design Services</h2>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {features.map((feature, index) => (
+//             <div
+//               key={index}
+//               className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
+//             >
+//               <img src={feature.img} alt={feature.name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
+//               <div className="p-4">
+//                 <h3 className="text-xl font-bold mb-2">{feature.name}</h3>
+//                 <p className="text-gray-600">{feature.description}</p>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+//       <Footer />
+//     </div>
+//   );
+// };
 
-      <section id="portfolio" className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-8">Our E-commerce Services</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
-              <img
-                src={service.img}
-                alt={service.name}
-                className="w-full h-48 object-cover group-hover:opacity-80 transition"
-              />
-              <div className="p-4 flex items-center justify-between">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{service.name}</h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </div>
-                <button className="px-6 py-2 text-lg font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 whitespace-nowrap">
-                  Order Now
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default EcommercePage;
+// export default UXUIPage;

@@ -37,17 +37,10 @@ const services = [
     icon: <FaBullhorn className="text-yellow-500 text-4xl mb-4" />,
   },
   {
-    title: "E-commerce Solutions",
-    description:
-      "We provide end-to-end e-commerce solutions that enable businesses to sell online with secure transactions and seamless user experiences.",
-    link: "/ecommerce",
-    icon: <FaShoppingCart className="text-orange-500 text-4xl mb-4" />,
-  },
-  {
     title: "UI/UX Design",
     description:
       "We specialize in designing intuitive, user-friendly interfaces and experiences that drive customer engagement and satisfaction.",
-    link: "/uiux",
+    link: "/ux/ui",
     icon: <FaUserCircle className="text-teal-500 text-4xl mb-4" />,
   },
   {

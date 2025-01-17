@@ -23,7 +23,7 @@ const teamMembers = [
   },
   {
     name: "Fahad Sajid",
-    role: "Project Manager",
+    role: "Chief Operating Officer",
     image: Fahad,
     socials: {
       facebook: "https://facebook.com/",

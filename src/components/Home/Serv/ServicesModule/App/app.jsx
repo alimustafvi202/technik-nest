@@ -63,9 +63,6 @@ const AppDevelopmentPage = () => {
                   <h3 className="text-xl font-bold mb-2">{app.name}</h3>
                   <p className="text-gray-600">{app.description}</p>
                 </div>
-                <button className="px-6 py-2 text-lg font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 whitespace-nowrap">
-  Order Now
-</button>
               </div>
             </div>
           ))}

@@ -6,24 +6,37 @@ import Contact from "../Home/Contact/contact";
 import Footer from "../Home/Footer/footer";
 import Testimonials from "../Home/Testimonial/Testimonials";
 import Preloader from '../Home/Preloader/Preloader';
+import Img1 from '../../assets/work/broucher.jpg';
+import Img2 from '../../assets/work/summer.jpg';
+import Img3 from '../../assets/work/my.png';
+import Img4 from '../../assets/work/vote.png';
+import Img5 from '../../assets/work/markaz e ilm.png';
+import Img6 from '../../assets/work/chatbot.png';
+import Img7 from '../../assets/work/chatting.png';
+import Img8 from '../../assets/work/Create-a-free-ecommerce-website.jpg';
+import Img9 from '../../assets/work/portfolio.png';
+import Img10 from '../../assets/work/ATS-Password-Checker-Tool.jpg.png';
 
 const PastWork = () => {
-  const [showPreloader, setShowPreloader] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPreloader(false); // Hide Preloader after 2 seconds
-    }, 500);
-
-    return () => clearTimeout(timer); // Cleanup timer on component unmount
-  }, []);
-
+  const projects = [
+    { title: "Broucher Design", description: "Graphic Designing Project", image: Img1 },
+    { title: "Poster Design", description: "Graphic Designing Project", image: Img2 },
+    { title: "Card Design", description: "Graphic Designing Project", image: Img3 },
+    { title: "Voting System", description: "Web Development Project", image: Img4 },
+    { title: "Markaz e ilm", description: "Full Stack Project", image: Img5 },
+    { title: "Personalized Chatbot", description: "AI/ML Project", image: Img6 },
+    { title: "Chatting App", description: "AI Project", image: Img7 },
+    { title: "E-commerce", description: "App Development Project", image: Img8 },
+    { title: "Portfolio", description: "3D Modeling Website Project", image: Img9 },
+    { title: "Pass Strength Meter", description: "Cyber Security Project", image: Img10 },
+  ];
+  
   return (
     <>
-      {showPreloader ? <Preloader /> : null} {/* Render Preloader only if showPreloader is true */}
+      
       
       {/* Render other components after Preloader is hidden */}
-      {!showPreloader && (
+      
         
           <div className="ourwork">
             {/* Header Section */}
@@ -34,13 +47,29 @@ const PastWork = () => {
                 
               </div>
             </header>
-            <OurWork />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
+              <p className="text-gray-600 mt-2">{project.description}</p>
+            </div>
+          ))}
+        </div>
+
             <Testimonials />
             <Contact />
             <Footer />
           </div>
         
-      )}
+      }
     </>
   );
 };

@@ -24,13 +24,12 @@ const Services = () => {
     { title: "App Development", description: "High-performance custom mobile apps with seamless design.", link: "/app", icon: <FaMobileAlt className="text-green-500 text-5xl" /> },
     { title: "Graphic Designing", description: "Custom graphic designs that ensure a strong brand presence.", link: "/graphic", icon: <FaBrush className="text-purple-500 text-5xl" /> },
     { title: "Digital Marketing", description: "Reach target audiences through SEO, social media, and ads.", link: "DigitalMarketing", icon: <FaBullhorn className="text-yellow-500 text-5xl" /> },
-    { title: "E-commerce Solutions", description: "End-to-end solutions for secure and seamless online selling.", link: "/ecommerence", icon: <FaShoppingCart className="text-orange-500 text-5xl" /> },
     { title: "UI/UX Design", description: "Intuitive, user-friendly designs that enhance engagement.", link: "/ux/ui", icon: <FaDesktop className="text-teal-500 text-5xl" /> },
-    { title: "Python Automation", description: "Automate tasks and workflows using Python for enhanced efficiency.", link: "/python-automation", icon: <FaCogs className="text-indigo-500 text-5xl" /> },
+    { title: "Python Automation", description: "Automate tasks and workflows using Python for enhanced efficiency.", link: "/python", icon: <FaCogs className="text-indigo-500 text-5xl" /> },
     { title: "Cybersecurity", description: "Advanced security services to protect businesses from threats.", link: "/cybersecurity", icon: <FaShieldAlt className="text-red-500 text-5xl" /> },
     { title: "AI & Machine Learning", description: "Automate processes and gain insights with AI solutions.", link: "/ai-ml", icon: <FaRobot className="text-gray-500 text-5xl" /> },
-    { title: "Custom Chatbot Development", description: "Build intelligent chatbots tailored to your business for improved customer engagement.", link: "/chatbot", icon: <FaRobot className="text-teal-500 text-5xl" /> },
-    //{ title: "Prompt Engineering", description: "Optimize AI models by refining inputs to generate precise and effective outputs.", link: "/prompt-engineering", icon: <FaCogs className="text-pink-500 text-5xl" /> },
+    { title: "Custom Chatbot Development", description: "Build intelligent chatbots tailored to your business.", link: "/chatbot", icon: <FaRobot className="text-teal-500 text-5xl" /> },
+    { title: "Prompt Engineering", description: "Optimize AI models by refining inputs to generate precise and effective outputs.", link: "/prompt-engineering", icon: <FaCogs className="text-pink-500 text-5xl" /> },
   ];
 
   const handlePrevClick = () => {

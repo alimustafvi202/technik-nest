@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../../../assets/logo/logo.png';
+import logo from '../../../assets/logo/Group 1.png';
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-16" />
+          <img src={logo} alt="Logo" className="h-12" />
         </div>
 
         {/* Hamburger Menu */}
