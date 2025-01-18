@@ -36,7 +36,7 @@ const PastWork = () => {
       
       
       {/* Render other components after Preloader is hidden */}
-      
+      (
         
           <div className="ourwork">
             {/* Header Section */}
@@ -69,7 +69,7 @@ const PastWork = () => {
             <Footer />
           </div>
         
-      }
+      )
     </>
   );
 };

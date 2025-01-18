@@ -7,7 +7,7 @@ import Member2 from '../../assets/Team/fahad.jpg';
 import Member3 from '../../assets/Team/ahsan.jpeg';
 import Member4 from '../../assets/Team/hassan.jpeg';
 import Member5 from '../../assets/Team/aleem.jpeg';
-
+import Member6 from '../../assets/Team/abdullah.png';
 const OurTeamPage = () => {
   const teamCategories = {
     Owners: [
@@ -18,7 +18,7 @@ const OurTeamPage = () => {
       { name: "Ahsan Naseer", role: "IT Manager", img: Member3 },
       { name: "Hassan Ali", role: "Software Developer", img: Member4 },
       { name: "Unknown", role: "Frontend Developer" },
-      { name: "Unknown", role: "Web Developer" },
+      { name: "Abdullah", role: "Web Developer",img: Member6 },
     ],
     Marketing: [
       { name: "Syed Aleem", role: "HR Manager", img: Member5 },
