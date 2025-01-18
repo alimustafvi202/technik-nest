@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./team.css";
-import Aleem from "../../../assets/Team/Aleem.png";
-import Ali from "../../../assets/Team/Ali.png";
-import Ahsan from "../../../assets/Team/Ahsan.png";
-import Fahad from "../../../assets/Team/Fahad.png";
-import Hassan from "../../../assets/Team/Hassan.png";
+import Aleem from "../../../assets/Team/Aleem Cards.png";
+import Ali from "../../../assets/Team/Ali Cards.png";
+import Ahsan from "../../../assets/Team/Ahsan Cards.png";
+import Fahad from "../../../assets/Team/Fahad Cards.png";
+import Hassan from "../../../assets/Team/Hassan Cards.png";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";

@@ -6,11 +6,13 @@ import Bg from '../../../assets/Bg/bg234.jpg';
 
 const Welcome = () => {
     return (
+        <>
+        <Navbar />
         <section 
     className="relative w-full min-h-[1000px] bg-cover bg-center backdrop-blur-sm bg-no-repeat mb-10 lg:min-h-[700px]" // Maintained for both views
     style={{ backgroundImage: `url(${Bg})` }} // Background set with inline styles
 >
-    <Navbar />
+    
     {/* Shape Section */}
     <div className="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-sm flex justify-center items-center">
         <div className="max-w-6xl w-full px-4 py-10 transition-all duration-300 backdrop-blur-md rounded-3xl shadow-lg">
@@ -39,6 +41,7 @@ const Welcome = () => {
         </div>
     </div>
 </section>
+</>
     );
 };
 
