@@ -10,7 +10,7 @@ import Member5 from '../../assets/Team/aleem.jpeg';
 import Member6 from '../../assets/Team/abdullah.png';
 import Member7 from '../../assets/Team/noor.png';
 import Member8 from '../../assets/Team/iqra.png';
-
+import Member9 from '../../assets/Team/ayesha.png';
 const OurTeamPage = () => {
   const teamCategories = {
     Owners: [
@@ -81,6 +81,8 @@ const OurTeamPage = () => {
         img: Member5,
         social: {
           linkedin: "https://www.linkedin.com/in/syed-aleem-gillani-0bbb76269/",
+          instagram:"https://www.instagram.com/_aleem_syed97?igsh=ZGhwYWljeXF3bnkx",
+          facebook: "https://www.facebook.com/share/191NGraXzP/",
         },
       },
       {
@@ -93,12 +95,12 @@ const OurTeamPage = () => {
         },
       },
       {
-        name: "Unknown",
+        name: "Ayesha Liaqat",
         role: "Graphic Designer",
-        img: "",
+        img: Member9,
         social: {
-          linkedin: "https://www.linkedin.com/in/",
-          instagram: "https://www.instagram.com/",
+          linkedin: "https://www.linkedin.com/in/ayesha-liaqat-ecommerce-etsy-6aa36527b?",
+          instagram: "https://www.instagram.com/ayeshaa_867?",
         },
       },
     ],

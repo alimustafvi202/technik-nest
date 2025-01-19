@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react"; // Import useState and useEffect
 import "./Portfolio.css";
 import Navbar from "../Home/Navbar/NavBar";
-import OurWork from "../Home/Work/Our_Work";
 import Contact from "../Home/Contact/contact";
 import Footer from "../Home/Footer/footer";
 import Testimonials from "../Home/Testimonial/Testimonials";
-import Preloader from '../Home/Preloader/Preloader';
 import Img1 from '../../assets/work/broucher.jpg';
 import Img2 from '../../assets/work/summer.jpg';
 import Img3 from '../../assets/work/my.png';
@@ -16,6 +14,7 @@ import Img7 from '../../assets/work/chatting.png';
 import Img8 from '../../assets/work/Create-a-free-ecommerce-website.jpg';
 import Img9 from '../../assets/work/portfolio.png';
 import Img10 from '../../assets/work/ATS-Password-Checker-Tool.jpg.png';
+import Bg from "../../assets/Bg/welcome_bg.jpg";
 
 const PastWork = () => {
   const projects = [
@@ -41,13 +40,22 @@ const PastWork = () => {
           <div className="ourwork">
             {/* Header Section */}
             <Navbar />
-            <header className="ourwork-header">
-              <div className="ourwork-container">
-                <h1>Our Past Work</h1>
-                
-              </div>
-            </header>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div
+          className="relative bg-cover bg-center text-white p-24 rounded-lg mb-10"
+          style={{
+            backgroundImage: `url(${Bg})`,
+            height: "500px",
+          }}
+        >
+          <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+          <div className="relative z-10 text-center pt-24">
+            <h1 className="text-4xl font-extrabold mb-6">Our Past Work</h1>
+            <p className="text-lg mb-12 leading-relaxed">
+            At Technik Nest, we’ve delivered impactful digital solutions across industries, including high-performing websites, user-friendly apps, and data-driven marketing strategies. Our proven track record showcases our ability to drive growth and success for businesses of all sizes.
+            </p>
+          </div>
+        </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-8 mb-10">
           {projects.map((project, index) => (
             <div
               key={index}

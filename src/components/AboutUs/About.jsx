@@ -39,7 +39,7 @@ const AboutUs = () => {
   <div className="about-col about-text-column">
     <h2>We provide solutions that grow your business.</h2>
     <p>
-      At TechX Hub, we believe in building long-lasting relationships
+      At Technik Nest, we believe in building long-lasting relationships
       with our clients. Our focus is on delivering reliable, scalable,
       and innovative solutions tailored to meet your business goals.
       We’re committed to exceeding your expectations and helping your
