@@ -83,6 +83,14 @@ const Navbar = () => {
             </li>
             <li>
               <a
+                href="/event"
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/team')}`}
+              >
+                Event
+              </a>
+            </li>
+            <li>
+              <a
                 href="/portfolio"
                 className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/portfolio')}`}
               >

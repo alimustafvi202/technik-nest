@@ -1,8 +1,9 @@
 import React from "react";
 import "./footer.css";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faCogs, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { FaFacebookF,  FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaFacebookF,  FaLinkedinIn, FaInstagram,FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   
   return (
@@ -15,8 +16,10 @@ const Footer = () => {
             Have questions or need more information? Feel free to reach out to our team. We’re here to assist you and provide personalized solutions tailored to your specific needs. Contact us today for a consultation.
           </p>
           <button className="bg-transparent text-white py-3 px-8 border-2 border-white rounded-full font-semibold hover:bg-white hover:border-white hover:text-teal-500 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-            Contact Us
-          </button>
+  <Link to="/contact" className="w-full h-full block">
+    Contact Us
+  </Link>
+</button>
         </div>
       </section>
      <footer className="footer-container">
@@ -35,7 +38,7 @@ const Footer = () => {
       </div>
       <div className="footer-contact">
         <h3>Contact Us</h3>
-        <p><FontAwesomeIcon icon={faPhone} /> +92 311 9614327</p>
+        <p><FontAwesomeIcon icon={faPhone} /> +92 335 6863761</p>
         <p><FontAwesomeIcon icon={faEnvelope} /> techniknestofficial@gmail.com</p>
       </div>
      <div className="footer-social">
@@ -49,7 +52,10 @@ const Footer = () => {
            <FaLinkedinIn />
          </a>
          <a href="https://instagram.com/techniknest" target="_blank" rel="noopener noreferrer">
-           <FaInstagram />
+       <FaInstagram />
+           </a>
+           <a href="https://whatsapp.com/channel/0029VaEGUWDBlHpTjOtHxS2L" target="_blank" rel="noopener noreferrer">
+           <FaWhatsapp />
          </a>
        </div>
      </div>

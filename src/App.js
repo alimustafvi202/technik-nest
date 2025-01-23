@@ -19,6 +19,8 @@ import AIAndMachineLearningServicesPage from './components/Home/Serv/ServicesMod
 import MaintenancePage from './components/Home/Serv/ServicesModule/CustomSoftware/custom software development';
 import ChatMaintenancePage from './components/Home/Serv/ServicesModule/CustomSoftware/custom software development';
 import PMaintenancePage from './components/Home/Serv/ServicesModule/CustomSoftware/custom software development';
+import NewsEvents from './components/Event/Event';
+import Contact from './components/ContactUs/contact';
 function App() {
   return (
     
@@ -46,6 +48,8 @@ function App() {
         <Route path='/software' element={<MaintenancePage/>}/>
         <Route path='/chatbot' element={<ChatMaintenancePage/>}/>
         <Route path='/promptengineering' element={<PMaintenancePage/>}/>
+        <Route path ='/event' element={<NewsEvents/>}/>
+        <Route path ='/contact' element={<Contact/>}/>
   </Routes>
     </BrowserRouter>
   );

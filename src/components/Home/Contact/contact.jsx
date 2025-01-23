@@ -71,7 +71,7 @@ const Contact = () => {
   {/* First Row - Phone and Email */}
   <div className="flex items-center gap-4 p-4 bg-white shadow-lg rounded-lg border-b-4 border-indigo-600 w-auto">
     <FaPhoneAlt className="text-xl text-gray-600" />
-    <p className="text-l font-semibold">+923165601184</p>
+    <p className="text-l font-semibold">+92 335 6863761</p>
   </div>
   <div className="flex items-center gap-4 p-4 bg-white shadow-lg rounded-lg border-b-4 border-red-600 w-auto">
     <FaEnvelope className="text-xl text-gray-600" />
