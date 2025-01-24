@@ -3,7 +3,6 @@ import Preloader from './Preloader/Preloader';
 import Welcome from './Main/index';
 import Services from './Serv/Services-short';
 import OurWork from './Work/Our_Work';
-import Team from './MainTeam/team';
 import Testimonials from './Testimonial/Testimonials';
 import Contact from './Contact/contact';
 import Footer from './Footer/footer';
@@ -33,7 +32,6 @@ const Home = () => {
           <About />
           <Services />
           <OurWork />
-          <Team />
           <NewsEvents/>
           <Testimonials />
           <Contact />

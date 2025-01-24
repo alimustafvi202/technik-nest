@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLaptopCode, FaMobileAlt, FaPaintBrush, FaBullhorn, FaShoppingCart, FaUserCircle, FaCloud, FaShieldAlt, FaBrain, FaCogs } from "react-icons/fa";
+import { FaLaptopCode, FaMobileAlt, FaPaintBrush, FaBullhorn, FaSyncAlt,FaRobot,FaTools, FaUserCircle, FaShieldAlt, FaBrain, FaCogs } from "react-icons/fa";
 import Navbar from "../Home/Navbar/NavBar";
 import Bg from "../../assets/Services/serbg.jpg";
 import Contact from "../Home/Contact/contact";
@@ -48,7 +48,7 @@ const services = [
     description:
       "Leverage Python's powerful automation capabilities to streamline repetitive tasks, integrate systems, and enhance operational efficiency.",
     link: "/python",
-    icon: <FaCloud className="text-indigo-500 text-4xl mb-4" />,
+    icon: <FaSyncAlt className="text-indigo-500 text-4xl mb-4" />,
   },
   {
     title: "Cybersecurity",
@@ -71,20 +71,7 @@ const services = [
     link: "/software",
     icon: <FaCogs className="text-pink-500 text-4xl mb-4" />,
   },
-  {
-    title: "Custom ChatBot Solution",
-    description:
-      "Develop custom chatbots tailored to your business needs for seamless automation. Improve customer support, engagement, and operational efficiency.",
-    link: "/chatbot",
-    icon: <FaCogs className="text-pink-500 text-4xl mb-4" />,
-  },
-  {
-    title: "Prompt Engineering",
-  description:
-    "Refine and optimize AI models through prompt engineering to ensure accurate, efficient, and context-aware responses.",
-  link: "/promptengineering",
-  icon: <FaCogs className="text-pink-500 text-4xl mb-4" />,
-},
+  
 ];
 
 const Services = () => {

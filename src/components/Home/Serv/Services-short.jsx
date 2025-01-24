@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { FaCode, FaMobileAlt, FaBrush, FaBullhorn, FaShoppingCart, FaDesktop, FaCloud, FaShieldAlt, FaRobot, FaCogs } from "react-icons/fa";
+import { FaCode, FaMobileAlt, FaBrush, FaBullhorn, FaSyncAlt, FaDesktop,FaTools,FaBrain, FaShieldAlt, FaRobot, FaCogs } from "react-icons/fa";
 import "swiper/css/bundle";
 
 const Services = () => {
@@ -23,14 +23,13 @@ const Services = () => {
     { title: "Web Development", description: "Responsive, user-friendly websites for businesses.", link: "/web", icon: <FaCode className="text-blue-500 text-5xl" /> },
     { title: "App Development", description: "High-performance custom mobile apps with seamless design.", link: "/app", icon: <FaMobileAlt className="text-green-500 text-5xl" /> },
     { title: "Graphic Designing", description: "Custom graphic designs that ensure a strong brand presence.", link: "/graphic", icon: <FaBrush className="text-purple-500 text-5xl" /> },
-    { title: "Digital Marketing", description: "Reach target audiences through SEO, social media, and ads.", link: "DigitalMarketing", icon: <FaBullhorn className="text-yellow-500 text-5xl" /> },
+    { title: "Digital Marketing", description: "Reach target audiences through SEO, social media, and ads.", link: "/digital-marketing", icon: <FaBullhorn className="text-yellow-500 text-5xl" /> },
     { title: "UI/UX Design", description: "Intuitive, user-friendly designs that enhance engagement.", link: "/ux/ui", icon: <FaDesktop className="text-teal-500 text-5xl" /> },
-    { title: "Python Automation", description: "Automate tasks and workflows using Python for enhanced efficiency.", link: "/python", icon: <FaCogs className="text-indigo-500 text-5xl" /> },
+    { title: "Python Automation", description: "Automate tasks and workflows using Python for enhanced efficiency.", link: "/python", icon: <FaSyncAlt className="text-indigo-500 text-5xl" /> },
     { title: "Cybersecurity", description: "Advanced security services to protect businesses from threats.", link: "/cybersecurity", icon: <FaShieldAlt className="text-red-500 text-5xl" /> },
-    { title: "AI & Machine Learning", description: "Automate processes and gain insights with AI solutions.", link: "/ai-ml", icon: <FaRobot className="text-gray-500 text-5xl" /> },
-    { title: "Custom Chatbot Development", description: "Build intelligent chatbots tailored to your business.", link: "/chatbot", icon: <FaRobot className="text-teal-500 text-5xl" /> },
-    { title: "Prompt Engineering", description: "Optimize AI models by refining inputs to generate precise and effective outputs.", link: "/prompt-engineering", icon: <FaCogs className="text-pink-500 text-5xl" /> },
-  ];
+    { title: "AI & Machine Learning", description: "Automate processes and gain insights with AI solutions.", link: "/ai-ml", icon: <FaBrain className="text-gray-500 text-5xl" /> },
+    {title: "Software Development",description:"We create custom software solutions that ensure the success.",link: "/software",icon: <FaCogs className="text-pink-500 text-4xl mb-4" />},
+      ];
 
   const handlePrevClick = () => {
     if (swiperRef.current) swiperRef.current.swiper.slidePrev();

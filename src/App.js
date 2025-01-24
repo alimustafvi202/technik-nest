@@ -12,7 +12,6 @@ import AppDevelopmentPage from './components/Home/Serv/ServicesModule/App/app';
 import ServicesPage from './components/Home/Serv/ServicesModule/serveicemodal';
 import Team from './components/Team/Team';
 import Python from './components/Home/Serv/ServicesModule/Python/cloudservices';
-import UIUX from './components/Home/Serv/ServicesModule/UXUI/UXUI';
 import DigitalMarketingPage from './components/Home/Serv/ServicesModule/Digital Marketing/DigitalMarketing';
 import CybersecurityServicesPage from './components/Home/Serv/ServicesModule/CyberSecurity/cybersecurity';
 import AIAndMachineLearningServicesPage from './components/Home/Serv/ServicesModule/ai-ml/AIAndMachineLearningServicesPage';
@@ -21,6 +20,7 @@ import ChatMaintenancePage from './components/Home/Serv/ServicesModule/CustomSof
 import PMaintenancePage from './components/Home/Serv/ServicesModule/CustomSoftware/custom software development';
 import NewsEvents from './components/Event/Event';
 import Contact from './components/ContactUs/contact';
+import UXUIPage from './components/Home/Serv/ServicesModule/UXUI/UXUI';
 function App() {
   return (
     
@@ -41,13 +41,11 @@ function App() {
         <Route path='/allservices' element={<ServicesPage/>}/>
         <Route path='/team' element={<Team/>}/>
         <Route path='/python' element={<Python/>}/>
-        <Route path='/ux/ui' element={<MaintenancePage/>}/>
+        <Route path='/ux/ui' element={<UXUIPage/>}/>
         <Route path='/digital-marketing' element={<DigitalMarketingPage/>}/>
         <Route path='/cybersecurity' element={<CybersecurityServicesPage/>}/>
         <Route path='/ai-ml' element={<AIAndMachineLearningServicesPage/>}/>
         <Route path='/software' element={<MaintenancePage/>}/>
-        <Route path='/chatbot' element={<ChatMaintenancePage/>}/>
-        <Route path='/promptengineering' element={<PMaintenancePage/>}/>
         <Route path ='/event' element={<NewsEvents/>}/>
         <Route path ='/contact' element={<Contact/>}/>
   </Routes>
