@@ -10,7 +10,6 @@ import Member5 from '../../assets/Team/aleem.jpeg';
 import Member6 from '../../assets/Team/abdullah.png';
 import Member7 from '../../assets/Team/noor.png';
 import Member8 from '../../assets/Team/iqra.png';
-import Member9 from '../../assets/Team/ayesha.png';
 const OurTeamPage = () => {
   const teamCategories = {
     Owners: [
@@ -97,7 +96,7 @@ const OurTeamPage = () => {
       {
         name: "Unknown",
         role: "Graphic Designer",
-        img: ,
+        img:"" ,
         social: {
           linkedin: "https://www.linkedin.com",
           instagram: "https://www.instagram.com",
