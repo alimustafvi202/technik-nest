@@ -95,12 +95,12 @@ const OurTeamPage = () => {
         },
       },
       {
-        name: "Ayesha Liaqat",
+        name: "Unknown",
         role: "Graphic Designer",
-        img: Member9,
+        img: ,
         social: {
-          linkedin: "https://www.linkedin.com/in/ayesha-liaqat-ecommerce-etsy-6aa36527b?",
-          instagram: "https://www.instagram.com/ayeshaa_867?",
+          linkedin: "https://www.linkedin.com",
+          instagram: "https://www.instagram.com",
         },
       },
     ],
