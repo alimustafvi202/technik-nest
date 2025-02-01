@@ -39,13 +39,13 @@ const NewsEvents = () => {
             <div className="p-6">
               <div className="flex items-start">
                 <div className="text-center pr-6 border-r border-gray-300">
-                  <h3 className="text-4xl font-bold text-red-600">29</h3>
+                  <h3 className="text-4xl font-bold text-red-600">30</h3>
                   <p className="text-sm font-medium text-gray-700">JAN</p>
                 </div>
                 <div className="pl-6">
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">Practical System Security Workshop</h3>
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">Linux For Cyber Defenders</h3>
                   <div className="text-sm text-blue-600 flex items-center mb-2">
-                    <span className="mr-2">⏰</span> 11:00 am - 12:30 pm
+                    <span className="mr-2">⏰</span> 11:00 am - 12:00 pm
                   </div>
                   <div className="text-sm text-blue-600 flex items-center">
                     <span className="mr-2">📍</span> Pak-Austria Fachhochschule

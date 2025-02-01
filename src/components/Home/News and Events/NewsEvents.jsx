@@ -4,10 +4,10 @@ import img from "../../../assets/Event/29 jan.jpg";
 const eventsData = [
   {
     id: 1,
-    date: "29",
+    date: "30",
     month: "JAN",
-    title: "Practical System Security Workshop",
-    time: "11:00 am - 12:30 pm",
+    title: "Linux for Cyber Defenders",
+    time: "11:00 am - 12:00 pm",
     location: "Pak-Austria Fachhochschule",
     image: img,
   },
@@ -54,26 +54,26 @@ const NewsEvents = () => {
           empower individuals and businesses. Join us in shaping the future with
           impactful opportunities.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-60">
           {eventsData.map((event) => (
             <div
               key={event.id}
-              className="bg-white shadow-md rounded-md overflow-hidden w-full"
+              className="bg-white shadow-md rounded-md overflow-hidden w-full flex flex-col"
             >
               {event.image ? (
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-auto object-cover"
                 />
               ) : (
-                <div className="w-full h-48 flex justify-center items-center bg-gray-300">
+                <div className="w-full h-56 flex justify-center items-center bg-gray-300">
                   <span className="text-xl font-semibold text-gray-600">
                     Coming Soon
                   </span>
                 </div>
               )}
-              <div className="p-4">
+              <div className="p-4 flex flex-col flex-grow">
                 <div className="flex items-start">
                   <div className="text-center pr-4 border-r border-gray-300">
                     <h3 className="text-3xl font-semibold text-red-600">
@@ -83,7 +83,7 @@ const NewsEvents = () => {
                       {event.month}
                     </p>
                   </div>
-                  <div className="pl-4">
+                  <div className="pl-4 flex-grow">
                     <h3 className="text-base font-bold text-gray-800 mb-2 text-left">
                       {event.title}
                     </h3>
