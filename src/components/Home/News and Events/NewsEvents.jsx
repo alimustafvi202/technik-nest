@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../../../assets/Event/29 jan.jpg";
+import { Link } from "react-router-dom";
 
 const eventsData = [
   {
@@ -54,18 +55,20 @@ const NewsEvents = () => {
           empower individuals and businesses. Join us in shaping the future with
           impactful opportunities.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-60">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {eventsData.map((event) => (
             <div
               key={event.id}
               className="bg-white shadow-md rounded-md overflow-hidden w-full flex flex-col"
             >
               {event.image ? (
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-auto object-cover"
-                />
+                <Link to="/gallery">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-56 object-cover cursor-pointer"
+                  />
+                </Link>
               ) : (
                 <div className="w-full h-56 flex justify-center items-center bg-gray-300">
                   <span className="text-xl font-semibold text-gray-600">

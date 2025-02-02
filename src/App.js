@@ -21,6 +21,7 @@ import PMaintenancePage from './components/Home/Serv/ServicesModule/CustomSoftwa
 import NewsEvents from './components/Event/Event';
 import Contact from './components/ContactUs/contact';
 import UXUIPage from './components/Home/Serv/ServicesModule/UXUI/UXUI';
+import ImageFrameUploader from './components/Gallery/gallery';
 function App() {
   return (
     
@@ -48,6 +49,7 @@ function App() {
         <Route path='/software' element={<MaintenancePage/>}/>
         <Route path ='/event' element={<NewsEvents/>}/>
         <Route path ='/contact' element={<Contact/>}/>
+        <Route path ='/gallery' element={<ImageFrameUploader/>}/>
   </Routes>
     </BrowserRouter>
   );

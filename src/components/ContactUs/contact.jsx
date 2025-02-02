@@ -16,15 +16,15 @@ const ContactPage = () => {
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-        <div className="relative z-10 text-center pt-24">
-        <h1 className="text-4xl font-extrabold mb-6">
-  Contact Us
-</h1>
-<p className="text-lg mb-12 leading-relaxed">
-  We’d love to hear from you! Whether you have questions, feedback, or inquiries, feel free to get in touch with us. Our team is here to assist you.
-</p>
-
+        <div className="relative z-30 text-center mt-16 pt-12 sm:pt-16 pb-8 px-4 sm:px-8">
+          <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 sm:mb-6">
+          Contact Us
+          </h1>
+          <p className="text-lg sm:text-xl mb-6">
+          We’d love to hear from you! Whether you have questions, feedback, or inquiries, feel free to get in touch with us. Our team is here to assist you.
+          </p>
         </div>
+
       </div>
       <Contact/>
       <Footer />

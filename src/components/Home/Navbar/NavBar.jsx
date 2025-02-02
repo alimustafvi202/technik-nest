@@ -4,13 +4,14 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserTie } from '@fortawesome/free-solid-svg-icons';
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();  // To get the current path
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-
+  
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 0);
     window.addEventListener('scroll', handleScroll);
@@ -19,6 +20,9 @@ const Navbar = () => {
 
   // Function to check if the current path matches the link
   const isActiveLink = (path) => location.pathname === path ? 'text-teal-400' : 'text-white';
+
+  // Function to close menu when a link is clicked
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header
@@ -50,52 +54,67 @@ const Navbar = () => {
         >
           <ul className="space-y-4 sm:space-y-0 sm:flex sm:space-x-8 py-4 sm:py-0">
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/')}`}
+                onClick={closeMenu}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/about')}`}
+                onClick={closeMenu}
               >
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/services"
+              <Link
+                to="/services"
                 className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/services')}`}
+                onClick={closeMenu}
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/team"
+              <Link
+                to="/team"
                 className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/team')}`}
+                onClick={closeMenu}
               >
                 Team
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/event"
+              <Link
+                to="/event"
                 className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/event')}`}
+                onClick={closeMenu}
               >
                 Event
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/portfolio"
+              <Link
+                to="/portfolio"
                 className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/portfolio')}`}
+                onClick={closeMenu}
               >
                 Portfolio
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/gallery"
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink('/gallery')}`}
+                onClick={closeMenu}
+              >
+                Gallery
+              </Link>
             </li>
           </ul>
         </nav>
@@ -107,6 +126,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-white bg-gray-700 hover:bg-teal-400 w-10 h-10 flex items-center justify-center rounded-full transition-all text-xl"
+            aria-label="Facebook"
           >
             <FaFacebookF />
           </a>
@@ -115,6 +135,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-white bg-gray-700 hover:bg-teal-400 w-10 h-10 flex items-center justify-center rounded-full transition-all text-xl"
+            aria-label="Instagram"
           >
             <FaInstagram />
           </a>
@@ -123,16 +144,17 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-white bg-gray-700 hover:bg-teal-400 w-10 h-10 flex items-center justify-center rounded-full transition-all text-xl"
+            aria-label="LinkedIn"
           >
             <FaLinkedinIn />
           </a>
           <Link
-      to="/hire"
-      className="text-white bg-transparent px-4 py-2 border-2 border-white rounded-full hover:bg-teal-400 hover:border-teal-400 transition duration-300 flex items-center space-x-2 transform hover:scale-105 hover:shadow-lg"
-    >
-      <FontAwesomeIcon icon={faUserTie} className="text-lg transform -translate-y-0.8" />
-      <span>Join Us</span>
-    </Link>
+            to="/hire"
+            className="text-white bg-transparent px-4 py-2 border-2 border-white rounded-full hover:bg-teal-400 hover:border-teal-400 transition duration-300 flex items-center space-x-2 transform hover:scale-105 hover:shadow-lg"
+          >
+            <FontAwesomeIcon icon={faUserTie} className="text-lg transform -translate-y-0.8" />
+            <span>Join Us</span>
+          </Link>
         </div>
       </div>
     </header>
