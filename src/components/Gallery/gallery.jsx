@@ -3,7 +3,7 @@ import Navbar from '../Home/Navbar/NavBar';
 import Bg from "../../assets/gallery/Workshop1/bg.jpg";
 import Footer from '../Home/Footer/footer';
 import Contact from '../Home/Contact/contact';
-import frame from "../../assets/gallery/Frame.png";
+import frame from "../../assets/gallery/Frame2.png";
 import Img1 from "../../assets/gallery/Workshop1/1.JPG";
 import Img2 from "../../assets/gallery/Workshop1/2.JPG";
 import Img3 from "../../assets/gallery/Workshop1/3.JPG";
