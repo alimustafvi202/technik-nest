@@ -94,10 +94,9 @@ const OurTeamPage = () => {
         role: "WordPress Developer",
         img: Member10,
         social: {
-          facebook: "https://www.facebook.com/just.abdullah.dev/",
-          linkedin: "https://www.linkedin.com/in/just-abdullah/",
-          instagram: "https://www.instagram.com/just_abdullah_._/",
-          github: "https://github.com/just-abdullah-dev/",
+          facebook: "https://www.facebook.com/share/1A64386QWb//",
+          linkedin: "https://www.linkedin.com/in/fahad-marwat-6a5060265/",
+          instagram: "https://www.instagram.com",
         },
       },
 
