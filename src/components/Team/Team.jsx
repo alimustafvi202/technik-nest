@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from '../Home/Navbar/NavBar';
 import Footer from "../Home/Footer/footer";
-import TeamHeroImage from '../../assets/Team/hero.jpg';
+import TeamHeroImage from '../../assets/Team/1.jpg';
 import Member1 from '../../assets/Team/dp1.png';
 import Member2 from '../../assets/Team/fahad.jpg';
 import Member3 from '../../assets/Team/ahsan.jpeg';
@@ -10,6 +10,10 @@ import Member5 from '../../assets/Team/aleem.jpeg';
 import Member6 from '../../assets/Team/abdullah.png';
 import Member7 from '../../assets/Team/noor.png';
 import Member8 from '../../assets/Team/iqra.png';
+import Member9 from '../../assets/Team/wajahat.png';
+import Member10 from '../../assets/Team/abdulfahad.png';
+import Member11 from '../../assets/Team/zainab.png';
+
 const OurTeamPage = () => {
   const teamCategories = {
     Owners: [
@@ -72,6 +76,31 @@ const OurTeamPage = () => {
           github: "https://github.com/just-abdullah-dev/",
         },
       },
+
+      {
+        name: "Wajahat Khan",
+        role: "Flutter Developer",
+        img: Member9,
+        social: {
+          facebook: "https://www.facebook.com/just.abdullah.dev/",
+          linkedin: "https://www.linkedin.com/in/just-abdullah/",
+          instagram: "https://www.instagram.com/just_abdullah_._/",
+          github: "https://github.com/just-abdullah-dev/",
+        },
+      },
+
+      {
+        name: "Abdul Fahad",
+        role: "WordPress Developer",
+        img: Member10,
+        social: {
+          facebook: "https://www.facebook.com/just.abdullah.dev/",
+          linkedin: "https://www.linkedin.com/in/just-abdullah/",
+          instagram: "https://www.instagram.com/just_abdullah_._/",
+          github: "https://github.com/just-abdullah-dev/",
+        },
+      },
+
     ],
     Media: [
       {
@@ -94,12 +123,13 @@ const OurTeamPage = () => {
         },
       },
       {
-        name: "Unknown",
-        role: "Graphic Designer",
-        img:"" ,
+        name: "Zainab Raza",
+        role: "Content Writer",
+        img:Member11 ,
         social: {
-          linkedin: "https://www.linkedin.com",
-          instagram: "https://www.instagram.com",
+          linkedin: "https://www.linkedin.com/in/zainab-raza-5ab752316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          instagram: "https://www.instagram.com/isabella126973?igsh=MTl2ZDgwaHlzeTBuZA%3D%3D&utm_source=qr",
+          facebook: "https://www.facebook.com/share/14ytnNaoby/?mibextid=wwXIfr",
         },
       },
     ],
