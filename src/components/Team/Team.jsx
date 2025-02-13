@@ -82,10 +82,8 @@ const OurTeamPage = () => {
         role: "Flutter Developer",
         img: Member9,
         social: {
-          facebook: "https://www.facebook.com/just.abdullah.dev/",
-          linkedin: "https://www.linkedin.com/in/just-abdullah/",
-          instagram: "https://www.instagram.com/just_abdullah_._/",
-          github: "https://github.com/just-abdullah-dev/",
+          facebook: "https://www.facebook.com/wajahatkhanmarwat30 ",
+          linkedin: "https://www.linkedin.com/in/abdul-wajahat-khan-61b096265/",
         },
       },
 
