@@ -94,7 +94,7 @@ const OurTeamPage = () => {
         social: {
           facebook: "https://www.facebook.com/share/1A64386QWb//",
           linkedin: "https://www.linkedin.com/in/fahad-marwat-6a5060265/",
-          instagram: "https://www.instagram.com",
+          
         },
       },
 
