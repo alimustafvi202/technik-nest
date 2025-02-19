@@ -37,7 +37,7 @@ const NewsEvents = () => {
                 <img
                   src={img} // Replace with actual image path
                   alt="PSDF Free Courses"
-                  className="w-full h-72 object-cover cursor-pointer" // Adding cursor-pointer for hover effect
+                  className="w-full h-76 object-cover cursor-pointer" // Adding cursor-pointer for hover effect
                 />
               </Link>
               <div className="p-6">
