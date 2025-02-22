@@ -6,11 +6,21 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { useInView } from "react-intersection-observer";
 import img1 from "../../../assets/Event/29 jan.jpg";
-import img2 from "../../../assets/Event/29 jan.jpg";
+import img2 from "../../../assets/Event/Coming Soon.png";
 import img3 from "../../../assets/Event/29 jan.jpg";
 import img4 from "../../../assets/Event/29 jan.jpg";
 
 const eventsData = [
+  {
+    id: 2,
+    date: "26",
+    month: "Feb",
+    title: "Coming Soon",
+    time: "10:00 am - 12:00 pm",
+    location: "Abbottabad University Havelian",
+    image: img2,
+    galleryLink: "/gallery/workshop2", 
+  },
   {
     id: 1,
     date: "30",
@@ -19,8 +29,10 @@ const eventsData = [
     time: "11:00 am - 12:00 pm",
     location: "Pak-Austria Fachhochschule",
     image: img1,
-  },
-
+    galleryLink: "/gallery/workshop1", 
+  }
+  
+    
 ];
 
 const NewsEvents = () => {
@@ -73,7 +85,7 @@ const NewsEvents = () => {
           {eventsData.map((event) => (
             <SwiperSlide key={event.id}>
               <div className="bg-white shadow-md rounded-md overflow-hidden w-full flex flex-col">
-                <Link to="/gallery">
+              <Link to={event.galleryLink}>
                   <img
                     src={event.image}
                     alt={event.title}

@@ -32,8 +32,11 @@ const OurTeamPage = () => {
       <div className="min-h-screen">
         <Navbar />
         <section
-          className="relative bg-cover bg-center h-[350px] flex items-center justify-center text-white mb-10"
-          style={{ backgroundImage: `url(${TeamHeroImage})` }}
+          className="relative bg-cover bg-center flex items-center justify-center text-white mb-10"
+          style={{ backgroundImage: `url(${TeamHeroImage})`,
+          height: "500px",
+  }
+  }
         >
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
           <div className="relative text-center z-10">

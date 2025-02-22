@@ -13,9 +13,81 @@ const Welcome = () => {
     style={{ backgroundImage: `url(${Bg})` }} // Background set with inline styles
 >
     
+<style>
+    {`
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Moves by half of content width */
+        }
+
+        .marquee-wrapper {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: flex;
+            min-width: 200%; /* Ensure continuous flow */
+            animation: marquee 30s linear infinite; /* Slow speed and infinite loop */
+        }
+    `}
+</style>
+
+{/* Scrolling Marquee Bar 
+<div className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3 relative top-[80px] overflow-hidden">
+    <div className="marquee-wrapper">
+        <div className="marquee-content">
+            {/* Marquee Content (Repeated Twice for Seamless Scrolling) 
+            <div className="flex">
+                <span className="text-lg font-bold text-white mx-8">
+                    🚀 Technik Nest – Crafting Digital Excellence!
+                </span>
+                <span className="text-lg font-bold text-white mx-8">
+                    📢 Join Technik Nest Internships – Learn, Build, and Grow!
+                </span>
+                <span className="text-lg font-bold text-white mx-8">
+                    🎨 Stunning Designs | 💻 Robust Web Apps | 📱 Mobile Innovations
+                </span>
+                <span className="text-lg font-bold text-white mx-8">
+                    📚 Markaz e Ilm – A Global Learning Platform by Technik Nest!
+                </span>
+                <span className="text-lg font-bold text-white mx-8">
+                    🚀 Empowering Innovation | 🔥 Affordable Tech Solutions
+                </span>
+            </div>
+
+            {/* Duplicate Content for Continuous Flow 
+            <div className="flex">
+                <span className="text-lg font-bold text-white mx-8">
+                    🚀 Technik Nest – Crafting Digital Excellence!
+                </span>
+                <span className="text-lg font-bold text-white mx-8">
+                    📢 Join Technik Nest Internships – Learn, Build, and Grow!
+                </span>
+                <span className="text-lg font-bold text-white mx-8">
+                    🎨 Stunning Designs | 💻 Robust Web Apps | 📱 Mobile Innovations
+                </span>
+                <span className="text-lg font-bold text-white mx-8">
+                    📚 Markaz e Ilm – A Global Learning Platform by Technik Nest!
+                </span>
+                <span className="text-lg font-bold text-white mx-8">
+                    🚀 Empowering Innovation | 🔥 Affordable Tech Solutions
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+    */}
+
+
     {/* Shape Section */}
-    <div className="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-sm flex justify-center items-center">
-        <div className="max-w-6xl w-full px-4 py-10 transition-all duration-300 backdrop-blur-md rounded-3xl shadow-lg">
+    <div className="absolute inset-0 bg-white bg-opacity-10 flex justify-center items-center">
+        
+
+        <div className="max-w-6xl w-full px-4 py-10 top-[70px] relative transition-all duration-300 backdrop-blur-md rounded-3xl shadow-lg">
             {/* Adjusted margin for desktop */}
             <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left space-y-8 lg:space-y-0">
                 {/* Welcome Text Section */}
@@ -27,10 +99,28 @@ const Welcome = () => {
                     <p className="mt-4 text-lg text-gray-200 leading-relaxed">
                         Technik Nest is a leading software development house in Pakistan, specializing in crafting custom software solutions, web applications, and mobile apps. Our dedicated team blends cutting-edge technology with industry expertise to deliver innovative and efficient solutions that drive business success. Committed to excellence and customer satisfaction, Technik Nest transforms complex challenges into seamless, user-friendly products that align with your goals and vision.
                     </p>
-                    <div className="mt-6 flex gap-4 justify-center lg:justify-start">
-                        <Link to="/Internships" className="py-2 px-6 border-2 border-white rounded-full text-white hover:bg-cyan-400 hover:text-black transition-all duration-300 text-stroke">Start Internship</Link>
-                        <Link to="/contact" className="py-2 px-6 border-2 border-white rounded-full text-white hover:bg-cyan-400 hover:text-black transition-all duration-300 text-stroke">Contact With Us</Link>
-                    </div>
+                    <div className="mt-6 flex gap-4 justify-center lg:justify-start relative">
+    {/* Registration Open Badge */}
+    <div className="absolute -top-5 right-1/2 transform -translate-x-1/2 bg-red-500 text-white text-xs font-bold p-1 rounded-full shadow-lg animate-pulse">
+        🚀 Registration Open!
+    </div>
+
+    <Link 
+        to="/Internships" 
+        className="py-2 px-6 border-2 border-white rounded-full text-white hover:bg-cyan-400 hover:text-black transition-all duration-300 text-stroke relative"
+    >
+        Start Internship
+    </Link>
+    
+    <Link 
+        to="/contact" 
+        className="py-2 px-6 border-2 border-white rounded-full text-white hover:bg-cyan-400 hover:text-black transition-all duration-300 text-stroke"
+    >
+        Contact With Us
+    </Link>
+</div>
+
+
                 </div>
 
                 {/* Welcome Image Section */}
@@ -41,6 +131,7 @@ const Welcome = () => {
         </div>
     </div>
 </section>
+            
 </>
     );
 };

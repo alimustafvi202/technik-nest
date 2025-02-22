@@ -22,6 +22,7 @@ import NewsEvents from './components/Event/Event';
 import Contact from './components/ContactUs/contact';
 import UXUIPage from './components/Home/Serv/ServicesModule/UXUI/UXUI';
 import ImageFrameUploader from './components/Gallery/gallery';
+import Gallery from './components/Gallery/main';
 function App() {
   return (
     
@@ -49,7 +50,8 @@ function App() {
         <Route path='/software' element={<MaintenancePage/>}/>
         <Route path ='/event' element={<NewsEvents/>}/>
         <Route path ='/contact' element={<Contact/>}/>
-        <Route path ='/gallery' element={<ImageFrameUploader/>}/>
+        <Route path="/gallery/:workshopId" element={<ImageFrameUploader/>}/>
+        <Route path='/gallery' element={<Gallery/>}/>
   </Routes>
     </BrowserRouter>
   );
