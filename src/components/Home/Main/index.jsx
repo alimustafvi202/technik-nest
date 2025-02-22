@@ -100,11 +100,11 @@ const Welcome = () => {
                         Technik Nest is a leading software development house in Pakistan, specializing in crafting custom software solutions, web applications, and mobile apps. Our dedicated team blends cutting-edge technology with industry expertise to deliver innovative and efficient solutions that drive business success. Committed to excellence and customer satisfaction, Technik Nest transforms complex challenges into seamless, user-friendly products that align with your goals and vision.
                     </p>
                     <div className="mt-6 flex gap-4 justify-center lg:justify-start relative">
-    {/* Registration Open Badge */}
+    {/* Registration Open Badge 
     <div className="absolute -top-5 right-1/2 transform -translate-x-1/2 bg-red-500 text-white text-xs font-bold p-1 rounded-full shadow-lg animate-pulse">
         🚀 Registration Open!
     </div>
-
+*/}
     <Link 
         to="/Internships" 
         className="py-2 px-6 border-2 border-white rounded-full text-white hover:bg-cyan-400 hover:text-black transition-all duration-300 text-stroke relative"
