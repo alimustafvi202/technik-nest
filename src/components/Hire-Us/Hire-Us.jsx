@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import img1 from "../../assets/Event/29 jan.jpg";
+import img2 from "../../assets/Event/AUST.png";
 import Navbar from "../Home/Navbar/NavBar";
 import Bg from "../../assets/Event/bg.jpg";
 import Contact from "../Home/Contact/contact";
 import Footer from "../Home/Footer/footer";
 
 const events = [
-  { name: "Cyber Security, AI , Cloud Computing", date: "2025-02-26T10:00:00", venue: "AUST University", image: "Aust.jpg" },
+  { name: "Cyber Security, AI , Cloud Computing", date: "2025-02-26T10:00:00", venue: "AUST University", image: img2 },
   { name: "Linux For Cyber Defenders", date: "2025-01-30T11:00:00", venue: "Pak Austria University", image: img1 }
 ];
 
