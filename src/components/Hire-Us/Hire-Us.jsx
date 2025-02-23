@@ -127,7 +127,7 @@ const StudentForm = () => {
                         <Countdown eventDate={event.date} />
                         <button
                           onClick={() => setSelectedEvent(event)}
-                          className="mt-4 w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition"
+                          className="mt-4 w-full bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-600 transition"
                         >
                           Register Now
                         </button>
