@@ -36,15 +36,27 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="h-12" />
         </div>
 
-        {/* Hamburger Menu */}
-        <button
-          className="sm:hidden flex flex-col justify-center items-center space-y-1 "
-          onClick={toggleMenu}
-        >
-          <span className="w-6 h-0.5 bg-white"></span>
-          <span className="w-6 h-0.5 bg-white"></span>
-          <span className="w-6 h-0.5 bg-white"></span>
-        </button>
+        {/* Hamburger Menu and Join Us Button (Mobile View) */}
+        <div className="sm:hidden flex items-center space-x-4">
+          {/* Join Us Button */}
+          <Link
+            to="/register"
+            className="text-white bg-transparent px-3 py-2 border-2 border-white rounded-full hover:bg-teal-400 hover:border-teal-400 transition duration-300 flex items-center space-x-2 transform hover:scale-105 hover:shadow-lg"
+          >
+            <FontAwesomeIcon icon={faUserTie} className="text-lg transform -translate-y-0.8" />
+            <span>Register</span>
+          </Link>
+
+          {/* Hamburger Menu */}
+          <button
+            className="flex flex-col justify-center items-center space-y-1"
+            onClick={toggleMenu}
+          >
+            <span className="w-6 h-0.5 bg-white"></span>
+            <span className="w-6 h-0.5 bg-white"></span>
+            <span className="w-6 h-0.5 bg-white"></span>
+          </button>
+        </div>
 
         {/* Navigation Links */}
         <nav
@@ -116,10 +128,11 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li>
+          
           </ul>
         </nav>
 
-        {/* Social Icons */}
+        {/* Social Icons (Desktop View) */}
         <div className="hidden sm:flex items-center space-x-4">
           <a
             href="https://facebook.com/techniknest"
@@ -149,11 +162,11 @@ const Navbar = () => {
             <FaLinkedinIn />
           </a>
           <Link
-            to="/hire"
+            to="/register"
             className="text-white bg-transparent px-4 py-2 border-2 border-white rounded-full hover:bg-teal-400 hover:border-teal-400 transition duration-300 flex items-center space-x-2 transform hover:scale-105 hover:shadow-lg"
           >
             <FontAwesomeIcon icon={faUserTie} className="text-lg transform -translate-y-0.8" />
-            <span>Join Us</span>
+            <span>Register</span>
           </Link>
         </div>
       </div>

@@ -11,7 +11,7 @@ import img3 from "../../assets/gallery/Workshop2/1.png";
 const events = [
   {
     id: 1,
-    name: "Linux for Cyber Defenders",
+    Name: "Linux for Cyber Defenders",
     thumbnail: img1,
     gallery: "/gallery/workshop1",
     date: "Jan 30, 2025",
@@ -19,7 +19,7 @@ const events = [
   },
   {
     id: 2,
-    name: "AI Seminar",
+    Name: "AI Seminar",
     thumbnail: img3,
     gallery: "/gallery/workshop2",
     date: "Feb 26, 2025",
@@ -60,14 +60,14 @@ export default function EventGallery() {
               className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-2xl transition duration-300"
             >
               <div className="relative group">
-                <img src={event.thumbnail} alt={event.name} className="w-full h-60 object-cover" />
+                <img src={event.thumbnail} alt={event.Name} className="w-full h-60 object-cover" />
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white p-4">
                   <p className="text-lg"><span className="mr-1">⏰</span> Date: {event.date}</p>
                   <p className="text-lg"><span className="mr-1">📍</span>Location: {event.location}</p>
                 </div>
               </div>
               <div className="p-4 text-center flex justify-between items-center">
-                <h2 className="text-xl font-semibold text-gray-800">{event.name}</h2>
+                <h2 className="text-xl font-semibold text-gray-800">{event.Name}</h2>
                 <span 
                   onClick={() => navigate(event.gallery)} 
                   className="text-blue-500 hover:text-blue-700 cursor-pointer transition duration-300 flex items-center"

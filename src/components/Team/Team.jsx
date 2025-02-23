@@ -14,16 +14,16 @@ import Member10 from '../../assets/Team/abdulfahad.png';
 import Member11 from '../../assets/Team/zainab.png';
 
 const teamMembers = [
-  { name: "Muhammad Ali", role: "Founder & CEO", img: Member1, social: { facebook: "https://facebook.com/m.alimustafvi202", linkedin: "https://linkedin.com/in/alimustafviofficial1", instagram: "https://instagram.com/alimustafvi202", github: "https://github.com/alimustafvi202/" } },
-  { name: "Fahad Sajid", role: "Chief Operating Officer", img: Member2, social: { github: "https://github.com/fahad4920/", linkedin: "https://www.linkedin.com/in/fahad-sajid-660043268/" } },
-  { name: "Ahsan Naseer", role: "IT Manager", img: Member3, social: { linkedin: "https://www.linkedin.com/in/ahsan-naseer-3617aa25b/" } },
-  { name: "Hassan Ali", role: "Software Developer", img: Member4, social: { linkedin: "https://linkedin.com/in/hassanali202/", github: "https://github.com/hassanali167" } },
-  { name: "Syed Aleem", role: "HR Manager", img: Member5, social: { linkedin: "https://www.linkedin.com/in/syed-aleem-gillani-0bbb76269/", instagram: "https://www.instagram.com/_aleem_syed97?igsh=ZGhwYWljeXF3bnkx", facebook: "https://www.facebook.com/share/191NGraXzP/" } },
-  { name: "Iqra Bibi", role: "Frontend Developer", img: Member8, social: { facebook: "https://www.facebook.com/share/18JujxwXBt/", linkedin: "https://www.linkedin.com/in/iqra-bibi-906993312" } },
-  { name: "Abdullah", role: "MERN Stack Developer", img: Member6, social: { facebook: "https://www.facebook.com/just.abdullah.dev/", linkedin: "https://www.linkedin.com/in/just-abdullah/", instagram: "https://www.instagram.com/just_abdullah_._/", github: "https://github.com/just-abdullah-dev/" } },
-  { name: "Wajahat Khan", role: "Flutter Developer", img: Member9, social: { facebook: "https://www.facebook.com/wajahatkhanmarwat30", linkedin: "https://www.linkedin.com/in/abdul-wajahat-khan-61b096265/" } },
-  { name: "Abdul Fahad", role: "WordPress Developer", img: Member10, social: { facebook: "https://www.facebook.com/share/1A64386QWb//", linkedin: "https://www.linkedin.com/in/fahad-marwat-6a5060265/" } },
-  { name: "Zainab Raza", role: "Content Writer", img: Member11, social: { linkedin: "https://www.linkedin.com/in/zainab-raza-5ab752316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", instagram: "https://www.instagram.com/isabella126973?igsh=MTl2ZDgwaHlzeTBuZA%3D%3D&utm_source=qr", facebook: "https://www.facebook.com/share/14ytnNaoby/?mibextid=wwXIfr" } }
+  { Name: "Muhammad Ali", role: "Founder & CEO", img: Member1, social: { facebook: "https://facebook.com/m.alimustafvi202", linkedin: "https://linkedin.com/in/alimustafviofficial1", instagram: "https://instagram.com/alimustafvi202", github: "https://github.com/alimustafvi202/" } },
+  { Name: "Fahad Sajid", role: "Chief Operating Officer", img: Member2, social: { github: "https://github.com/fahad4920/", linkedin: "https://www.linkedin.com/in/fahad-sajid-660043268/" } },
+  { Name: "Ahsan Naseer", role: "IT Manager", img: Member3, social: { linkedin: "https://www.linkedin.com/in/ahsan-naseer-3617aa25b/" } },
+  { Name: "Hassan Ali", role: "Software Developer", img: Member4, social: { linkedin: "https://linkedin.com/in/hassanali202/", github: "https://github.com/hassanali167" } },
+  { Name: "Syed Aleem", role: "HR Manager", img: Member5, social: { linkedin: "https://www.linkedin.com/in/syed-aleem-gillani-0bbb76269/", instagram: "https://www.instagram.com/_aleem_syed97?igsh=ZGhwYWljeXF3bnkx", facebook: "https://www.facebook.com/share/191NGraXzP/" } },
+  { Name: "Iqra Bibi", role: "Frontend Developer", img: Member8, social: { facebook: "https://www.facebook.com/share/18JujxwXBt/", linkedin: "https://www.linkedin.com/in/iqra-bibi-906993312" } },
+  { Name: "Abdullah", role: "MERN Stack Developer", img: Member6, social: { facebook: "https://www.facebook.com/just.abdullah.dev/", linkedin: "https://www.linkedin.com/in/just-abdullah/", instagram: "https://www.instagram.com/just_abdullah_._/", github: "https://github.com/just-abdullah-dev/" } },
+  { Name: "Wajahat Khan", role: "Flutter Developer", img: Member9, social: { facebook: "https://www.facebook.com/wajahatkhanmarwat30", linkedin: "https://www.linkedin.com/in/abdul-wajahat-khan-61b096265/" } },
+  { Name: "Abdul Fahad", role: "WordPress Developer", img: Member10, social: { facebook: "https://www.facebook.com/share/1A64386QWb//", linkedin: "https://www.linkedin.com/in/fahad-marwat-6a5060265/" } },
+  { Name: "Zainab Raza", role: "Content Writer", img: Member11, social: { linkedin: "https://www.linkedin.com/in/zainab-raza-5ab752316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", instagram: "https://www.instagram.com/isabella126973?igsh=MTl2ZDgwaHlzeTBuZA%3D%3D&utm_source=qr", facebook: "https://www.facebook.com/share/14ytnNaoby/?mibextid=wwXIfr" } }
 ];
 
 const OurTeamPage = () => {
@@ -51,12 +51,12 @@ const OurTeamPage = () => {
                 <div className="bg-teal-500 h-20 relative">
                   <div className="absolute top-10 left-1/2 transform -translate-x-1/2">
                     {member.img && (
-                      <img className="w-20 h-20 rounded-full border-4 border-white" src={member.img} alt={member.name} />
+                      <img className="w-20 h-20 rounded-full border-4 border-white" src={member.img} alt={member.Name} />
                     )}
                   </div>
                 </div>
                 <div className="mt-12">
-                  <h2 className="text-xl text-center font-bold text-red-600">{member.name}</h2>
+                  <h2 className="text-xl text-center font-bold text-red-600">{member.Name}</h2>
                   <p className="text-gray-500 text-center">{member.role}</p>
                 </div>
                 <div className="flex justify-center space-x-6 mt-4 text-gray-400">

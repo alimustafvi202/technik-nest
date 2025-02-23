@@ -98,26 +98,26 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Name"
-            name="name"
+            Name="Name"
             required
             className="p-3 border border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none"
           />
           <input
-            type="email"
+            type="Email"
             placeholder="Email"
-            name="email"
+            Name="Email"
             required
             className="p-3 border border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none"
           />
           <input
             type="tel"
             placeholder="Phone"
-            name="phone"
+            Name="Phone"
             className="p-3 border border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none"
           />
           <textarea
             placeholder="Message"
-            name="message"
+            Name="message"
             required
             className="p-3 border border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none resize-none"
             rows="5"

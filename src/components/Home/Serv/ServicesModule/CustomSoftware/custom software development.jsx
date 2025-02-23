@@ -14,13 +14,13 @@ import CSImg10 from '../../../../../assets/Services/custom-software/10.jpg';
 
 const CustomSoftwarePage = () => {
   const features = [
-    { name: "Enterprise Applications", description: "Scalable solutions for large organizations.", img: CSImg1 },
-    { name: "API Development", description: "Seamless integrations with robust APIs.", img: CSImg2 },
-    { name: "Database Management", description: "Efficient and secure data handling solutions.", img: CSImg6 },
-    { name: "Software Modernization", description: "Upgrade legacy systems to modern standards.", img: CSImg7 },
-    { name: "Custom ERP Solutions", description: "Streamline business operations with tailored ERPs.", img: CSImg8 },
-    { name: "Automation Tools", description: "Optimize workflows with custom automation.", img: CSImg9 },
-    { name: "Technical Support Services", description: "Dedicated support for your software needs.", img: CSImg10 },
+    { Name: "Enterprise Applications", description: "Scalable solutions for large organizations.", img: CSImg1 },
+    { Name: "API Development", description: "Seamless integrations with robust APIs.", img: CSImg2 },
+    { Name: "Database Management", description: "Efficient and secure data handling solutions.", img: CSImg6 },
+    { Name: "Software Modernization", description: "Upgrade legacy systems to modern standards.", img: CSImg7 },
+    { Name: "Custom ERP Solutions", description: "Streamline business operations with tailored ERPs.", img: CSImg8 },
+    { Name: "Automation Tools", description: "Optimize workflows with custom automation.", img: CSImg9 },
+    { Name: "Technical Support Services", description: "Dedicated support for your software needs.", img: CSImg10 },
   ];
 
   return (
@@ -44,9 +44,9 @@ const CustomSoftwarePage = () => {
               key={index}
               className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
             >
-              <img src={feature.img} alt={feature.name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
+              <img src={feature.img} alt={feature.Name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
               <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">{feature.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{feature.Name}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             </div>

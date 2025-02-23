@@ -15,16 +15,16 @@ import Img10 from '../../../../../assets/Services/web/Img10.png';
 
 const WebDevelopmentPage = () => {
   const websites = [
-    { name: "E-commerce Website", description: "Sell your products online seamlessly.", img: Img1 },
-    { name: "Portfolio Website", description: "Showcase your work beautifully.", img: Img2 },
-    { name: "Corporate Website", description: "Professional websites for businesses.", img: Img3 },
-    { name: "Educational Website", description: "Online learning platforms.", img: Img4 },
-    { name: "Blog Website", description: "Personal or multi-author blogs.", img: Img5 },
-    { name: "News Website", description: "Publish news and articles.", img: Img6 },
-    { name: "Landing Page", description: "Promote products or campaigns.", img: Img7 },
-    { name: "Non-Profit Website", description: "Raise awareness and donations.", img: Img8 },
-    { name: "Real Estate Website", description: "List properties with ease.", img: Img9 },
-    { name: "Event Website", description: "Manage events and tickets online.", img: Img10 },
+    { Name: "E-commerce Website", description: "Sell your products online seamlessly.", img: Img1 },
+    { Name: "Portfolio Website", description: "Showcase your work beautifully.", img: Img2 },
+    { Name: "Corporate Website", description: "Professional websites for businesses.", img: Img3 },
+    { Name: "Educational Website", description: "Online learning platforms.", img: Img4 },
+    { Name: "Blog Website", description: "Personal or multi-author blogs.", img: Img5 },
+    { Name: "News Website", description: "Publish news and articles.", img: Img6 },
+    { Name: "Landing Page", description: "Promote products or campaigns.", img: Img7 },
+    { Name: "Non-Profit Website", description: "Raise awareness and donations.", img: Img8 },
+    { Name: "Real Estate Website", description: "List properties with ease.", img: Img9 },
+    { Name: "Event Website", description: "Manage events and tickets online.", img: Img10 },
   ];
 
   return (
@@ -56,12 +56,12 @@ const WebDevelopmentPage = () => {
             >
               <img
                 src={website.img}
-                alt={website.name}
+                alt={website.Name}
                 className="w-full h-48 object-cover group-hover:opacity-80 transition"
               />
               <div className="p-4 flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{website.name}</h3>
+                  <h3 className="text-xl font-bold mb-2">{website.Name}</h3>
                   <p className="text-gray-600">{website.description}</p>
                 </div>
                

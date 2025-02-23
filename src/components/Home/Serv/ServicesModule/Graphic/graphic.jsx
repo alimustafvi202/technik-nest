@@ -15,16 +15,16 @@ import Img9 from '../../../../../assets/Services/graphic/9.jpg';
 import Img10 from '../../../../../assets/Services/graphic/10.png';
 const GraphicDesigningPage = () => {
   const projects = [
-    { name: "Logo Design", description: "Modern and sleek logo design.", img: Img1 },
-    { name: "Business Card", description: "Professional and stylish cards.", img: Img2 },
-    { name: "Social Media Kit", description: "Eye-catching templates.", img: Img3 },
-    { name: "Poster Design", description: "Creative and impactful posters.", img: Img4 },
-    { name: "Brochure Design", description: "Elegant and informative brochures.", img:Img5 },
-    { name: "Flyer Design", description: "Captivating flyers for promotion.", img:Img6 },
-    { name: "Brand Identity", description: "Complete branding solutions.", img: Img7 },
-    { name: "Illustrations", description: "Unique hand-drawn art.", img: Img8},
-    { name: "Product Packaging", description: "Creative and engaging packaging.", img: Img9 },
-    { name: "UI/UX Design", description: "User-friendly and modern interfaces.", img:Img10 },
+    { Name: "Logo Design", description: "Modern and sleek logo design.", img: Img1 },
+    { Name: "Business Card", description: "Professional and stylish cards.", img: Img2 },
+    { Name: "Social Media Kit", description: "Eye-catching templates.", img: Img3 },
+    { Name: "Poster Design", description: "Creative and impactful posters.", img: Img4 },
+    { Name: "Brochure Design", description: "Elegant and informative brochures.", img:Img5 },
+    { Name: "Flyer Design", description: "Captivating flyers for promotion.", img:Img6 },
+    { Name: "Brand Identity", description: "Complete branding solutions.", img: Img7 },
+    { Name: "Illustrations", description: "Unique hand-drawn art.", img: Img8},
+    { Name: "Product Packaging", description: "Creative and engaging packaging.", img: Img9 },
+    { Name: "UI/UX Design", description: "User-friendly and modern interfaces.", img:Img10 },
   ];
 
   return (
@@ -55,12 +55,12 @@ const GraphicDesigningPage = () => {
             >
               <img
                 src={project.img}
-                alt={project.name}
+                alt={project.Name}
                 className="w-full h-48 object-cover group-hover:opacity-80 transition"
               />
               <div className="p-4 flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                  <h3 className="text-xl font-bold mb-2">{project.Name}</h3>
                   <p className="text-gray-600">{project.description}</p>
                 </div>
                 <button className="px-6 py-2 text-lg font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 whitespace-nowrap">

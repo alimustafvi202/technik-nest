@@ -19,16 +19,16 @@ import UXImg10 from '../../../../../assets/Services/ux-ui/10.png';
 
 const UXUIPage = () => {
   const features = [
-    { name: "Wireframing & Prototyping", description: "Turn ideas into interactive prototypes.", img: UXImg1 },
-    { name: "User Research", description: "Understand your audience to create impactful designs.", img: UXImg2 },
-    { name: "Visual Design", description: "Design stunning interfaces that captivate users.", img: UXImg3 },
-    { name: "Usability Testing", description: "Ensure your designs are user-friendly and efficient.", img: UXImg4 },
-    { name: "Information Architecture", description: "Organize content for optimal user navigation.", img: UXImg5 },
-    { name: "Interaction Design", description: "Craft engaging interactions for better experiences.", img: UXImg6 },
-    { name: "Responsive Design", description: "Create designs that look great on any device.", img: UXImg7 },
-    { name: "Design Systems", description: "Build cohesive and scalable design systems.", img: UXImg8 },
-    { name: "Accessibility Design", description: "Design inclusive experiences for all users.", img: UXImg9 },
-    { name: "UX Audits", description: "Identify and improve pain points in your design.", img: UXImg10 },
+    { Name: "Wireframing & Prototyping", description: "Turn ideas into interactive prototypes.", img: UXImg1 },
+    { Name: "User Research", description: "Understand your audience to create impactful designs.", img: UXImg2 },
+    { Name: "Visual Design", description: "Design stunning interfaces that captivate users.", img: UXImg3 },
+    { Name: "Usability Testing", description: "Ensure your designs are user-friendly and efficient.", img: UXImg4 },
+    { Name: "Information Architecture", description: "Organize content for optimal user navigation.", img: UXImg5 },
+    { Name: "Interaction Design", description: "Craft engaging interactions for better experiences.", img: UXImg6 },
+    { Name: "Responsive Design", description: "Create designs that look great on any device.", img: UXImg7 },
+    { Name: "Design Systems", description: "Build cohesive and scalable design systems.", img: UXImg8 },
+    { Name: "Accessibility Design", description: "Design inclusive experiences for all users.", img: UXImg9 },
+    { Name: "UX Audits", description: "Identify and improve pain points in your design.", img: UXImg10 },
   ];
 
   return (
@@ -52,9 +52,9 @@ const UXUIPage = () => {
               key={index}
               className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
             >
-              <img src={feature.img} alt={feature.name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
+              <img src={feature.img} alt={feature.Name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
               <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">{feature.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{feature.Name}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             </div>

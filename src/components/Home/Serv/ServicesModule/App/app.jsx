@@ -14,16 +14,16 @@ import Img9 from '../../../../../assets/Services/app/9.png';
 import Img10 from '../../../../../assets/Services/app/10.png';
 const AppDevelopmentPage = () => {
   const apps = [
-    { name: "Fitness App", description: "Track workouts and health.", img: Img1 },
-    { name: "E-commerce App", description: "Sell products on mobile.", img:Img2  },
-    { name: "Food Delivery App", description: "Deliver food conveniently.", img:Img3  },
-    { name: "Educational App", description: "Learn anywhere, anytime.", img: Img4  },
-    { name: "Task Management App", description: "Boost productivity.", img: Img5  },
-    { name: "Social Media App", description: "Connect with others.", img: Img6 },
-    { name: "Healthcare App", description: "Book doctor appointments.", img: Img7 },
-    { name: "News App", description: "Stay updated.", img:Img8 },
-    { name: "Travel App", description: "Book tickets and hotels.", img: Img9  },
-    { name: "Messaging App", description: "Real-time communication.", img: Img10  },
+    { Name: "Fitness App", description: "Track workouts and health.", img: Img1 },
+    { Name: "E-commerce App", description: "Sell products on mobile.", img:Img2  },
+    { Name: "Food Delivery App", description: "Deliver food conveniently.", img:Img3  },
+    { Name: "Educational App", description: "Learn anywhere, anytime.", img: Img4  },
+    { Name: "Task Management App", description: "Boost productivity.", img: Img5  },
+    { Name: "Social Media App", description: "Connect with others.", img: Img6 },
+    { Name: "Healthcare App", description: "Book doctor appointments.", img: Img7 },
+    { Name: "News App", description: "Stay updated.", img:Img8 },
+    { Name: "Travel App", description: "Book tickets and hotels.", img: Img9  },
+    { Name: "Messaging App", description: "Real-time communication.", img: Img10  },
   ];
 
   return (
@@ -55,12 +55,12 @@ const AppDevelopmentPage = () => {
             >
               <img
                 src={app.img}
-                alt={app.name}
+                alt={app.Name}
                 className="w-full h-48 object-cover group-hover:opacity-80 transition"
               />
               <div className="p-4 flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{app.name}</h3>
+                  <h3 className="text-xl font-bold mb-2">{app.Name}</h3>
                   <p className="text-gray-600">{app.description}</p>
                 </div>
               </div>

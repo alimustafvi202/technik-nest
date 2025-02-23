@@ -11,12 +11,12 @@ import Img6 from '../../../../../assets/Services/cybersecurity/6.png';
 
 const CybersecurityServicesPage = () => {
   const features = [
-    { name: "Network Security", description: "Protect your network from unauthorized access and threats.", img: Img1 },
-    { name: "Threat Detection", description: "Identify and mitigate potential threats in real time.", img: Img2 },
-    { name: "Data Encryption", description: "Secure sensitive data with advanced encryption techniques.", img: Img3 },
-    { name: "Endpoint Protection", description: "Safeguard devices from malware and cyber attacks.", img: Img4 },
-    { name: "Vulnerability Assessments", description: "Identify weak points in your system for proactive security.", img: Img5 },
-    { name: "Incident Response", description: "Quickly respond to and recover from security breaches.", img: Img6 },
+    { Name: "Network Security", description: "Protect your network from unauthorized access and threats.", img: Img1 },
+    { Name: "Threat Detection", description: "Identify and mitigate potential threats in real time.", img: Img2 },
+    { Name: "Data Encryption", description: "Secure sensitive data with advanced encryption techniques.", img: Img3 },
+    { Name: "Endpoint Protection", description: "Safeguard devices from malware and cyber attacks.", img: Img4 },
+    { Name: "Vulnerability Assessments", description: "Identify weak points in your system for proactive security.", img: Img5 },
+    { Name: "Incident Response", description: "Quickly respond to and recover from security breaches.", img: Img6 },
   ];
 
   return (
@@ -40,9 +40,9 @@ const CybersecurityServicesPage = () => {
               key={index}
               className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
             >
-              <img src={feature.img} alt={feature.name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
+              <img src={feature.img} alt={feature.Name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
               <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">{feature.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{feature.Name}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             </div>

@@ -15,16 +15,16 @@ import Img10 from '../../../../../assets/Services/digital-marketing/10.jpg';
 
 const DigitalMarketingServicesPage = () => {
   const features = [
-    { name: "Search Engine Optimization (SEO)", description: "Boost your website's ranking on search engines.", img: Img1 },
-    { name: "Pay-Per-Click (PPC) Advertising", description: "Drive traffic with targeted ad campaigns.", img: Img2 },
-    { name: "Social Media Marketing", description: "Grow your brand presence on social platforms.", img: Img3 },
-    { name: "Content Marketing", description: "Engage audiences with high-quality content.", img: Img4 },
-    { name: "Email Marketing", description: "Reach your audience with personalized email campaigns.", img: Img5 },
-    { name: "Affiliate Marketing", description: "Leverage partnerships to increase sales.", img: Img6 },
-    { name: "Influencer Marketing", description: "Collaborate with influencers to amplify your brand.", img: Img7 },
-    { name: "Video Marketing", description: "Create compelling video content to engage audiences.", img: Img8 },
-    { name: "Web Analytics & Reporting", description: "Measure performance and optimize strategies.", img: Img9 },
-    { name: "Online Reputation Management", description: "Protect and enhance your brand’s online image.", img: Img10 },
+    { Name: "Search Engine Optimization (SEO)", description: "Boost your website's ranking on search engines.", img: Img1 },
+    { Name: "Pay-Per-Click (PPC) Advertising", description: "Drive traffic with targeted ad campaigns.", img: Img2 },
+    { Name: "Social Media Marketing", description: "Grow your brand presence on social platforms.", img: Img3 },
+    { Name: "Content Marketing", description: "Engage audiences with high-quality content.", img: Img4 },
+    { Name: "Email Marketing", description: "Reach your audience with personalized Email campaigns.", img: Img5 },
+    { Name: "Affiliate Marketing", description: "Leverage partnerships to increase sales.", img: Img6 },
+    { Name: "Influencer Marketing", description: "Collaborate with influencers to amplify your brand.", img: Img7 },
+    { Name: "Video Marketing", description: "Create compelling video content to engage audiences.", img: Img8 },
+    { Name: "Web Analytics & Reporting", description: "Measure performance and optimize strategies.", img: Img9 },
+    { Name: "Online Reputation Management", description: "Protect and enhance your brand’s online image.", img: Img10 },
   ];
 
   return (
@@ -48,9 +48,9 @@ const DigitalMarketingServicesPage = () => {
               key={index}
               className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
             >
-              <img src={feature.img} alt={feature.name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
+              <img src={feature.img} alt={feature.Name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
               <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">{feature.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{feature.Name}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             </div>

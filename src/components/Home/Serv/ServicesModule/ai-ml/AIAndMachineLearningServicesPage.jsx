@@ -11,12 +11,12 @@ import Img6 from '../../../../../assets/Services/ai-ml/6.jpg';
 
 const AIAndMachineLearningServicesPage = () => {
   const features = [
-    { name: "Predictive Analytics", description: "Use data to forecast future trends and outcomes.", img: Img1 },
-    { name: "Natural Language Processing", description: "Develop AI that understands and interacts with human language.", img: Img2 },
-    { name: "Image Recognition", description: "Automate tasks using advanced image processing models.", img: Img3 },
-    { name: "Chatbot Development", description: "Build intelligent conversational agents for businesses.", img: Img4 },
-    { name: "Recommendation Systems", description: "Enhance user experience with personalized recommendations.", img: Img5 },
-    { name: "Custom AI Models", description: "Tailor AI solutions to meet your unique business needs.", img: Img6 },
+    { Name: "Predictive Analytics", description: "Use data to forecast future trends and outcomes.", img: Img1 },
+    { Name: "Natural Language Processing", description: "Develop AI that understands and interacts with human language.", img: Img2 },
+    { Name: "Image Recognition", description: "Automate tasks using advanced image processing models.", img: Img3 },
+    { Name: "Chatbot Development", description: "Build intelligent conversational agents for businesses.", img: Img4 },
+    { Name: "Recommendation Systems", description: "Enhance user experience with personalized recommendations.", img: Img5 },
+    { Name: "Custom AI Models", description: "Tailor AI solutions to meet your unique business needs.", img: Img6 },
   ];
 
   return (
@@ -40,9 +40,9 @@ const AIAndMachineLearningServicesPage = () => {
               key={index}
               className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
             >
-              <img src={feature.img} alt={feature.name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
+              <img src={feature.img} alt={feature.Name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
               <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">{feature.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{feature.Name}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             </div>

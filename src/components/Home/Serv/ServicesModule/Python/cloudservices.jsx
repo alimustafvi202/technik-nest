@@ -11,12 +11,12 @@ import Img6 from '../../../../../assets/Services/python/6.png';
 
 const PythonAutomationPage = () => {
   const features = [
-    { name: "Data Processing", description: "Automate data collection and analysis.", img: Img1 },
-    { name: "Web Scraping", description: "Extract valuable information from websites.", img: Img2 },
-    { name: "Workflow Automation", description: "Streamline repetitive business tasks.", img: Img3 },
-    { name: "Scripting Solutions", description: "Custom scripts tailored to your needs.", img: Img4 },
-    { name: "API Integration", description: "Seamlessly connect and manage APIs.", img: Img5 },
-    { name: "Data Visualization", description: "Create meaningful insights with data visuals.", img: Img6 },
+    { Name: "Data Processing", description: "Automate data collection and analysis.", img: Img1 },
+    { Name: "Web Scraping", description: "Extract valuable information from websites.", img: Img2 },
+    { Name: "Workflow Automation", description: "Streamline repetitive business tasks.", img: Img3 },
+    { Name: "Scripting Solutions", description: "Custom scripts tailored to your needs.", img: Img4 },
+    { Name: "API Integration", description: "Seamlessly connect and manage APIs.", img: Img5 },
+    { Name: "Data Visualization", description: "Create meaningful insights with data visuals.", img: Img6 },
   ];
 
   return (
@@ -40,9 +40,9 @@ const PythonAutomationPage = () => {
               key={index}
               className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105"
             >
-              <img src={feature.img} alt={feature.name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
+              <img src={feature.img} alt={feature.Name} className="w-full h-48 object-cover group-hover:opacity-80 transition" />
               <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">{feature.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{feature.Name}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             </div>
