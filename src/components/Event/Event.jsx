@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { useInView } from "react-intersection-observer";
 import img1 from "../../assets/Event/29 jan.jpg";
-import img2 from "../../assets/Event/Coming Soon.png";
+import img2 from "../../assets/Event/AUST.png";
 import img3 from "../../assets/Event/29 jan.jpg";
 import img4 from "../../assets/Event/29 jan.jpg";
 
