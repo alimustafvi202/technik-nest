@@ -7,14 +7,13 @@ import Contact from "../Home/Contact/contact";
 import Footer from "../Home/Footer/footer";
 
 const events = [
-  { name: "Cyber Security, AI , Cloud Computing", date: "2025-02-26T10:00:00", venue: "AUST University", image: img2 },
+  { name: "Cyber Security, AI, Cloud Computing", date: "2025-02-26T10:00:00", venue: "AUST University", image: img2 },
   { name: "Linux For Cyber Defenders", date: "2025-01-30T11:00:00", venue: "Pak Austria University", image: img1 }
 ];
 
 const categorizeEvents = (events) => {
   const now = new Date();
   return {
-    active: [],
     upcoming: events.filter(event => new Date(event.date) > now),
     passed: events.filter(event => new Date(event.date).getTime() + 3600000 <= now)
   };
@@ -47,77 +46,77 @@ const Countdown = ({ eventDate }) => {
 const StudentForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", Program: "", Semester: "" });
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const { active, upcoming, passed } = categorizeEvents(events);
+  const { upcoming, passed } = categorizeEvents(events);
   const [successPopup, setSuccessPopup] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const [progress, setProgress] = useState(0);
 
-    if (!selectedEvent) {
-      alert("Please select an event first.");
-      return;
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  if (!selectedEvent) return alert("Please select an event first.");
+
+  setLoading(true);
+  setProgress(0);
+
+  const formEle = e.target;
+  const formDataToSend = new FormData(formEle);
+  formDataToSend.append("event", selectedEvent.name);
+
+  // Simulate progress
+  const progressInterval = setInterval(() => {
+    setProgress((prev) => (prev < 90 ? prev + 10 : prev)); // Increase until 90%
+  }, 500);
+
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwJHWIAl4jrjTQsHlac3uBH2ncQML8aHijhh9K6qoxDodlQcS-72LhDAnNUdfSCh2-N/exec", {
+      method: "POST",
+      body: formDataToSend,
+    });
+
+    clearInterval(progressInterval);
+    setProgress(100); // Complete progress
+
+    if (response.ok) {
+      setFormData({ name: "", email: "", phone: "", Program: "", Semester: "" });
+      setSelectedEvent(null);
+      setSuccessPopup(true);
+    } else {
+      alert("Failed to submit the form. Please try again.");
     }
+  } catch (error) {
+    alert("An error occurred. Please try again.");
+  } finally {
+    setLoading(false);
+    setTimeout(() => setProgress(0), 1000); // Reset after showing full progress
+  }
+};
 
-    const formEle = e.target;
-    const formDataToSend = new FormData(formEle);
-    formDataToSend.append("event", selectedEvent.name);
-
-    try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbwJHWIAl4jrjTQsHlac3uBH2ncQML8aHijhh9K6qoxDodlQcS-72LhDAnNUdfSCh2-N/exec", {
-        method: "POST",
-        body: formDataToSend,
-      });
-
-      if (response.ok) {
-        setSuccessPopup(true);
-        setFormData({ name: "", email: "", phone: "", Program: "", Semester: "" });
-        setSelectedEvent(null);
-      } else {
-        alert("Failed to submit the form. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred. Please try again.");
-    }
-  };
-
+  
   return (
     <>
       <Navbar />
-      <div
-        className="relative bg-cover bg-center text-white p-24 rounded-lg"
-        style={{
-          backgroundImage: `url(${Bg})`,
-          height: "500px",
-        }}
-      >
+      <div className="relative bg-cover bg-center text-white p-24 rounded-lg" style={{ backgroundImage: `url(${Bg})`, height: "500px" }}>
         <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
         <div className="relative z-10 text-center pt-24">
           <h1 className="text-4xl font-extrabold mb-6">Stay Updated with the Latest News & Events</h1>
-          <p className="text-lg mb-12 leading-relaxed">
-            Stay connected with Technik Nest to discover the latest happenings, announcements, and updates.
-          </p>
+          <p className="text-lg mb-12 leading-relaxed">Stay connected with Technik Nest to discover the latest happenings, announcements, and updates.</p>
         </div>
       </div>
       <div className="min-h-screen bg-gray-100 p-6">
         <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">Events</h2>
-
-        {[ { title: "Upcoming Events", list: upcoming }, { title: "Passed Events", list: passed }].map(({ title, list }) => (
+        {[{ title: "Upcoming Events", list: upcoming }, { title: "Passed Events", list: passed }].map(({ title, list }) => (
           <div key={title} className="mb-6">
             <h3 className="text-2xl font-semibold mb-4 text-gray-700">{title}</h3>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {list.map((event, index) => (
                 <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer relative">
-                  <div className="w-full  overflow-hidden"> {/* Fixed height for image container */}
-                    <img
-                      src={event.image}
-                      alt={event.name}
-                      className="w-full h-full object-cover" /* Ensure image covers the container */
-                    />
+                  <div className="w-full overflow-hidden">
+                    <img src={event.image} alt={event.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="p-4">
                     <h3 className="text-xl font-semibold">{event.name}</h3>
@@ -126,10 +125,7 @@ const StudentForm = () => {
                     {title === "Upcoming Events" && (
                       <>
                         <Countdown eventDate={event.date} />
-                        <button
-                          onClick={() => setSelectedEvent(event)}
-                          className="mt-4 w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition"
-                        >
+                        <button onClick={() => setSelectedEvent(event)} className="mt-4 w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition">
                           Register Now
                         </button>
                       </>
@@ -152,7 +148,14 @@ const StudentForm = () => {
                 <input type="tel" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" required />
                 <input type="text" name="Program" placeholder="Program" value={formData.Program} onChange={handleChange} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" required />
                 <input type="number" name="Semester" placeholder="Semester" value={formData.Semester} onChange={handleChange} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" required />
-                <button type="submit" className="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition">Submit</button>
+                <button
+  type="submit"
+  className="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition"
+  disabled={loading}
+>
+  {loading ? <span>Submitting... {progress}%</span> : "Submit"}
+</button>
+
               </form>
             </div>
           </div>
