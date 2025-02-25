@@ -4,7 +4,7 @@ import Footer from "../Home/Footer/footer";
 import Contact from "../Home/Contact/contact";
 import Navbar from "../Home/Navbar/NavBar";
 import Preloader from "../Home/Preloader/Preloader";
-
+import Bg from "../../assets/about/bg.jpg";
 // Import images
 import aboutThumb1 from "../../assets/about/about_thumb_1.jpg";
 import missionImage from "../../assets/about/about_thumb_2.png";
@@ -18,16 +18,19 @@ const AboutUs = () => {
 
 <div className="about-us">
       <Navbar />
-      <section className="about-intro">
-        <div className="about-container">
-          <div className="about-intro-content">
-            <h1>ABOUT US</h1>
-            <p className="about-intro-text">
-              We provide solutions that grow your business.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div
+        className="relative bg-cover bg-center text-white p-6 sm:p-16 lg:p-24 rounded-lg"
+        style={{
+          backgroundImage: `url(${Bg})`,
+          height: "500px",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-70 rounded-lg"></div>
+        <div className="relative z-30 text-center mt-12  pt-12 sm:pt-2 pb-8 px-4 sm:px-8">
+        <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 sm:mb-6">About US</h1>
+        <p className="text-lg sm:text-xl mb-6 max-w-2xl mx-auto">
+        Technik Nest is an innovation-driven software company delivering tech solutions that align with industry standards and future trends. More than just a startup, we foster growth through technology mentorship, equipping young minds with practical experience and AI-driven problem-solving skills. </p></div>
+      </div>
     {/* Mission Section */}
 <section className="about-overview-section">
   <div className="about-container">

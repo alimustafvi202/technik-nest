@@ -31,19 +31,20 @@ const OurTeamPage = () => {
     <>
       <div className="min-h-screen">
         <Navbar />
-        <section
-          className="relative bg-cover bg-center flex items-center justify-center text-white mb-10"
-          style={{ backgroundImage: `url(${TeamHeroImage})`,
+        <div
+        className="relative bg-cover bg-center text-white p-6 sm:p-16 lg:p-24 rounded-lg"
+        style={{
+          backgroundImage: `url(${TeamHeroImage})`,
           height: "500px",
-  }
-  }
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-          <div className="relative text-center z-10">
-            <h2 className="text-5xl font-extrabold mb-4 drop-shadow-lg">Our Team</h2>
-            <p className="text-lg drop-shadow-md">Meet the passionate individuals shaping our vision.</p>
-          </div>
-        </section>
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-70 rounded-lg"></div>
+        <div className="relative z-30 text-center mt-12  pt-12 sm:pt-2 pb-8 px-4 sm:px-8">
+        <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 sm:mb-6">Our Team</h1>
+        <p className="text-lg sm:text-xl mb-6 max-w-2xl mx-auto">
+        Technik Nest is at the forefront of innovation, fueling growth in the digital era with AI-driven solutions. Our team fosters success by equipping businesses with the skills and knowledge to navigate industry trends and thrive in an ever-changing landscape.
+        </p></div>
+      </div>
         <div className="py-10">
           <div className="flex flex-wrap justify-center gap-8">
             {teamMembers.map((member, index) => (

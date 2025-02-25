@@ -53,19 +53,17 @@ const NewsEvents = () => {
     <>
       <Navbar />
       <div
-        className="relative bg-cover bg-center text-white p-24 rounded-lg"
+        className="relative bg-cover bg-center text-white p-6 sm:p-16 lg:p-24 rounded-lg"
         style={{
           backgroundImage: `url(${Bg})`,
           height: "500px",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-        <div className="relative z-10 text-center pt-24">
-          <h1 className="text-4xl font-extrabold mb-6">Stay Updated with the Latest News & Events</h1>
-          <p className="text-lg mb-12 leading-relaxed">
-            Stay connected with Technik Nest to discover the latest happenings, announcements, and updates. 
-          </p>
-        </div>
+        <div className="absolute inset-0 bg-black opacity-70 rounded-lg"></div>
+        <div className="relative z-30 text-center mt-12  pt-12 sm:pt-2 pb-8 px-4 sm:px-8">
+        <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 sm:mb-6">News & Events</h1>
+        <p className="text-lg sm:text-xl mb-6 max-w-2xl mx-auto">
+        Stay up to date with the latest news and events at Technik Nest! From exciting workshops and bootcamps to insightful seminars, we keep you informed about all the happenings that drive knowledge, innovation, and collaboration. Keep an eye on this section for updates and get inspired for what’s coming next!  </p></div>
       </div>
 
       <div className="h-screen w-full bg-gray-100 py-10">

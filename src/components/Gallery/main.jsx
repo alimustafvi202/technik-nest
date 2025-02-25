@@ -40,15 +40,11 @@ export default function EventGallery() {
           height: "500px",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-        <div className="relative z-30 text-center mt-10  pt-5 sm:pt-2 pb-8 px-4 sm:px-8">
+        <div className="absolute inset-0 bg-black opacity-70 rounded-lg"></div>
+        <div className="relative z-30 text-center mt-12  pt-12 sm:pt-2 pb-8 px-4 sm:px-8">
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 sm:mb-6">Event Gallery</h1>
         <p className="text-lg sm:text-xl mb-6 max-w-2xl mx-auto">
-            Welcome to our Event Gallery! Here, you can explore highlights from our past workshops, bootcamps, and seminars. 
-            Each event is a testament to our commitment to fostering knowledge, innovation, and collaboration. 
-            Relive the moments, browse through the photos, and get inspired for future events. 
-            Whether it's a hands-on workshop, an insightful seminar, or an intensive bootcamp, 
-            our gallery captures the essence of learning and growth. Dive in and experience the journey!
+        Welcome to our Event Gallery! Explore highlights from our workshops, bootcamps, and seminars, showcasing our commitment to knowledge, innovation, and collaboration. Browse photos, relive the moments, and get inspired for future events!
           </p></div>
       </div>
       <div className="min-h-screen bg-gray-100 p-6">

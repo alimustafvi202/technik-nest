@@ -41,20 +41,20 @@ const PastWork = () => {
             {/* Header Section */}
             <Navbar />
             <div
-          className="relative bg-cover bg-center text-white p-24 rounded-lg mb-10"
-          style={{
-            backgroundImage: `url(${Bg})`,
-            height: "500px",
-          }}
-        >
-          <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-          <div className="relative z-10 text-center pt-24">
-            <h1 className="text-4xl font-extrabold mb-6">Our Past Work</h1>
-            <p className="text-lg mb-12 leading-relaxed">
-            At Technik Nest, we’ve delivered impactful digital solutions across industries, including high-performing websites, user-friendly apps, and data-driven marketing strategies. Our proven track record showcases our ability to drive growth and success for businesses of all sizes.
-            </p>
-          </div>
+        className="relative bg-cover bg-center text-white p-6 sm:p-16 lg:p-24 rounded-lg"
+        style={{
+          backgroundImage: `url(${Bg})`,
+          height: "500px",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+        <div className="relative z-30 text-center mt-16 pt-12 sm:pt-16 pb-8 px-4 sm:px-8">
+          <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 sm:mb-6">
+          Our Past Work
+          </h1>
+          <p className="text-lg sm:text-xl mb-6"> Explore our past work at Technik Nest, where innovation meets execution. From successful projects to impactful collaborations, our portfolio showcases our dedication to delivering high-quality solutions. Browse through our completed work and see how we've helped businesses thrive with cutting-edge technology and expertise.</p>
         </div>
+      </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-8 mb-10">
           {projects.map((project, index) => (
             <div
