@@ -5,7 +5,7 @@ import Footer from '../Home/Footer/footer';
 import Contact from '../Home/Contact/contact';
 import frame from "../../assets/gallery/Frame2.png";
 import BgWorkshop1 from "../../assets/gallery/Workshop1/bg.jpg";
-import BgWorkshop2 from "../../assets/gallery/Workshop2/bg.webp";
+import BgWorkshop2 from "../../assets/gallery/Workshop2/bg.avif";
 // Workshop 1 Images
 import Img1 from "../../assets/gallery/Workshop1/1.JPG";
 import Img2 from "../../assets/gallery/Workshop1/2.JPG";
@@ -29,15 +29,15 @@ import Img19 from "../../assets/gallery/Workshop1/19.JPG";
 import Img20 from "../../assets/gallery/Workshop1/20.JPG";
 // Workshop 2 Images
 import W2_Img1 from "../../assets/gallery/Workshop2/1.png";
-import W2_Img2 from "../../assets/gallery/Workshop2/1.png";
-import W2_Img3 from "../../assets/gallery/Workshop2/1.png";
-import W2_Img4 from "../../assets/gallery/Workshop2/1.png";
-import W2_Img5 from "../../assets/gallery/Workshop2/1.png";
-import W2_Img6 from "../../assets/gallery/Workshop2/1.png";
-import W2_Img7 from "../../assets/gallery/Workshop2/1.png";
+import W2_Img2 from "../../assets/gallery/Workshop2/2.jpg";
+import W2_Img3 from "../../assets/gallery/Workshop2/3.jpg";
+import W2_Img4 from "../../assets/gallery/Workshop2/4.jpg";
+import W2_Img5 from "../../assets/gallery/Workshop2/5.jpg";
+import W2_Img6 from "../../assets/gallery/Workshop2/6.jpg";
+import W2_Img7 from "../../assets/gallery/Workshop2/7.jpg";
 import W2_Img8 from "../../assets/gallery/Workshop2/1.png";
-import W2_Img9 from "../../assets/gallery/Workshop2/1.png";
-import W2_Img10 from "../../assets/gallery/Workshop2/1.png";
+import W2_Img9 from "../../assets/gallery/Workshop2/5.jpg";
+import W2_Img10 from "../../assets/gallery/Workshop2/7.jpg";
 
 const workshopData = {
   workshop1: {
@@ -48,9 +48,9 @@ const workshopData = {
    Bg: BgWorkshop1
   },
   workshop2: {
-    title: "Advanced Ethical Hacking Workshop",
+    title: "Career Compass: AI, Cyber, and Cloud Seminar",
     description:
-      "Explore advanced techniques in ethical hacking to secure networks...",
+      "The Career Compass: AI, Cyber, and Cloud Seminar successfully concluded, offering valuable insights into career opportunities, industry trends, and essential skills in these fields. Attendees engaged in expert talks, networking, and interactive discussions, gaining a clearer path for their tech careers. ",
     images: [W2_Img1, W2_Img2, W2_Img3, W2_Img4, W2_Img5, W2_Img6, W2_Img7, W2_Img8, W2_Img9, W2_Img10],
     Bg:BgWorkshop2
   },
