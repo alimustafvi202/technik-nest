@@ -19,7 +19,7 @@ const events = [
   },
   {
     id: 2,
-    Name: "AI Seminar",
+    Name: "Career Compass: AI, Cyber, and Cloud",
     thumbnail: img3,
     gallery: "/gallery/workshop2",
     date: "Feb 26, 2025",
